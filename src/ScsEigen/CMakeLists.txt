@@ -25,7 +25,7 @@ target_link_libraries(${LIBRARY_NAME} PRIVATE scs::scsdir)
 set_target_properties(${LIBRARY_NAME} PROPERTIES
   OUTPUT_NAME ${LIBRARY_NAME}
   VERSION ${PROJECT_VERSION}
-  PUBLIC_HEADER ${${LIBRARY_NAME}_HDR})
+  PUBLIC_HEADER "${${LIBRARY_NAME}_HDR}")
 
 # Specify include directories for both compilation and installation process.
 # The $<INSTALL_PREFIX> generator expression is useful to ensure to create
