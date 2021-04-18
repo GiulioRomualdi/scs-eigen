@@ -5,8 +5,8 @@
  * @date 2021
  */
 
-#ifndef SCSEIGEN_SETTINGS_H
-#define SCSEIGEN_SETTINGS_H
+#ifndef SCS_EIGEN_SETTINGS_H
+#define SCS_EIGEN_SETTINGS_H
 
 #include <memory>
 
@@ -169,4 +169,4 @@ public:
 
 } // namespace ScsEigen
 
-#endif // SCSEIGEN_SETTINGS_H
+#endif // SCS_EIGEN_SETTINGS_H
