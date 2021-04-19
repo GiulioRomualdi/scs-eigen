@@ -30,9 +30,7 @@ bool LinearCost::setA(const Eigen::Ref<const Eigen::VectorXd>& a)
             log()->error("[LinearCost::setA] The size of the vector 'a' cannot change.");
             return false;
         }
-    }
-
-    if (!this->setNumberOfVariables(a.size()))
+    } else if (!this->setNumberOfVariables(a.size()))
     {
         log()->error("[LinearCost::setA] Unable to set the number of variables.");
         return false;
