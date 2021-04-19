@@ -7,13 +7,15 @@ set(${LIBRARY_NAME}_HDR
   include/ScsEigen/Settings.h
   include/ScsEigen/Logger.h
   include/ScsEigen/Cost.h
-  include/ScsEigen/LinearCost.h)
+  include/ScsEigen/LinearCost.h
+  include/ScsEigen/MathematicalProgram.h)
 
 set(${LIBRARY_NAME}_SRC
   src/Settings.cpp
   src/Logger.cpp
   src/Cost.cpp
-  src/LinearCost.cpp)
+  src/LinearCost.cpp
+  src/MathematicalProgram.cpp)
 
 add_library(${LIBRARY_NAME} ${${LIBRARY_NAME}_HDR} ${${LIBRARY_NAME}_SRC})
 
