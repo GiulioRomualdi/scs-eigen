@@ -49,6 +49,22 @@ struct Solver::Impl
         })
     {
     }
+
+    bool linearCostEmbedding()
+    {
+        for (const auto& [name, cost] : this->mathematicalProgram.getLinearCosts())
+        {
+            assert(cost->getNumberOfVariables() >= this->gradient.size());
+
+            // the first cost->getNumberOfVariables() must be greater than zero
+            Eigen::Map<Eigen::VectorXd>(this->gradient.data(),
+                                        this->mathematicalProgram.numberOfVariables())
+                += cost->getA();
+            this->constant += cost->getB();
+        }
+
+        return true;
+    }
 };
 
 Solver::Solver()
@@ -92,6 +108,13 @@ bool Solver::solve()
 
     // reset all the gradient vector equal to zero
     m_pimpl->gradient.resize(m_pimpl->optimizationVariables, 0.0);
+
+    // perform the embedding
+    if (!m_pimpl->linearCostEmbedding())
+    {
+        log()->error("[Solver::solve] Unable to perform linear cost embedding.");
+        return false;
+    }
 
     return true;
 }
