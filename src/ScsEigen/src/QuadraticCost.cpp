@@ -17,10 +17,11 @@ using namespace ScsEigen;
 QuadraticCost::QuadraticCost(const Eigen::Ref<const Eigen::MatrixXd>& Q,
                              const Eigen::Ref<const Eigen::MatrixXd>& b,
                              double c)
-    : Cost((Q.rows() == Q.cols() && Q.rows() != b.rows()) ? Q.rows() : 0, "Quadratic cost")
+    : Cost((Q.rows() == Q.cols() && Q.rows() == b.rows()) ? Q.rows() : 0, "Quadratic cost")
 {
     if (Q.rows() != Q.cols() || Q.rows() != b.rows())
     {
+
         log()->error("[QuadraticCost::QuadraticCost] Q matrix must be square and the size of b "
                      "should be coherent with Q");
         assert(false);
@@ -87,4 +88,9 @@ Eigen::Ref<const Eigen::VectorXd> QuadraticCost::getB() const
 Eigen::Ref<const Eigen::MatrixXd> QuadraticCost::getQ() const
 {
     return m_Q;
+}
+
+double QuadraticCost::getC() const
+{
+    return m_c;
 }
