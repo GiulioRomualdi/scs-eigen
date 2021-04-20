@@ -8,15 +8,22 @@
 #include <functional>
 #include <numeric>
 
-// scs
+// clang-format off
+// scs.h should be included before linsys/amatrix.h, since amatrix.h uses types
+// scs_float, scs_int, etc, defined in scs.h
 #include <scs.h>
+#include <cones.h>
+#include <linalg.h>
 #include <util.h>
+#include <amatrix.h>
+// clang-format on
 
 #include <ScsEigen/Logger.h>
 #include <ScsEigen/Math.h>
 #include <ScsEigen/MathematicalProgram.h>
 #include <ScsEigen/Settings.h>
 #include <ScsEigen/Solver.h>
+#include <ScsEigen/impl/SettingsImpl.h>
 
 #include <Eigen/Sparse>
 
@@ -28,25 +35,41 @@ struct Solver::Impl
     MathematicalProgram mathematicalProgram; /**< The mathematical problem that should be solved */
 
     double constant{0}; /**< Constant term in the cost function. */
-    std::vector<double> gradient; /**< Gradient term in the cost function. */
+    std::vector<scs_float> gradient; /**< Gradient term in the cost function. */
 
     int optimizationVariables{0}; /**< Number of optimization variable */
-    std::vector<int> secondOrderConesSize; /**< Sizes of the second order cone. */
+    std::vector<scs_int> secondOrderConesSize; /**< Sizes of the second order cone. */
 
-    std::vector<Eigen::Triplet<double>> constraintMatrixTriplets; /**< Triplets associated to the
+    Eigen::SparseMatrix<scs_float, 0, scs_int> constraintMatrix;
+    std::vector<Eigen::Triplet<scs_float>> constraintMatrixTriplets; /**< Triplets associated to the
                                                                      constraint matrix. */
     unsigned int constraintMatrixRows{0}; /**< Number of the rows of the constraint matrix */
-    std::vector<double> constraintVector; /**< vector containing the equality constraints */
+    std::vector<scs_float> constraintVector; /**< vector containing the equality constraints */
 
     std::unique_ptr<ScsCone, std::function<void(ScsCone*)>> cone;
+    std::unique_ptr<ScsData, std::function<void(ScsData*)>> data;
+    std::unique_ptr<ScsSolution, std::function<void(ScsSolution*)>> solution;
 
     Impl()
-        : cone(static_cast<ScsCone*>(scs_calloc(1, sizeof(ScsCone))), [](ScsCone* ptr) {
-            if (ptr != nullptr)
-                // scs_free_data takes ScsData and ScsCone
-                // https://github.com/cvxgrp/scs/blob/48dfbe81caad2162c3ce5757faccdb3f3d31e142/src/util.c#L155
-                scs_free_data(nullptr, ptr);
-        })
+        : cone(static_cast<ScsCone*>(scs_calloc(1, sizeof(ScsCone))),
+               [](ScsCone* ptr) {
+                   // scs_free_data takes ScsData and ScsCone
+                   // https://github.com/cvxgrp/scs/blob/48dfbe81caad2162c3ce5757faccdb3f3d31e142/src/util.c#L155
+                   if (ptr != nullptr)
+                       scs_free_data(nullptr, ptr);
+               })
+        , data(static_cast<ScsData*>(scs_calloc(1, sizeof(ScsData))),
+               [](ScsData* ptr) {
+                   // scs_free_data takes ScsData and ScsCone
+                   // https://github.com/cvxgrp/scs/blob/48dfbe81caad2162c3ce5757faccdb3f3d31e142/src/util.c#L155
+                   if (ptr != nullptr)
+                       scs_free_data(ptr, nullptr);
+               })
+        , solution(static_cast<ScsSolution*>(scs_calloc(1, sizeof(ScsSolution))),
+                   [](ScsSolution* ptr) {
+                       if (ptr != nullptr)
+                           scs_free_sol(ptr);
+                   })
     {
     }
 
@@ -136,8 +159,15 @@ struct Solver::Impl
             // Here we add the element in the first column latest row of the matrix A
             AConeTriplets.emplace_back(0, numberOfVariables, 1);
 
+            // Set the constraint
+            for (int i = 0; i < cost->getB().rows(); ++i)
+            {
+                AConeTriplets.emplace_back(0, i, -cost->getB()(i));
+            }
+
             // Decompose Q in CᵀC
             // Q is always SDP. Please check QuadraticCost::setQ()
+
             const auto [outcome, C] = choleskyDecomposition(cost->getQ());
             if (!outcome)
             {
@@ -170,6 +200,54 @@ struct Solver::Impl
         }
 
         return true;
+    }
+
+    void prepareScsData()
+    {
+        this->data->n = this->optimizationVariables;
+        this->data->m = this->constraintMatrixRows;
+
+        this->data->A = static_cast<ScsMatrix*>(malloc(sizeof(ScsMatrix)));
+        this->data->A->x = static_cast<scs_float*>(
+            scs_calloc(this->constraintMatrix.nonZeros(), sizeof(scs_float)));
+
+        this->data->A->i = static_cast<scs_int*>(scs_calloc(this->constraintMatrix.nonZeros(), //
+                                                            sizeof(scs_int)));
+        this->data->A->p = static_cast<scs_int*>(scs_calloc(this->data->n + 1, sizeof(scs_int)));
+
+        this->data->A->m = this->data->m;
+        this->data->A->n = this->data->n;
+
+        std::memcpy(this->data->A->x,
+                    this->constraintMatrix.valuePtr(),
+                    this->constraintMatrix.nonZeros() * sizeof(scs_float));
+
+        std::memcpy(this->data->A->i,
+                    this->constraintMatrix.innerIndexPtr(),
+                    this->constraintMatrix.nonZeros() * sizeof(scs_int));
+
+        std::memcpy(this->data->A->p,
+                    this->constraintMatrix.outerIndexPtr(),
+                    this->data->m * sizeof(scs_int));
+
+        this->data->b = static_cast<scs_float*>(scs_calloc(this->constraintVector.size(), //
+                                                           sizeof(scs_float)));
+
+        std::memcpy(this->data->b,
+                    this->constraintVector.data(),
+                    this->constraintVector.size() * sizeof(scs_float));
+
+        this->data->c = static_cast<scs_float*>(scs_calloc(this->optimizationVariables, //
+                                                           sizeof(scs_float)));
+        std::memcpy(this->data->c,
+                    this->gradient.data(),
+                    this->optimizationVariables * sizeof(scs_float));
+
+        // Set the parameters to default values.
+        this->data->stgs = static_cast<ScsSettings*>(scs_calloc(1, sizeof(ScsSettings)));
+
+        // we should change this
+        scs_set_default_settings(this->data.get());
     }
 };
 
@@ -227,6 +305,32 @@ bool Solver::solve()
         log()->error("[Solver::solve] Unable to perform quadratic cost embedding.");
         return false;
     }
+
+    // set the second-order cone length in the SCS cone struct
+    // Here dynamic allocation is performed.
+    // The moeory will be automatically deallocated when Impl::cone goes out of scope
+    m_pimpl->cone->qsize = m_pimpl->secondOrderConesSize.size();
+    m_pimpl->cone->q = static_cast<scs_int*>(scs_calloc(m_pimpl->cone->qsize, sizeof(scs_int)));
+
+    for (unsigned int i = 0; i < m_pimpl->cone->qsize; i++)
+    {
+        m_pimpl->cone->q[i] = m_pimpl->secondOrderConesSize[i];
+    }
+
+    // prepare the constraint matrix
+    m_pimpl->constraintMatrix.resize(m_pimpl->constraintMatrixRows, m_pimpl->optimizationVariables);
+    m_pimpl->constraintMatrix.setFromTriplets(m_pimpl->constraintMatrixTriplets.begin(),
+                                              m_pimpl->constraintMatrixTriplets.end());
+
+    m_pimpl->constraintMatrix.makeCompressed();
+
+    m_pimpl->prepareScsData();
+
+    // TODO (GR) handle the settings
+    ScsInfo info{0};
+
+    // solve the problem
+    scs(m_pimpl->data.get(), m_pimpl->cone.get(), m_pimpl->solution.get(), &info);
 
     return true;
 }
