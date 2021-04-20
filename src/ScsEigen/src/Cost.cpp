@@ -22,12 +22,14 @@ Cost::Cost(int numberOfVariables, std::string_view description)
         m_description = description;
     }
 
-    if (numberOfVariables < 0)
+    if (numberOfVariables <= 0)
     {
         log()->error("The number of variables should be a positive number. The default value will  "
                      "be used: "
                      + std::to_string(m_numberOfVariables) + ".");
     }
+
+    m_numberOfVariables = numberOfVariables;
 }
 
 void Cost::setDescription(std::string_view description)
