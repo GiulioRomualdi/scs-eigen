@@ -5,6 +5,7 @@
  * @date 2021
  */
 
+
 #include <string>
 
 #include <Eigen/Dense>
@@ -42,15 +43,15 @@ bool Cost::setNumberOfVariables(int numberOfVariables)
                      "be used: "
                      + std::to_string(m_numberOfVariables) + ".");
         return false;
-    }
-    if (m_numberOfVariables != 0)
+    } else if (m_numberOfVariables != 0 && m_numberOfVariables != numberOfVariables)
     {
-        log()->error("The number of variables has been already set.");
+        log()->error("The number of variables has been already set and it is different from the "
+                     "expected number of variables.");
         return false;
+    } else
+    {
+        m_numberOfVariables = numberOfVariables;
     }
-
-    m_numberOfVariables = numberOfVariables;
-
     return true;
 }
 
