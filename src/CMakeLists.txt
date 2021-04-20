@@ -2,3 +2,4 @@
 # Copyright: Released under the terms of the MIT License.
 
 add_subdirectory(ScsEigen)
+add_subdirectory(tests)
