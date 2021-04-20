@@ -6,6 +6,7 @@ set(LIBRARY_NAME ${PROJECT_NAME})
 set(${LIBRARY_NAME}_HDR
   include/ScsEigen/Math.h
   include/ScsEigen/Settings.h
+  include/ScsEigen/impl/SettingsImpl.h
   include/ScsEigen/Logger.h
   include/ScsEigen/Cost.h
   include/ScsEigen/LinearCost.h

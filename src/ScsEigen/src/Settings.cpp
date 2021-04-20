@@ -9,14 +9,9 @@
 #include <scs.h>
 
 #include <ScsEigen/Settings.h>
+#include <ScsEigen/impl/SettingsImpl.h>
 
 using namespace ScsEigen;
-
-struct Settings::Impl
-{
-    ScsSettings settings; /**< Scs Setting struct */
-    std::string filename; /**< name of the file where the solution is stored. */
-};
 
 Settings::Settings()
     : m_pimpl(std::make_unique<Impl>())

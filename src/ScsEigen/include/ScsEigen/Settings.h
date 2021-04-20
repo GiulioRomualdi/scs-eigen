@@ -20,10 +20,15 @@ namespace ScsEigen
  * @note You can find further information here:
  * https://github.com/cvxgrp/scs/blob/48dfbe81caad2162c3ce5757faccdb3f3d31e142/include/scs.h#L44-L63
  */
+
+class Solver;
+
 class Settings
 {
     struct Impl;
     std::unique_ptr<Impl> m_pimpl;
+
+    friend class Solver;
 
 public:
 
