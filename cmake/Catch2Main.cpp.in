@@ -1,0 +1,9 @@
+/**
+ * @file Catch2Main.cpp(.in)
+ * @authors Giulio Romualdi
+ * @copyright Released under the terms of the MIT License.
+ * @date 2021
+ */
+
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch.hpp>
