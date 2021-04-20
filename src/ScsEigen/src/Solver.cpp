@@ -50,6 +50,52 @@ struct Solver::Impl
     {
     }
 
+    void rotateSecondOrderConeEmbedding(const std::vector<Eigen::Triplet<double>>& AConeTriplets,
+                                        const Eigen::Ref<const Eigen::VectorXd>& bCone,
+                                        const std::vector<int>& AiVarInded)
+    {
+        for (const auto& triplet : AConeTriplets)
+        {
+            const int xIndex = AiVarInded[triplet.col()];
+            if (triplet.row() == 0)
+            {
+                this->constraintMatrixTriplets.emplace_back(this->constraintMatrixRows,
+                                                            xIndex,
+                                                            -0.5 * triplet.value());
+                this->constraintMatrixTriplets.emplace_back(this->constraintMatrixRows + 1,
+                                                            xIndex,
+                                                            -0.5 * triplet.value());
+            } else if (triplet.row() == 1)
+            {
+                this->constraintMatrixTriplets.emplace_back(this->constraintMatrixRows,
+                                                            xIndex,
+                                                            -0.5 * triplet.value());
+                this->constraintMatrixTriplets.emplace_back(this->constraintMatrixRows + 1,
+                                                            xIndex,
+                                                            0.5 * triplet.value());
+            } else
+            {
+                this->constraintMatrixTriplets.emplace_back(this->constraintMatrixRows
+                                                                + triplet.row(),
+                                                            xIndex,
+                                                            -triplet.value());
+            }
+        }
+
+        assert(bCone.size() >= 2
+               && "Solver::Impl::rotateSecondOrderConeEmbedding] The size of the cone should be at "
+                  "least 2.");
+
+        this->constraintVector.push_back(0.5 * (bCone(0) + bCone(1)));
+        this->constraintVector.push_back(0.5 * (bCone(0) - bCone(1)));
+        for (int i = 2; i < bCone.rows(); ++i)
+        {
+            this->constraintVector.push_back(bCone(i));
+        }
+        this->constraintMatrixRows += bCone.rows();
+        this->secondOrderConesSize.push_back(bCone.rows());
+    }
+
     bool linearCostEmbedding()
     {
         for (const auto& [name, cost] : this->mathematicalProgram.getLinearCosts())
@@ -61,6 +107,66 @@ struct Solver::Impl
                                         this->mathematicalProgram.numberOfVariables())
                 += cost->getA();
             this->constant += cost->getB();
+        }
+
+        return true;
+    }
+
+    // A QuadraticCost encodes cost of the form
+    //   0.5 xᵀQx + pᵀx + r
+    // Since SCS only supports linear cost, we transform the cost using the epigraph form.
+    // In details we introduce a new slack variable y as the upper bound of the cost, with the
+    // rotated Lorentz cone constraint 2(y - r - pᵀx) ≥ xᵀQx.
+    //    minimize_{x}  0.5 xᵀQx + pᵀx + r
+    // becomes
+    //    minimize_{x, y}  y
+    //    subject to  2(y - r - pᵀx) ≥ xᵀQx.
+    bool quadraticCostEmbedding()
+    {
+        std::vector<int> AiVarIndex(this->mathematicalProgram.numberOfVariables());
+        std::iota(std::begin(AiVarIndex), std::end(AiVarIndex), 0);
+
+        for (const auto& [name, cost] : this->mathematicalProgram.getQuadraticCosts())
+        {
+            const auto numberOfVariables = cost->getNumberOfVariables();
+
+            // we create a vector containing the triplets of the matrix A_cone
+            std::vector<Eigen::Triplet<double>> AConeTriplets;
+
+            // Here we add the element in the first column latest row of the matrix A
+            AConeTriplets.emplace_back(0, numberOfVariables, 1);
+
+            // Decompose Q in CᵀC
+            // Q is always SDP. Please check QuadraticCost::setQ()
+            const auto [outcome, C] = choleskyDecomposition(cost->getQ());
+            if (!outcome)
+            {
+                log()->error("[Solver::Impl::quadraticCostEmbedding] Unable to compute the "
+                             "Cholesky decomposition for the hessian matrix associated to the "
+                             "quadratic cost named: "
+                             + std::string(name) + ".");
+                return false;
+            }
+
+            // get the element different from zero and store it in the triplets
+            for (int i = 0; i < C.rows(); ++i)
+                for (int j = 0; j < C.cols(); ++j)
+                    if (C(i, j) != 0)
+                        AConeTriplets.emplace_back(2 + i, j, C(i, j));
+
+            // add the slack variables as optimization variable
+            AiVarIndex.push_back(this->optimizationVariables);
+            this->optimizationVariables++;
+
+            Eigen::VectorXd bCone = Eigen::VectorXd::Zero(2 + C.cols());
+            bCone(0) = -cost->getC();
+            bCone(1) = 2;
+
+            // Add the secondOrderCone to the constraints
+            this->rotateSecondOrderConeEmbedding(AConeTriplets, bCone, AiVarIndex);
+
+            // increase the gradient with the slack variable
+            this->gradient.push_back(1);
         }
 
         return true;
@@ -113,6 +219,12 @@ bool Solver::solve()
     if (!m_pimpl->linearCostEmbedding())
     {
         log()->error("[Solver::solve] Unable to perform linear cost embedding.");
+        return false;
+    }
+
+    if (!m_pimpl->quadraticCostEmbedding())
+    {
+        log()->error("[Solver::solve] Unable to perform quadratic cost embedding.");
         return false;
     }
 
