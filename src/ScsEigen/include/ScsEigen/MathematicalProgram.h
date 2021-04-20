@@ -13,6 +13,7 @@
 #include <unordered_map>
 
 #include <ScsEigen/LinearCost.h>
+#include <ScsEigen/QuadraticCost.h>
 
 /**
  * ScsEigen namespace.
@@ -41,6 +42,13 @@ public:
     std::weak_ptr<LinearCost> getLinearCost(std::string_view name) const;
 
     const std::unordered_map<std::string_view, std::shared_ptr<LinearCost>>& getLinearCosts() const;
+
+    bool addQuadraticCost(std::shared_ptr<QuadraticCost> cost, std::string_view name);
+
+    std::weak_ptr<QuadraticCost> getQuadraticCost(std::string_view name) const;
+
+    const std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>>&
+    getQuadraticCosts() const;
 };
 
 } // namespace ScsEigen
