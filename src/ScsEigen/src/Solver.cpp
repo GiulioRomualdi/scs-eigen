@@ -41,7 +41,7 @@ struct Solver::Impl
     std::vector<scs_int> secondOrderConesSize; /**< Sizes of the second order cone. */
 
     Eigen::SparseMatrix<scs_float, 0, scs_int> constraintMatrix;
-    std::vector<Eigen::Triplet<scs_float>> constraintMatrixTriplets; /**< Triplets associated to the
+    std::vector<Eigen::Triplet<scs_float, scs_int>> constraintMatrixTriplets; /**< Triplets associated to the
                                                                      constraint matrix. */
     unsigned int constraintMatrixRows{0}; /**< Number of the rows of the constraint matrix */
     std::vector<scs_float> constraintVector; /**< vector containing the equality constraints */
@@ -202,6 +202,75 @@ struct Solver::Impl
         return true;
     }
 
+    bool linearConstraintEmbedding()
+    {
+        // The linear constraint lb ≤ Ax ≤ ub is converted to
+        //
+        //  Ax + s1 = ub,
+        // -Ax + s2 = lb
+        // s1, s2  are two vectors that belongs to the positive orthant.
+        // If one of the element of lb or ub is equal to plus or minus infinity it is not added in
+        // the constraint.
+        unsigned int linearConstraintsRowIndex{0};
+        for (const auto& [name, constraint] : this->mathematicalProgram.getLinearConstraints())
+        {
+            const Eigen::Ref<const Eigen::VectorXd> lowerBound = constraint->getLowerBound();
+            const Eigen::Ref<const Eigen::VectorXd> upperBound = constraint->getUpperBound();
+
+            const Eigen::Ref<const Eigen::MatrixXd> A = constraint->getA();
+            const Eigen::Ref<const LinearConstraint::SparsityPattern> sparsityPattern = constraint->getASparsityPattern();
+
+            // analyze each row of the matrix
+            for (int i = 0; i < constraint->getNumberOfConstraints(); ++i)
+            {
+                const bool isLowerBoundFinite{!std::isinf(lowerBound(i))};
+                const bool isUpperBoundFinite{!std::isinf(upperBound(i))};
+
+                // if both of the elements are infinite the row is skipped
+                if (isLowerBoundFinite || isUpperBoundFinite)
+                {
+                    const int lowerBoundRowIndex
+                        = this->constraintMatrixRows + linearConstraintsRowIndex;
+                    const int upperBoundRowIndex
+                        = lowerBoundRowIndex + (isLowerBoundFinite ? 1 : 0);
+                    for (int j = 0; j < this->mathematicalProgram.numberOfVariables(); ++j)
+                    {
+                        if (sparsityPattern(i, j))
+                        {
+                            if (isLowerBoundFinite)
+                            {
+                                this->constraintMatrixTriplets.emplace_back(lowerBoundRowIndex,
+                                                                            j,
+                                                                            -A(i, j));
+                            }
+
+                            if (isUpperBoundFinite)
+                            {
+                                this->constraintMatrixTriplets.emplace_back(upperBoundRowIndex,
+                                                                            j,
+                                                                            A(i, j));
+                            }
+                        }
+                    }
+                    if (isLowerBoundFinite)
+                    {
+                        this->constraintVector.push_back(-lowerBound(i));
+                        linearConstraintsRowIndex++;
+                    }
+                    if (isUpperBoundFinite)
+                    {
+                        this->constraintVector.push_back(upperBound(i));
+                        linearConstraintsRowIndex++;
+                    }
+                }
+            }
+        }
+
+        this->constraintMatrixRows += linearConstraintsRowIndex;
+        this->cone->l += linearConstraintsRowIndex;
+        return true;
+    }
+
     void prepareScsData()
     {
         this->data->n = this->optimizationVariables;
@@ -297,6 +366,12 @@ bool Solver::solve()
     if (!m_pimpl->linearCostEmbedding())
     {
         log()->error("[Solver::solve] Unable to perform linear cost embedding.");
+        return false;
+    }
+
+    if (!m_pimpl->linearConstraintEmbedding())
+    {
+        log()->error("[Solver::solve] Unable to perform linear constraint embedding.");
         return false;
     }
 
