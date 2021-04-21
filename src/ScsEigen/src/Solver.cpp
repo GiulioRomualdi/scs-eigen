@@ -297,7 +297,7 @@ struct Solver::Impl
 
         std::memcpy(this->data->A->p,
                     this->constraintMatrix.outerIndexPtr(),
-                    this->data->m * sizeof(scs_int));
+                    (this->data->n + 1) * sizeof(scs_int));
 
         this->data->b = static_cast<scs_float*>(scs_calloc(this->constraintVector.size(), //
                                                            sizeof(scs_float)));
