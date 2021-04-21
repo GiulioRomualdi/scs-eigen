@@ -14,6 +14,7 @@
 
 #include <ScsEigen/LinearCost.h>
 #include <ScsEigen/QuadraticCost.h>
+#include <ScsEigen/LinearConstraint.h>
 
 /**
  * ScsEigen namespace.
@@ -49,6 +50,13 @@ public:
 
     const std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>>&
     getQuadraticCosts() const;
+
+    bool addLinearConstraint(std::shared_ptr<LinearConstraint> constraint, std::string_view name);
+
+    std::weak_ptr<LinearConstraint> getLinearConstraint(std::string_view name) const;
+
+    const std::unordered_map<std::string_view, std::shared_ptr<LinearConstraint>>&
+    getLinearConstraints() const;
 };
 
 } // namespace ScsEigen

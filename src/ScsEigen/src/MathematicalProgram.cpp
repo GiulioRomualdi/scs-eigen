@@ -18,6 +18,8 @@ struct MathematicalProgram::Impl
     unsigned int numberOfVariables{0};
     std::unordered_map<std::string_view, std::shared_ptr<LinearCost>> linearCosts;
     std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>> quadraticCosts;
+
+    std::unordered_map<std::string_view, std::shared_ptr<LinearConstraint>> linearConstraints;
 };
 
 MathematicalProgram::MathematicalProgram()
@@ -144,4 +146,60 @@ const std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>>&
 MathematicalProgram::getQuadraticCosts() const
 {
     return m_pimpl->quadraticCosts;
+}
+
+bool MathematicalProgram::addLinearConstraint(std::shared_ptr<LinearConstraint> constraint, std::string_view name)
+{
+    if (m_pimpl->numberOfVariables == 0)
+    {
+        log()->error("[MathematicalProgram::addLinearConstraint] Please set the number of "
+                     "variables.");
+        return false;
+    }
+
+    if (m_pimpl->linearConstraints.find(name) != m_pimpl->linearConstraints.end())
+    {
+        log()->error("[MathematicalProgram::addLinearConstraint] The constraint named "
+                     + std::string(name) + "already exists.");
+        return false;
+    }
+
+    if (constraint == nullptr)
+    {
+        log()->error("[MathematicalProgram::addLinearConstraint] The constraint is not valid.");
+        return false;
+    }
+
+    if (constraint->getNumberOfVariables() != m_pimpl->numberOfVariables)
+    {
+        log()->error("[MathematicalProgram::addLinearConstraint] The size of the constraint is "
+                     "different from the number of variables stored in the MathematicalProgram. "
+                     "Expected:"
+                     + std::to_string(m_pimpl->numberOfVariables)
+                     + " passed:" + std::to_string(constraint->getNumberOfVariables()) + ".");
+        return false;
+    }
+
+    m_pimpl->linearConstraints[name] = constraint;
+    return true;
+}
+
+std::weak_ptr<LinearConstraint> MathematicalProgram::getLinearConstraint(std::string_view name) const
+{
+    auto constraint = m_pimpl->linearConstraints.find(name);
+    if (constraint != m_pimpl->linearConstraints.end())
+    {
+        return constraint->second;
+    }
+
+    log()->warning("[MathematicalProgram::getLinearConstraint] The constraint named " + std::string(name)
+                   + "does not exists. An invalid weak_ptr will be returned.");
+
+    return std::shared_ptr<LinearConstraint>();
+}
+
+const std::unordered_map<std::string_view, std::shared_ptr<LinearConstraint>>&
+MathematicalProgram::getLinearConstraints() const
+{
+    return m_pimpl->linearConstraints;
 }
