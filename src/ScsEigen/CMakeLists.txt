@@ -14,6 +14,7 @@ set(${LIBRARY_NAME}_HDR
   include/ScsEigen/Constraint.h
   include/ScsEigen/LinearConstraint.h
   include/ScsEigen/MathematicalProgram.h
+  include/ScsEigen/Solution.h
   include/ScsEigen/Solver.h)
 
 set(${LIBRARY_NAME}_SRC
@@ -26,6 +27,7 @@ set(${LIBRARY_NAME}_SRC
   src/Constraint.cpp
   src/LinearConstraint.cpp
   src/MathematicalProgram.cpp
+  src/Solution.cpp
   src/Solver.cpp)
 
 add_library(${LIBRARY_NAME} ${${LIBRARY_NAME}_HDR} ${${LIBRARY_NAME}_SRC})
