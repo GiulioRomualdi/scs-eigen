@@ -22,6 +22,12 @@ TEST_CASE("QPProblem - Unconstrained")
             .addQuadraticCost(std::make_shared<ScsEigen::QuadraticCost>(H, gradient), "test"));
 
     REQUIRE(solver.solve());
+    REQUIRE(solver.solution().isValid());
+    REQUIRE(solver.solution().status == ScsEigen::Solution::Status::solved);
+
+    Eigen::Vector2d expectedSolution;
+    expectedSolution << -1.2500, 0.3750;
+    REQUIRE(solver.solution().solution.isApprox(expectedSolution, tolerance));
 }
 
 TEST_CASE("QPProblem - Constrained")
@@ -60,4 +66,10 @@ TEST_CASE("QPProblem - Constrained")
         "linear constraint"));
 
     REQUIRE(solver.solve());
+    REQUIRE(solver.solution().isValid());
+    REQUIRE(solver.solution().status == ScsEigen::Solution::Status::solved);
+
+    Eigen::Vector2d expectedSolution;
+    expectedSolution << 0.3, 0.7;
+    REQUIRE(solver.solution().solution.isApprox(expectedSolution, tolerance));
 }
