@@ -13,8 +13,9 @@
 // Eigen
 #include <Eigen/Dense>
 
-#include <ScsEigen/Settings.h>
 #include <ScsEigen/MathematicalProgram.h>
+#include <ScsEigen/Settings.h>
+#include <ScsEigen/Solution.h>
 
 /**
  * ScsEigen namespace.
@@ -68,6 +69,10 @@ public:
      */
     bool solve();
 
+    /**
+     * Access to ScsEigen::Solution object.
+     */
+    const Solution& solution() const;
 };
 
 } // namespace ScsEigen

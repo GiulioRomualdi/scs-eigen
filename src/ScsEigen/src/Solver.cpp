@@ -22,6 +22,7 @@
 #include <ScsEigen/Math.h>
 #include <ScsEigen/MathematicalProgram.h>
 #include <ScsEigen/Settings.h>
+#include <ScsEigen/Solution.h>
 #include <ScsEigen/Solver.h>
 #include <ScsEigen/impl/SettingsImpl.h>
 
@@ -33,6 +34,7 @@ struct Solver::Impl
 {
     Settings settings; /**< The settings of the ScsSolver */
     MathematicalProgram mathematicalProgram; /**< The mathematical problem that should be solved */
+    Solution solution; /**< Solution of the conic problem */
 
     double constant{0}; /**< Constant term in the cost function. */
     std::vector<scs_float> gradient; /**< Gradient term in the cost function. */
@@ -48,7 +50,7 @@ struct Solver::Impl
 
     std::unique_ptr<ScsCone, std::function<void(ScsCone*)>> cone;
     std::unique_ptr<ScsData, std::function<void(ScsData*)>> data;
-    std::unique_ptr<ScsSolution, std::function<void(ScsSolution*)>> solution;
+    std::unique_ptr<ScsSolution, std::function<void(ScsSolution*)>> scsSolution;
 
     Impl()
         : cone(static_cast<ScsCone*>(scs_calloc(1, sizeof(ScsCone))),
@@ -65,11 +67,11 @@ struct Solver::Impl
                    if (ptr != nullptr)
                        scs_free_data(ptr, nullptr);
                })
-        , solution(static_cast<ScsSolution*>(scs_calloc(1, sizeof(ScsSolution))),
-                   [](ScsSolution* ptr) {
-                       if (ptr != nullptr)
-                           scs_free_sol(ptr);
-                   })
+        , scsSolution(static_cast<ScsSolution*>(scs_calloc(1, sizeof(ScsSolution))),
+                      [](ScsSolution* ptr) {
+                          if (ptr != nullptr)
+                              scs_free_sol(ptr);
+                      })
     {
     }
 
@@ -405,7 +407,51 @@ bool Solver::solve()
     ScsInfo info{0};
 
     // solve the problem
-    scs(m_pimpl->data.get(), m_pimpl->cone.get(), m_pimpl->solution.get(), &info);
+    m_pimpl->solution.status = Solution::getStatus(scs(m_pimpl->data.get(), //
+                                                       m_pimpl->cone.get(),
+                                                       m_pimpl->scsSolution.get(),
+                                                       &info));
 
-    return true;
+    // copy the content of scs info.
+    m_pimpl->solution.iteration = info.iter;
+    m_pimpl->solution.primalObjective = info.pobj;
+    m_pimpl->solution.dualObjective = info.dobj;
+    m_pimpl->solution.primalResidue = info.res_pri;
+    m_pimpl->solution.residueInfeasibility = info.res_infeas;
+    m_pimpl->solution.residueUnbounded = info.res_unbdd;
+    m_pimpl->solution.relativeDualityGap = info.rel_gap;
+    m_pimpl->solution.setupTime = info.setup_time;
+    m_pimpl->solution.solveTime = info.solve_time;
+
+    m_pimpl->solution.dualVariable = Eigen::Map<Eigen::Matrix<scs_float, Eigen::Dynamic, 1>>( //
+        m_pimpl->scsSolution->y,
+        m_pimpl->constraintMatrixRows);
+
+    m_pimpl->solution.primalEqualitySlack
+        = Eigen::Map<Eigen::Matrix<scs_float, //
+                                   Eigen::Dynamic,
+                                   1>>(m_pimpl->scsSolution->s, m_pimpl->constraintMatrixRows);
+
+    if (m_pimpl->solution.status == Solution::Status::solved
+        || m_pimpl->solution.status == Solution::Status::solved_inaccurate)
+    {
+        m_pimpl->solution.completeSolution
+            = Eigen::Map<Eigen::Matrix<scs_float, //
+                                       Eigen::Dynamic,
+                                       1>>(m_pimpl->scsSolution->x, m_pimpl->optimizationVariables);
+
+        m_pimpl->solution.solution = m_pimpl->solution.completeSolution.head(
+            m_pimpl->mathematicalProgram.numberOfVariables());
+
+        return true;
+    }
+
+    log()->error("[Solver::Solve] Unable to find a feasible solution. Please inspect the "
+                 "Solution struct.");
+    return false;
+}
+
+const Solution& Solver::solution() const
+{
+    return m_pimpl->solution;
 }
