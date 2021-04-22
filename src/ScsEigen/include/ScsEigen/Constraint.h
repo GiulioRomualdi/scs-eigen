@@ -18,7 +18,11 @@
 namespace ScsEigen
 {
 /**
- * Constraint
+ * Constraint class describes a generic convex constraint set of the form
+ * \f[
+ * l \le _\mathcal{k} f(x)  \le _\mathcal{k} u
+ * Where \f$ \le _\mathcal{k} \f$ represents a generalized inequality.
+ * \f]
  */
 class Constraint
 {
@@ -47,10 +51,9 @@ protected:
     bool setNumberOfConstraints(int numberOfConstraints);
 
 public:
+
     ~Constraint() = default;
-
-    std::string_view getDescrition() const;
-
+    std::string_view getDescription() const;
     int getNumberOfVariables() const;
     int getNumberOfConstraints() const;
     Eigen::Ref<const Eigen::VectorXd> getLowerBound() const;

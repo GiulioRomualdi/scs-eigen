@@ -149,7 +149,7 @@ Eigen::Ref<const Eigen::VectorXd> Constraint::getUpperBound() const
     return m_upperBound;
 }
 
-std::string_view Constraint::getDescrition() const
+std::string_view Constraint::getDescription() const
 {
     return m_description;
 }
