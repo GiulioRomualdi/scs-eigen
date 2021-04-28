@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_settings_8h" kind="file" language="C++">
+    <compoundname>Settings.h</compoundname>
+    <includes local="no">memory</includes>
+    <includedby refid="_settings_impl_8h" local="no">SettingsImpl.h</includedby>
+    <includedby refid="_solver_8h" local="no">Solver.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Settings.h</label>
+        <link refid="_settings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Solver.h</label>
+        <link refid="_solver_8h"/>
+      </node>
+      <node id="2">
+        <label>SettingsImpl.h</label>
+        <link refid="_settings_impl_8h"/>
+      </node>
+      <node id="1">
+        <label>Settings.h</label>
+        <link refid="_settings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_scs_eigen_1_1_settings" prot="public">ScsEigen::Settings</innerclass>
+    <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+<simplesect kind="date"><para>2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Settings.h"/>
+  </compounddef>
+</doxygen>

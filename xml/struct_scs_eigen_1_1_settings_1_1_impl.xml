@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_scs_eigen_1_1_settings_1_1_impl" kind="struct" language="C++" prot="public">
+    <compoundname>ScsEigen::Settings::Impl</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_settings_1_1_impl_1ac25fb4f7bfb3e99892bcd81f05743839" prot="public" static="no" mutable="no">
+        <type>ScsSettings</type>
+        <definition>ScsSettings ScsEigen::Settings::Impl::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scs Setting struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" line="26" column="17" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_settings_1_1_impl_1aac5e20edc9e67cd4a1aadab4d3cad561" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ScsEigen::Settings::Impl::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>name of the file where the solution is stored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" line="27" column="17" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" line="25" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/SettingsImpl.h" bodystart="24" bodyend="28"/>
+    <listofallmembers>
+      <member refid="struct_scs_eigen_1_1_settings_1_1_impl_1aac5e20edc9e67cd4a1aadab4d3cad561" prot="public" virt="non-virtual"><scope>ScsEigen::Settings::Impl</scope><name>filename</name></member>
+      <member refid="struct_scs_eigen_1_1_settings_1_1_impl_1ac25fb4f7bfb3e99892bcd81f05743839" prot="public" virt="non-virtual"><scope>ScsEigen::Settings::Impl</scope><name>settings</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

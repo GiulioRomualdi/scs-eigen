@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_aaf370e3b2562d9aa0ac29f285512b02" kind="dir">
+    <compoundname>ScsEigen</compoundname>
+    <innerdir refid="dir_c3e991e1c88ab8dc1b73c66df700e934">include</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/"/>
+  </compounddef>
+</doxygen>

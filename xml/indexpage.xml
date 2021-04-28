@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>scs-eigen &lt;img src=&quot;https://img.shields.io/badge/License-MIT-yellow.svg&quot; alt=&quot;License&quot;/&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1autotoc_md1">
+<title>Dependencies</title>
+<para>The project depends only on <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> and <ulink url="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen3</ulink>. Please install <computeroutput>scs</computeroutput> using the <computeroutput>cmake-build</computeroutput> system provided in <ulink url="https://github.com/dic-iit/scs-cmake-buildsystem">this repository</ulink>.</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Usage</title>
+<para><orderedlist>
+<listitem><para>Clone the repository</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/GiulioRomualdi/scs-eigen</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>Build it</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>scs-eigen</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=&lt;custom-folder&gt;<sp/>../</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>install</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>Add the following environmental variable <programlisting><codeline><highlight class="normal">ScsEigen_DIR=/path/where/you/installed/</highlight></codeline>
+</programlisting></para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>How to include the library in your CMake project</title>
+<para><bold>scs-eigen</bold> provides native <computeroutput>CMake</computeroutput> support which allows the library to be easily used in <computeroutput>CMake</computeroutput> projects. <bold>scs-eigen</bold> exports a CMake target called <computeroutput>ScsEigen::ScsEigen</computeroutput> which can be imported using the <computeroutput>find_package</computeroutput> CMake command and used by calling <computeroutput>target_link_libraries</computeroutput> as in the following example: <programlisting filename=".cmake"><codeline><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.0)</highlight></codeline>
+<codeline><highlight class="normal">project(myproject)</highlight></codeline>
+<codeline><highlight class="normal">find_package(ScsEigen<sp/>REQUIRED)</highlight></codeline>
+<codeline><highlight class="normal">add_executable(example<sp/>example.cpp)</highlight></codeline>
+<codeline><highlight class="normal">target_link_libraries(example<sp/>ScsEigen::ScsEigen)</highlight></codeline>
+</programlisting></para>
+<para>In your code <programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;ScsEigen/ScsEigen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">auto<sp/>solver<sp/>=<sp/><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>How to use the library</title>
+<para><bold>scs-eigen</bold> introduces the <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> class that can be used to easily design a convex optimization problem.</para>
+<para><computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput>, <computeroutput><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> will perform the so called conic-embedding to convert them in a form compatible with <computeroutput>scs</computeroutput>.</para>
+<para>We provide a list of self-contained example that can be used as a refernce to build an optimization problem:<itemizedlist>
+<listitem><para>`qp.md` contains an example of Quadratic Programming (QP) problem</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>License</title>
+<para>Materials in this repository are distributed under the following license:</para>
+<para><blockquote><para>All software is licensed under the MIT License. See <ulink url="https://github.com/GiulioRomualdi/scs-eigen/blob/main/LICENSE">LICENSE</ulink> file for details. </para>
+</blockquote></para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

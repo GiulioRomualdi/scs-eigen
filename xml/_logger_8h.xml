@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_logger_8h" kind="file" language="C++">
+    <compoundname>Logger.h</compoundname>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_scs_eigen_1_1_logger" prot="public">ScsEigen::Logger</innerclass>
+    <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Logger.h"/>
+  </compounddef>
+</doxygen>

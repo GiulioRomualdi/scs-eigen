@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_scs_eigen_1_1_solution" kind="struct" language="C++" prot="public">
+    <compoundname>ScsEigen::Solution</compoundname>
+    <includes refid="_solution_8h" local="no">Solution.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Status</name>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a16e74ec57f0aee76aa89065c4cecfb63" prot="public">
+          <name>infeasible_inaccurate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a3aa9ba57c878bca44a01c8f46b0d6c9f" prot="public">
+          <name>unbounded_inaccurate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a1e1d797794489f86365e23b2457ea573" prot="public">
+          <name>sigint</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a26934eb377001f66e37289a5c93fe284" prot="public">
+          <name>failed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a44560d82707cce3b8111a770924cf0e2" prot="public">
+          <name>indeterminate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32afc988471d247479f88a57e29916bbf82" prot="public">
+          <name>infeasible</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32afceb11066a5e52940fe5a2565bc29d9a" prot="public">
+          <name>unbounded</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a937993609f879126ce444c9fcd31b252" prot="public">
+          <name>unfinished</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32aac6f263f90369bef9b31137c03c77c09" prot="public">
+          <name>solved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32a2d8f758a90af2a96cc98f42595c3876e" prot="public">
+          <name>solved_inaccurate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32aad921d60486366258809553a3db49a4a" prot="public">
+          <name>unknown</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="29" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="28" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a6b59ffcce9120168c12887d98212abdd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ScsEigen::Solution::iteration</definition>
+        <argsstring></argsstring>
+        <name>iteration</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of iterations taken by the solver </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="44" column="9" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1ac09f740c3edd370177afecaf60899dff" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::primalObjective</definition>
+        <argsstring></argsstring>
+        <name>primalObjective</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Primal objective value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="45" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1ae89404a42a1510b3640bf8d7dac2fc10" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::dualObjective</definition>
+        <argsstring></argsstring>
+        <name>dualObjective</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dual objective value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="46" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a9704ccf4734dd48279c838d9e169c298" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::primalResidue</definition>
+        <argsstring></argsstring>
+        <name>primalResidue</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Primal equality residue </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="47" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a6177fc396cdd7fd3c07ac521eb16aae5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::residueInfeasibility</definition>
+        <argsstring></argsstring>
+        <name>residueInfeasibility</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>infeasibility certificate residue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="48" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a65aec123e825cba9c65727ff83be6e0d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::residueUnbounded</definition>
+        <argsstring></argsstring>
+        <name>residueUnbounded</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unbounded certificate residue </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="49" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1aa5e8cc0dbf5fe828f71a5a700e88e94a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::relativeDualityGap</definition>
+        <argsstring></argsstring>
+        <name>relativeDualityGap</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>relative duality gap </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="50" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1af2f461e09687817c892e170b4dd9e083" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::setupTime</definition>
+        <argsstring></argsstring>
+        <name>setupTime</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time taken for SCS to setup in milliseconds. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="51" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1adde4a7e039832203be2676220b6b810e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScsEigen::Solution::solveTime</definition>
+        <argsstring></argsstring>
+        <name>solveTime</name>
+        <initializer>{std::nan(&quot;0&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time taken for SCS to solve the problem in milliseconds. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="52" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a67d826aa13fb6381c33667da932e7f3c" prot="public" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd ScsEigen::Solution::solution</definition>
+        <argsstring></argsstring>
+        <name>solution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="54" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1ad962ce777626e47d50db9f89d4938ea4" prot="public" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd ScsEigen::Solution::completeSolution</definition>
+        <argsstring></argsstring>
+        <name>completeSolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="55" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1abc13501fd64a0a4028d2558bcf58948f" prot="public" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd ScsEigen::Solution::dualVariable</definition>
+        <argsstring></argsstring>
+        <name>dualVariable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="56" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a94ec8268c4ae8a68420fe22d0a31ec4d" prot="public" static="no" mutable="no">
+        <type>Eigen::VectorXd</type>
+        <definition>Eigen::VectorXd ScsEigen::Solution::primalEqualitySlack</definition>
+        <argsstring></argsstring>
+        <name>primalEqualitySlack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="57" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a0ea5eacd27af3d5869ca9fc028e3ec2c" prot="public" static="no" mutable="no">
+        <type>Status</type>
+        <definition>Status ScsEigen::Solution::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <initializer>{Status::unknown}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="59" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_scs_eigen_1_1_solution_1a69c5a782d551a24fab7271a3f12722ca" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend ScsEigen::Solution::Solver</definition>
+        <argsstring></argsstring>
+        <name>Solver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="64" column="12" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_scs_eigen_1_1_solution_1a7801544c71d1e3f54b08ec1e04bb6440" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ScsEigen::Solution::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="61" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="struct_scs_eigen_1_1_solution_1a4e0452fb49bdef34d59cf295417a5369" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Solution::Status</type>
+        <definition>static Solution::Status ScsEigen::Solution::getStatus</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getStatus</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="65" column="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_scs_eigen_1_1_solution" kindref="compound">Solution</ref> class contains the solution of the convex problem. </para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" line="27" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h" bodystart="26" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct_scs_eigen_1_1_solution_1ad962ce777626e47d50db9f89d4938ea4" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>completeSolution</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1ae89404a42a1510b3640bf8d7dac2fc10" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>dualObjective</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1abc13501fd64a0a4028d2558bcf58948f" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>dualVariable</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a4e0452fb49bdef34d59cf295417a5369" prot="private" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>getStatus</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a7801544c71d1e3f54b08ec1e04bb6440" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>isValid</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a6b59ffcce9120168c12887d98212abdd" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>iteration</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a94ec8268c4ae8a68420fe22d0a31ec4d" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>primalEqualitySlack</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1ac09f740c3edd370177afecaf60899dff" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>primalObjective</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a9704ccf4734dd48279c838d9e169c298" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>primalResidue</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1aa5e8cc0dbf5fe828f71a5a700e88e94a" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>relativeDualityGap</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a6177fc396cdd7fd3c07ac521eb16aae5" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>residueInfeasibility</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a65aec123e825cba9c65727ff83be6e0d" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>residueUnbounded</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1af2f461e09687817c892e170b4dd9e083" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>setupTime</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a67d826aa13fb6381c33667da932e7f3c" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>solution</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a69c5a782d551a24fab7271a3f12722ca" prot="private" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>Solver</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1adde4a7e039832203be2676220b6b810e" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>solveTime</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1ad26870adda3b9792e35ec2dae9b37e32" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>Status</name></member>
+      <member refid="struct_scs_eigen_1_1_solution_1a0ea5eacd27af3d5869ca9fc028e3ec2c" prot="public" virt="non-virtual"><scope>ScsEigen::Solution</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

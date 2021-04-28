@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_scs_eigen_1_1_solver" kind="class" language="C++" prot="public">
+    <compoundname>ScsEigen::Solver</compoundname>
+    <includes refid="_solver_8h" local="no">Solver.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scs_eigen_1_1_solver_1ac9cfd9fad88959d45e6df324397b7cfa" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Impl &gt;</type>
+        <definition>std::unique_ptr&lt;Impl&gt; ScsEigen::Solver::m_pimpl</definition>
+        <argsstring></argsstring>
+        <name>m_pimpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="32" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a40d1ccce88ec2626853bc29e1ed194ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScsEigen::Solver::Solver</definition>
+        <argsstring>()</argsstring>
+        <name>Solver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a921530402a120d568b3a1285883699b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScsEigen::Solver::~Solver</definition>
+        <argsstring>()</argsstring>
+        <name>~Solver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a0f967a56f988e57bcf9ee048bd3a94db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scs_eigen_1_1_settings" kindref="compound">Settings</ref> &amp;</type>
+        <definition>Settings&amp; ScsEigen::Solver::settings</definition>
+        <argsstring>()</argsstring>
+        <name>settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to the <ref refid="class_scs_eigen_1_1_settings" kindref="compound">ScsEigen::Settings</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1af82491e978bfd0bf72c7978ed40a00e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_scs_eigen_1_1_settings" kindref="compound">Settings</ref> &amp;</type>
+        <definition>const Settings&amp; ScsEigen::Solver::settings</definition>
+        <argsstring>() const</argsstring>
+        <name>settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to the <ref refid="class_scs_eigen_1_1_settings" kindref="compound">ScsEigen::Settings</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="54" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a00d3a52b9f6700bfd5bb924ceac479b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">MathematicalProgram</ref> &amp;</type>
+        <definition>MathematicalProgram&amp; ScsEigen::Solver::mathematicalProgram</definition>
+        <argsstring>()</argsstring>
+        <name>mathematicalProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to the <ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="59" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a924fc7428f27f2de192e77edfb967713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">MathematicalProgram</ref> &amp;</type>
+        <definition>const MathematicalProgram&amp; ScsEigen::Solver::mathematicalProgram</definition>
+        <argsstring>() const</argsstring>
+        <name>mathematicalProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to the <ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="64" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a77f4aea8f4131a2ebb340a5777bebafd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ScsEigen::Solver::solve</definition>
+        <argsstring>()</argsstring>
+        <name>solve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Solve the optimization problem described in <ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">MathematicalProgram</ref> class <simplesect kind="return"><para>true in case of success/false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="70" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_solver_1a795031c498a9bccce8f6cc1515d8190e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_scs_eigen_1_1_solution" kindref="compound">Solution</ref> &amp;</type>
+        <definition>const Solution&amp; ScsEigen::Solver::solution</definition>
+        <argsstring>() const</argsstring>
+        <name>solution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to <ref refid="struct_scs_eigen_1_1_solution" kindref="compound">ScsEigen::Solution</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="75" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_scs_eigen_1_1_solver" kindref="compound">Solver</ref> class is a wrapper of the scs library </para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" line="30" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solver.h" bodystart="29" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_scs_eigen_1_1_solver_1ac9cfd9fad88959d45e6df324397b7cfa" prot="private" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>m_pimpl</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a00d3a52b9f6700bfd5bb924ceac479b2" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>mathematicalProgram</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a924fc7428f27f2de192e77edfb967713" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>mathematicalProgram</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a0f967a56f988e57bcf9ee048bd3a94db" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>settings</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1af82491e978bfd0bf72c7978ed40a00e4" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>settings</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a795031c498a9bccce8f6cc1515d8190e" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>solution</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a77f4aea8f4131a2ebb340a5777bebafd" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>solve</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a40d1ccce88ec2626853bc29e1ed194ae" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>Solver</name></member>
+      <member refid="class_scs_eigen_1_1_solver_1a921530402a120d568b3a1285883699b3" prot="public" virt="non-virtual"><scope>ScsEigen::Solver</scope><name>~Solver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

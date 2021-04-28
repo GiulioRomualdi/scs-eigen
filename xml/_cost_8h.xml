@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_cost_8h" kind="file" language="C++">
+    <compoundname>Cost.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">Eigen/Dense</includes>
+    <includedby refid="_linear_cost_8h" local="no">LinearCost.h</includedby>
+    <includedby refid="_quadratic_cost_8h" local="no">QuadraticCost.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="1">
+        <label>Cost.h</label>
+        <link refid="_cost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>Solver.h</label>
+        <link refid="_solver_8h"/>
+      </node>
+      <node id="1">
+        <label>Cost.h</label>
+        <link refid="_cost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MathematicalProgram.h</label>
+        <link refid="_mathematical_program_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QuadraticCost.h</label>
+        <link refid="_quadratic_cost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LinearCost.h</label>
+        <link refid="_linear_cost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_scs_eigen_1_1_cost" prot="public">ScsEigen::Cost</innerclass>
+    <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+<simplesect kind="date"><para>2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Cost.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_math_8h" kind="file" language="C++">
+    <compoundname>Math.h</compoundname>
+    <includes local="no">utility</includes>
+    <includes local="no">Eigen/Dense</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Math.h</label>
+        <link refid="_math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="2">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+<simplesect kind="date"><para>2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h"/>
+  </compounddef>
+</doxygen>

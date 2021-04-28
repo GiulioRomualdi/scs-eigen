@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_solution_8h" kind="file" language="C++">
+    <compoundname>Solution.h</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">Eigen/Dense</includes>
+    <includedby refid="_solver_8h" local="no">Solver.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="1">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Solver.h</label>
+        <link refid="_solver_8h"/>
+      </node>
+      <node id="1">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_scs_eigen_1_1_solution" prot="public">ScsEigen::Solution</innerclass>
+    <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the LGPLv2.1 or later, see LGPL.TXT </para>
+</simplesect>
+<simplesect kind="date"><para>2018 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Solution.h"/>
+  </compounddef>
+</doxygen>
