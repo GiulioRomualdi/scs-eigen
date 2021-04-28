@@ -16,7 +16,7 @@ TEST_CASE("QPProblem - Unconstrained")
     Eigen::Vector2d gradient;
     gradient << 3, 1;
 
-    solver.mathematicalProgram().setNumberOfVariabels(2);
+    solver.mathematicalProgram().setNumberOfVariables(2);
 
     REQUIRE(solver.mathematicalProgram()
             .addQuadraticCost(std::make_shared<ScsEigen::QuadraticCost>(H, gradient), "test"));
@@ -42,7 +42,7 @@ TEST_CASE("QPProblem - Constrained")
     Eigen::Vector2d gradient;
     gradient << 3, 1;
 
-    solver.mathematicalProgram().setNumberOfVariabels(2);
+    solver.mathematicalProgram().setNumberOfVariables(2);
 
     REQUIRE(solver.mathematicalProgram().addQuadraticCost( //
         std::make_shared<ScsEigen::QuadraticCost>(H, gradient),

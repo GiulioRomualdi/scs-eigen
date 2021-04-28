@@ -29,7 +29,7 @@ MathematicalProgram::MathematicalProgram()
 
 MathematicalProgram::~MathematicalProgram() = default;
 
-void MathematicalProgram::setNumberOfVariabels(unsigned int variables)
+void MathematicalProgram::setNumberOfVariables(unsigned int variables)
 {
     m_pimpl->numberOfVariables = variables;
 }

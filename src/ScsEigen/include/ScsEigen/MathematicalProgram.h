@@ -34,7 +34,7 @@ public:
 
     ~MathematicalProgram();
 
-    void setNumberOfVariabels(unsigned int variables);
+    void setNumberOfVariables(unsigned int variables);
 
     unsigned int numberOfVariables() const;
 
