@@ -62,7 +62,7 @@ int Cost::getNumberOfVariables() const
     return m_numberOfVariables;
 }
 
-std::string_view Cost::getDescrition() const
+std::string_view Cost::getDescription() const
 {
     return m_description;
 }

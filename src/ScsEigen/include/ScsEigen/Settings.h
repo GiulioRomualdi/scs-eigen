@@ -33,30 +33,30 @@ class Settings
 public:
 
     /**
-     * Constructor.
+     * @brief Constructor.
      */
     Settings();
 
     /**
-     * Destructor, Required for the pimpl idiom.
+     * brief Destructor, Required for the pimpl idiom.
      */
     ~Settings();
 
     /**
-     * Enable the heuristic data rescaling.
+     * brief Enable the heuristic data rescaling.
      * @param normalize if true the rescaling is enabled.
      * @warning If you call this function you should reinitialize the problem.
      */
     void normalize(bool normalize);
 
     /**
-     * Is rescaling enabled?
+     * brief Is rescaling enabled?
      * @return true if the rescaling is enabled.
      */
     bool normalize() const;
 
     /**
-     * Set the scaling factor.
+     * @brief Set the scaling factor.
      * @param scale a positive number.
      * @return true in case of success, false otherwise.
      * @warning If you call this function you should reinitialize the problem.
@@ -64,13 +64,13 @@ public:
     bool scale(double scale);
 
     /**
-     * Get the scaling factor
+     * @brief Get the scaling factor
      * @return the scaling factor.
      */
     double scale() const;
 
     /**
-     * Set the equality constraint scaling.
+     * @brief Set the equality constraint scaling.
      * @param rho a positive number.
      * @return true in case of success, false otherwise.
      * @warning If you call this function you should reinitialize the problem.
@@ -78,95 +78,95 @@ public:
     bool rho(double rho);
 
     /**
-     * Get the scaling factor.
+     * @brief Get the scaling factor.
      * @return the scaling factor.
      */
     double rho() const;
 
     /**
-     * Set the maximum number of iterations.
+     * @brief Set the maximum number of iterations.
      * @param iterations number of iterations
      * @return true in case of success, false otherwise.
      */
     bool maxIterations(int iterations);
 
     /**
-     * Get the number of iterations.
+     * @brief Get the number of iterations.
      * @return the iterations.
      */
     int maxIterations() const;
 
     /**
-     * Set the convergence tolerance.
+     * @brief Set the convergence tolerance.
      * @param eps convergence tolerance.
      * @return true in case of success, false otherwise.
      */
     bool eps(double eps);
 
     /**
-     * Get the convergence tolerance.
+     * @brief Get the convergence tolerance.
      * @return the tolerance.
      */
     double eps() const;
 
     /**
-     * Set the relaxation parameter.
+     * @brief Set the relaxation parameter.
      * @param alpha relaxation parameter.
      * @return true in case of success, false otherwise.
      */
     bool alpha(double alpha);
 
     /**
-     * Get the relaxation parameter.
+     * @brief Get the relaxation parameter.
      * @return the parameter.
      */
     double alpha() const;
 
     /**
-     * Set the verbosity of the solver.
+     * @brief Set the verbosity of the solver.
      * @param isVerbose if true the solver will be verbose.
      */
     void verbose(bool isVerbose);
 
     /**
-     * Is solver verbose?
+     * @brief Is solver verbose?
      * @return true if the solver is verbose.
      */
     bool verbose() const;
 
     /**
-     * Enable the warm start.
+     * @brief Enable the warm start.
      * @param warmStart if true the warm start is enable
      */
     void warmStart(bool warmStart);
 
     /**
-     * Is warm start enabled?
+     * @brief Is warm start enabled?
      * @return true if warm start is enabled.
      */
     bool warmStart() const;
 
     /**
-     * Set the memory for acceleration.
+     * @brief Set the memory for acceleration.
      * @param accelerationLookBack memory acceleration.
      * @return true if the solver is verbose.
      */
     bool accelerationLookback(int accelerationLookback);
 
     /**
-     * Get the memory acceleration.
+     * @brief Get the memory acceleration.
      * @return the memory acceleration.
      */
     int accelerationLookback();
 
     /**
-     * Set the filename used to store the data.
+     * @brief Set the filename used to store the data.
      * @filename name of the file where the data will be stored.
      */
     void writeDataFilename(std::string_view filename);
 
     /**
-     * Get the filename.
+     * @brief Get the filename.
      * @return a string containing the filename.
      */
     std::string_view writeDataFilename() const;

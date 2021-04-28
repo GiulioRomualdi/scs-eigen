@@ -16,10 +16,10 @@ using namespace ScsEigen;
 struct MathematicalProgram::Impl
 {
     unsigned int numberOfVariables{0};
-    std::unordered_map<std::string_view, std::shared_ptr<LinearCost>> linearCosts;
-    std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>> quadraticCosts;
+    MathematicalProgram::dictionary<LinearCost> linearCosts;
+    MathematicalProgram::dictionary<QuadraticCost> quadraticCosts;
 
-    std::unordered_map<std::string_view, std::shared_ptr<LinearConstraint>> linearConstraints;
+    MathematicalProgram::dictionary<LinearConstraint> linearConstraints;
 };
 
 MathematicalProgram::MathematicalProgram()
@@ -87,8 +87,7 @@ std::weak_ptr<LinearCost> MathematicalProgram::getLinearCost(std::string_view na
     return std::shared_ptr<LinearCost>();
 }
 
-const std::unordered_map<std::string_view, std::shared_ptr<LinearCost>>&
-MathematicalProgram::getLinearCosts() const
+const MathematicalProgram::dictionary<LinearCost>& MathematicalProgram::getLinearCosts() const
 {
     return m_pimpl->linearCosts;
 }
@@ -142,13 +141,13 @@ std::weak_ptr<QuadraticCost> MathematicalProgram::getQuadraticCost(std::string_v
     return std::shared_ptr<QuadraticCost>();
 }
 
-const std::unordered_map<std::string_view, std::shared_ptr<QuadraticCost>>&
-MathematicalProgram::getQuadraticCosts() const
+const MathematicalProgram::dictionary<QuadraticCost>& MathematicalProgram::getQuadraticCosts() const
 {
     return m_pimpl->quadraticCosts;
 }
 
-bool MathematicalProgram::addLinearConstraint(std::shared_ptr<LinearConstraint> constraint, std::string_view name)
+bool MathematicalProgram::addLinearConstraint(std::shared_ptr<LinearConstraint> constraint,
+                                              std::string_view name)
 {
     if (m_pimpl->numberOfVariables == 0)
     {
@@ -184,7 +183,8 @@ bool MathematicalProgram::addLinearConstraint(std::shared_ptr<LinearConstraint> 
     return true;
 }
 
-std::weak_ptr<LinearConstraint> MathematicalProgram::getLinearConstraint(std::string_view name) const
+std::weak_ptr<LinearConstraint>
+MathematicalProgram::getLinearConstraint(std::string_view name) const
 {
     auto constraint = m_pimpl->linearConstraints.find(name);
     if (constraint != m_pimpl->linearConstraints.end())
@@ -192,13 +192,13 @@ std::weak_ptr<LinearConstraint> MathematicalProgram::getLinearConstraint(std::st
         return constraint->second;
     }
 
-    log()->warning("[MathematicalProgram::getLinearConstraint] The constraint named " + std::string(name)
-                   + "does not exists. An invalid weak_ptr will be returned.");
+    log()->warning("[MathematicalProgram::getLinearConstraint] The constraint named "
+                   + std::string(name) + "does not exists. An invalid weak_ptr will be returned.");
 
     return std::shared_ptr<LinearConstraint>();
 }
 
-const std::unordered_map<std::string_view, std::shared_ptr<LinearConstraint>>&
+const MathematicalProgram::dictionary<LinearConstraint>&
 MathematicalProgram::getLinearConstraints() const
 {
     return m_pimpl->linearConstraints;

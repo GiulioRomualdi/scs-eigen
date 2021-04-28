@@ -1,8 +1,8 @@
 /**
  * @file Solver.h
  * @author Giulio Romualdi
- * @copyright  Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
- * @date 2018
+ * @copyright Released under the terms of the MIT License.
+ * @date 2021
  */
 #ifndef SCS_EIGEN_SOLVER_H
 #define SCS_EIGEN_SOLVER_H
@@ -24,7 +24,9 @@ namespace ScsEigen
 {
 
 /**
- * Solver class is a wrapper of the scs library
+ * Solver class is a wrapper of the scs library.
+ * This is the main class that you should use when you want to solve a convex optimization problem.
+ * This [example](./pages/qp.md) can be used as a reference to solve a QP problem.
  */
 class Solver
 {
@@ -32,45 +34,44 @@ class Solver
     std::unique_ptr<Impl> m_pimpl;
 
 public:
-
     /**
-     * Constructor.
+     * @brief Constructor.
      */
     Solver();
 
     /**
-     * Destructor.
+     * @brief Destructor.
      */
     ~Solver();
 
     /**
-     * Access to the ScsEigen::Settings object.
+     * @brief Access to the ScsEigen::Settings object.
      */
     Settings& settings();
 
     /**
-     * Access to the ScsEigen::Settings object.
+     * @brief Access to the ScsEigen::Settings object.
      */
     const Settings& settings() const;
 
     /**
-     * Access to the ScsEigen::MathematicalProgram object.
+     * @brief Access to the ScsEigen::MathematicalProgram object.
      */
     MathematicalProgram& mathematicalProgram();
 
     /**
-     * Access to the ScsEigen::MathematicalProgram object.
+     * @brief Access to the ScsEigen::MathematicalProgram object.
      */
     const MathematicalProgram& mathematicalProgram() const;
 
     /**
-     * Solve the optimization problem described in MathematicalProgram class
+     * @brief Solve the optimization problem described in MathematicalProgram class
      * @return true in case of success/false otherwise.
      */
     bool solve();
 
     /**
-     * Access to ScsEigen::Solution object.
+     * @brief Access to ScsEigen::Solution object.
      */
     const Solution& solution() const;
 };
