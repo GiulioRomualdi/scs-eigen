@@ -3,6 +3,10 @@
 ## Dependencies
 The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page). Please install `scs` using the `cmake-build` system provide in [this repository](https://github.com/dic-iit/scs-cmake-buildsystem).
 
+## Documentation
+
+The documentation is available online at the accompanying [website](https://giulioromualdi.github.io/scs-eigen/).
+
 ## Usage
 1. Clone the repository
 
@@ -23,6 +27,7 @@ The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](
    ```
    ScsEigen_DIR=/path/where/you/installed/
    ```
+
 ## How to use the library
 **scs-eigen** provides native `CMake` support which allows the library to be easily used in `CMake` projects.
 **scs-eigen** exports a CMake target called `ScsEigen::ScsEigen` which can be imported using the `find_package` CMake command and used by calling `target_link_libraries` as in the following example:
