@@ -52,24 +52,50 @@
             <li>
               Reference
               <ul>
+                <li><a href="#pub-types">Public types</a></li>
                 <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
               </ul>
             </li>
           </ul>
         </div>
-<p><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> is a class that describes an optimization problem</p>
+<p><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> is a class that describes an optimization problem. Please use if when you want to define an optimization problem.</p><p>This simple example shows you how to use the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;ScsEigen/MathematicalProgram.h&gt;</span><span class="cp"></span>
+
+<span class="p">...</span>
+
+<span class="c1">// Initialize the mathematical programming problem</span>
+<span class="n">ScsEigen</span><span class="o">::</span><span class="n">MathematicalProgram</span> <span class="n">mp</span><span class="p">;</span>
+
+<span class="c1">// Add a quadratic cost</span>
+<span class="n">mp</span><span class="p">.</span><span class="n">addQuadraticCost</span><span class="p">(</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ScsEigen</span><span class="o">::</span><span class="n">QuadraticCost</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">,</span>
+       <span class="s">&quot;quadratic cost&quot;</span><span class="p">));</span>
+
+<span class="c1">// Add linear constraint</span>
+<span class="n">mp</span><span class="p">.</span><span class="n">addLinearConstraint</span><span class="p">(</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ScsEigen</span><span class="o">::</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">lowerBound</span><span class="p">,</span> <span class="n">upperBound</span><span class="p">),</span>
+       <span class="s">&quot;linear constraint&quot;</span><span class="p">));</span></pre>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="afe781329fc472bcc3ea27fa5fef308d2">
+              <div class="m-doc-template">template&lt;class T&gt;</div>
+              using <a href="#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc-self">dictionary</a> = std::unordered_map&lt;std::string_view, std::shared_ptr&lt;T&gt;&gt;
+            </dt>
+            <dd>dictionary used to store cost and constraints.</dd>
+          </dl>
+        </section>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
             <dt id="a249d15ba08a77fc13a6239a4bd462a11">
               <span class="m-doc-wrap-bumper"><a href="#a249d15ba08a77fc13a6239a4bd462a11" class="m-doc-self">MathematicalProgram</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Constructor.</dd>
             <dt id="acb917134e6000cff89944e9bb0d59ea7">
               <span class="m-doc-wrap-bumper"><a href="#acb917134e6000cff89944e9bb0d59ea7" class="m-doc-self">~MathematicalProgram</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Destructor.</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -78,51 +104,195 @@
             <dt id="a923b25789b93b60f71af60d182c4df85">
               <span class="m-doc-wrap-bumper">void <a href="#a923b25789b93b60f71af60d182c4df85" class="m-doc-self">setNumberOfVariables</a>(</span><span class="m-doc-wrap">unsigned int variables)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Set the number of variables.</dd>
             <dt id="a5a2d66d46baca622ab05f5ffcaf651d3">
               <span class="m-doc-wrap-bumper">auto <a href="#a5a2d66d46baca622ab05f5ffcaf651d3" class="m-doc-self">numberOfVariables</a>(</span><span class="m-doc-wrap">) const -&gt; unsigned int</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a66adf1561d9a8e48f99209d1df305361">
-              <span class="m-doc-wrap-bumper">auto <a href="#a66adf1561d9a8e48f99209d1df305361" class="m-doc-self">addLinearCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt; cost,
+            <dd>Get the number of variables.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a66adf1561d9a8e48f99209d1df305361" class="m-doc">addLinearCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt; cost,
               std::string_view name) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="acfe40cb174a5638c22444a5e21b3fff3">
-              <span class="m-doc-wrap-bumper">auto <a href="#acfe40cb174a5638c22444a5e21b3fff3" class="m-doc-self">getLinearCost</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt;</span>
+            <dd>Set the linear cost.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#acfe40cb174a5638c22444a5e21b3fff3" class="m-doc">getLinearCost</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="ac1207ea6249819d5624026a8f7dc3704">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac1207ea6249819d5624026a8f7dc3704" class="m-doc-self">getLinearCosts</a>(</span><span class="m-doc-wrap">) const -&gt; const std::unordered_map&lt;std::string_view, std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt;&gt;&amp;</span>
+            <dd>Get the linear cost.</dd>
+            <dt id="a47933e1f46b712585e336944cf38a27b">
+              <span class="m-doc-wrap-bumper">auto <a href="#a47933e1f46b712585e336944cf38a27b" class="m-doc-self">getLinearCosts</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc">dictionary</a>&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt;&amp;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a9248c4f32d5aeae9cafdc8b932f315c4">
-              <span class="m-doc-wrap-bumper">auto <a href="#a9248c4f32d5aeae9cafdc8b932f315c4" class="m-doc-self">addQuadraticCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt; cost,
+            <dd>Get all the linear costs stored the in the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a9248c4f32d5aeae9cafdc8b932f315c4" class="m-doc">addQuadraticCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt; cost,
               std::string_view name) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="af46e64dd3e9ea89b13562d63d41ab8b5">
-              <span class="m-doc-wrap-bumper">auto <a href="#af46e64dd3e9ea89b13562d63d41ab8b5" class="m-doc-self">getQuadraticCost</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt;</span>
+            <dd>Set the quadratic cost.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af46e64dd3e9ea89b13562d63d41ab8b5" class="m-doc">getQuadraticCost</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a4190d6d62462513c06f81fc2c3103659">
-              <span class="m-doc-wrap-bumper">auto <a href="#a4190d6d62462513c06f81fc2c3103659" class="m-doc-self">getQuadraticCosts</a>(</span><span class="m-doc-wrap">) const -&gt; const std::unordered_map&lt;std::string_view, std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt;&gt;&amp;</span>
+            <dd>Get the quadratic cost.</dd>
+            <dt id="a2b0894253a917166c69912457d80b29c">
+              <span class="m-doc-wrap-bumper">auto <a href="#a2b0894253a917166c69912457d80b29c" class="m-doc-self">getQuadraticCosts</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc">dictionary</a>&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt;&amp;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="ac5f5b786fc6caa14cfb47f5b690ac27a">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac5f5b786fc6caa14cfb47f5b690ac27a" class="m-doc-self">addLinearConstraint</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt; constraint,
+            <dd>Get all the quadratic costs stored the in the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac5f5b786fc6caa14cfb47f5b690ac27a" class="m-doc">addLinearConstraint</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt; constraint,
               std::string_view name) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="aeb216c8ee64a31014c3ed46ec1718039">
-              <span class="m-doc-wrap-bumper">auto <a href="#aeb216c8ee64a31014c3ed46ec1718039" class="m-doc-self">getLinearConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt;</span>
+            <dd>Set the linear constraint.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aeb216c8ee64a31014c3ed46ec1718039" class="m-doc">getLinearConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a990078e2c1558397a3bfa40be3a9cddc">
-              <span class="m-doc-wrap-bumper">auto <a href="#a990078e2c1558397a3bfa40be3a9cddc" class="m-doc-self">getLinearConstraints</a>(</span><span class="m-doc-wrap">) const -&gt; const std::unordered_map&lt;std::string_view, std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt;&gt;&amp;</span>
+            <dd>Get the linear constraint.</dd>
+            <dt id="a443e22c9c5b6afcfd6636075c03e77c1">
+              <span class="m-doc-wrap-bumper">auto <a href="#a443e22c9c5b6afcfd6636075c03e77c1" class="m-doc-self">getLinearConstraints</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc">dictionary</a>&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt;&amp;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Get all the linear constraints stored the in the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a66adf1561d9a8e48f99209d1df305361"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a66adf1561d9a8e48f99209d1df305361" class="m-doc-self">addLinearCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt; cost,
+              std::string_view name)</span></span>
+            </h3>
+            <p>Set the linear cost.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">cost</td>
+                  <td>a shared pointer to the cost.</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>the name of the cost.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>the User is in charge to set the vectors related to the cost.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="acfe40cb174a5638c22444a5e21b3fff3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>&gt; ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acfe40cb174a5638c22444a5e21b3fff3" class="m-doc-self">getLinearCost</a>(</span><span class="m-doc-wrap">std::string_view name) const</span></span>
+            </h3>
+            <p>Get the linear cost.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">name</td>
+                  <td>name of the cost.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a weak_ptr to the cost.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>if the cost associated to the name &quot;name&quot; is not found an unlockable weak_ptr is returned.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a9248c4f32d5aeae9cafdc8b932f315c4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9248c4f32d5aeae9cafdc8b932f315c4" class="m-doc-self">addQuadraticCost</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt; cost,
+              std::string_view name)</span></span>
+            </h3>
+            <p>Set the quadratic cost.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">cost</td>
+                  <td>a shared pointer to the cost.</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>the name of the cost.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>the User is in charge to set the vectors related to the cost.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="af46e64dd3e9ea89b13562d63d41ab8b5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::weak_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>&gt; ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af46e64dd3e9ea89b13562d63d41ab8b5" class="m-doc-self">getQuadraticCost</a>(</span><span class="m-doc-wrap">std::string_view name) const</span></span>
+            </h3>
+            <p>Get the quadratic cost.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">name</td>
+                  <td>name of the cost.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a weak_ptr to the cost.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>if the cost associated to the name &quot;name&quot; is not found an unlockable weak_ptr is returned.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ac5f5b786fc6caa14cfb47f5b690ac27a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac5f5b786fc6caa14cfb47f5b690ac27a" class="m-doc-self">addLinearConstraint</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt; constraint,
+              std::string_view name)</span></span>
+            </h3>
+            <p>Set the linear constraint.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">constraint</td>
+                  <td>a shared pointer to the constraint.</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>the name of the constraint.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>the User is in charge to set the vectors related to the constraint.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aeb216c8ee64a31014c3ed46ec1718039"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt; ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aeb216c8ee64a31014c3ed46ec1718039" class="m-doc-self">getLinearConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const</span></span>
+            </h3>
+            <p>Get the linear constraint.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">name</td>
+                  <td>name of the constraint.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a weak_ptr to the constraint.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>if the constraint associated to the name &quot;name&quot; is not found an unlockable weak_ptr is returned.</p></aside>
+          </div></section>
         </section>
       </div>
     </div>

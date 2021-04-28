@@ -58,91 +58,56 @@
             </li>
           </ul>
         </div>
-<p><a href="class_scs_eigen_1_1_solver.html" class="m-doc">Solver</a> class is a wrapper of the scs library</p>
+<p><a href="class_scs_eigen_1_1_solver.html" class="m-doc">Solver</a> class is a wrapper of the scs library. This is the main class that you should use when you want to solve a convex optimization problem. This <a href="md_pages_qp.html" class="m-doc">example</a> can be used as a reference to solve a QP problem.</p>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a40d1ccce88ec2626853bc29e1ed194ae" class="m-doc">Solver</a>(</span><span class="m-doc-wrap">)</span>
+            <dt id="a40d1ccce88ec2626853bc29e1ed194ae">
+              <span class="m-doc-wrap-bumper"><a href="#a40d1ccce88ec2626853bc29e1ed194ae" class="m-doc-self">Solver</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a921530402a120d568b3a1285883699b3" class="m-doc">~Solver</a>(</span><span class="m-doc-wrap">)</span>
+            <dd>Constructor.</dd>
+            <dt id="a921530402a120d568b3a1285883699b3">
+              <span class="m-doc-wrap-bumper"><a href="#a921530402a120d568b3a1285883699b3" class="m-doc-self">~Solver</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
-            <dd></dd>
+            <dd>Destructor.</dd>
           </dl>
         </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a0f967a56f988e57bcf9ee048bd3a94db" class="m-doc">settings</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp;</span>
+            <dt id="a0f967a56f988e57bcf9ee048bd3a94db">
+              <span class="m-doc-wrap-bumper">auto <a href="#a0f967a56f988e57bcf9ee048bd3a94db" class="m-doc-self">settings</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp;</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#af82491e978bfd0bf72c7978ed40a00e4" class="m-doc">settings</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp;</span>
+            <dd>Access to the <a href="class_scs_eigen_1_1_settings.html" class="m-doc">ScsEigen::<wbr />Settings</a> object.</dd>
+            <dt id="af82491e978bfd0bf72c7978ed40a00e4">
+              <span class="m-doc-wrap-bumper">auto <a href="#af82491e978bfd0bf72c7978ed40a00e4" class="m-doc-self">settings</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp;</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a00d3a52b9f6700bfd5bb924ceac479b2" class="m-doc">mathematicalProgram</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp;</span>
+            <dd>Access to the <a href="class_scs_eigen_1_1_settings.html" class="m-doc">ScsEigen::<wbr />Settings</a> object.</dd>
+            <dt id="a00d3a52b9f6700bfd5bb924ceac479b2">
+              <span class="m-doc-wrap-bumper">auto <a href="#a00d3a52b9f6700bfd5bb924ceac479b2" class="m-doc-self">mathematicalProgram</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp;</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a924fc7428f27f2de192e77edfb967713" class="m-doc">mathematicalProgram</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp;</span>
+            <dd>Access to the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a> object.</dd>
+            <dt id="a924fc7428f27f2de192e77edfb967713">
+              <span class="m-doc-wrap-bumper">auto <a href="#a924fc7428f27f2de192e77edfb967713" class="m-doc-self">mathematicalProgram</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp;</span>
             </dt>
-            <dd></dd>
+            <dd>Access to the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a> object.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a77f4aea8f4131a2ebb340a5777bebafd" class="m-doc">solve</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a795031c498a9bccce8f6cc1515d8190e" class="m-doc">solution</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a>&amp;</span>
+            <dd>Solve the optimization problem described in <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
+            <dt id="a795031c498a9bccce8f6cc1515d8190e">
+              <span class="m-doc-wrap-bumper">auto <a href="#a795031c498a9bccce8f6cc1515d8190e" class="m-doc-self">solution</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a>&amp;</span>
             </dt>
-            <dd></dd>
+            <dd>Access to <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">ScsEigen::<wbr />Solution</a> object.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a40d1ccce88ec2626853bc29e1ed194ae"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a40d1ccce88ec2626853bc29e1ed194ae" class="m-doc-self">Solver</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-<p>Constructor.</p>
-          </div></section>
-          <section class="m-doc-details" id="a921530402a120d568b3a1285883699b3"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a921530402a120d568b3a1285883699b3" class="m-doc-self">~Solver</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-<p>Destructor.</p>
-          </div></section>
-          <section class="m-doc-details" id="a0f967a56f988e57bcf9ee048bd3a94db"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp; ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0f967a56f988e57bcf9ee048bd3a94db" class="m-doc-self">settings</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-<p>Access to the <a href="class_scs_eigen_1_1_settings.html" class="m-doc">ScsEigen::<wbr />Settings</a> object.</p>
-          </div></section>
-          <section class="m-doc-details" id="af82491e978bfd0bf72c7978ed40a00e4"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">const <a href="class_scs_eigen_1_1_settings.html" class="m-doc">Settings</a>&amp; ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af82491e978bfd0bf72c7978ed40a00e4" class="m-doc-self">settings</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-<p>Access to the <a href="class_scs_eigen_1_1_settings.html" class="m-doc">ScsEigen::<wbr />Settings</a> object.</p>
-          </div></section>
-          <section class="m-doc-details" id="a00d3a52b9f6700bfd5bb924ceac479b2"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp; ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a00d3a52b9f6700bfd5bb924ceac479b2" class="m-doc-self">mathematicalProgram</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-<p>Access to the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a> object.</p>
-          </div></section>
-          <section class="m-doc-details" id="a924fc7428f27f2de192e77edfb967713"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">const <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>&amp; ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a924fc7428f27f2de192e77edfb967713" class="m-doc-self">mathematicalProgram</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-<p>Access to the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a> object.</p>
-          </div></section>
           <section class="m-doc-details" id="a77f4aea8f4131a2ebb340a5777bebafd"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a77f4aea8f4131a2ebb340a5777bebafd" class="m-doc-self">solve</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
+            <p>Solve the optimization problem described in <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -151,13 +116,6 @@
                 </tr>
               </tfoot>
             </table>
-<p>Solve the optimization problem described in <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class</p>
-          </div></section>
-          <section class="m-doc-details" id="a795031c498a9bccce8f6cc1515d8190e"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">const <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a>&amp; ScsEigen::<wbr />Solver::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a795031c498a9bccce8f6cc1515d8190e" class="m-doc-self">solution</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-<p>Access to <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">ScsEigen::<wbr />Solution</a> object.</p>
           </div></section>
         </section>
       </div>

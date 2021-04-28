@@ -40,9 +40,9 @@
         <argsstring>()</argsstring>
         <name>Settings</name>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Constructor. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -56,7 +56,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Destructor, Required for the pimpl idiom. </para>
+<para>brief Destructor, Required for the pimpl idiom. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -74,7 +74,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Enable the heuristic data rescaling. <parameterlist kind="param"><parameteritem>
+<para>brief Enable the heuristic data rescaling. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>normalize</parametername>
 </parameternamelist>
@@ -99,7 +99,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Is rescaling enabled? <simplesect kind="return"><para>true if the rescaling is enabled. </para>
+<para>brief Is rescaling enabled? <simplesect kind="return"><para>true if the rescaling is enabled. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -117,9 +117,10 @@
           <declname>scale</declname>
         </param>
         <briefdescription>
+<para>Set the scaling factor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the scaling factor. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>scale</parametername>
 </parameternamelist>
@@ -144,9 +145,10 @@
         <argsstring>() const</argsstring>
         <name>scale</name>
         <briefdescription>
+<para>Get the scaling factor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the scaling factor <simplesect kind="return"><para>the scaling factor. </para>
+<para><simplesect kind="return"><para>the scaling factor. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -164,9 +166,10 @@
           <declname>rho</declname>
         </param>
         <briefdescription>
+<para>Set the equality constraint scaling. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the equality constraint scaling. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>rho</parametername>
 </parameternamelist>
@@ -191,9 +194,10 @@
         <argsstring>() const</argsstring>
         <name>rho</name>
         <briefdescription>
+<para>Get the scaling factor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the scaling factor. <simplesect kind="return"><para>the scaling factor. </para>
+<para><simplesect kind="return"><para>the scaling factor. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -211,9 +215,10 @@
           <declname>iterations</declname>
         </param>
         <briefdescription>
+<para>Set the maximum number of iterations. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the maximum number of iterations. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>iterations</parametername>
 </parameternamelist>
@@ -236,9 +241,10 @@
         <argsstring>() const</argsstring>
         <name>maxIterations</name>
         <briefdescription>
+<para>Get the number of iterations. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the number of iterations. <simplesect kind="return"><para>the iterations. </para>
+<para><simplesect kind="return"><para>the iterations. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -256,9 +262,10 @@
           <declname>eps</declname>
         </param>
         <briefdescription>
+<para>Set the convergence tolerance. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the convergence tolerance. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>eps</parametername>
 </parameternamelist>
@@ -281,9 +288,10 @@
         <argsstring>() const</argsstring>
         <name>eps</name>
         <briefdescription>
+<para>Get the convergence tolerance. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the convergence tolerance. <simplesect kind="return"><para>the tolerance. </para>
+<para><simplesect kind="return"><para>the tolerance. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -301,9 +309,10 @@
           <declname>alpha</declname>
         </param>
         <briefdescription>
+<para>Set the relaxation parameter. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the relaxation parameter. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>alpha</parametername>
 </parameternamelist>
@@ -326,9 +335,10 @@
         <argsstring>() const</argsstring>
         <name>alpha</name>
         <briefdescription>
+<para>Get the relaxation parameter. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the relaxation parameter. <simplesect kind="return"><para>the parameter. </para>
+<para><simplesect kind="return"><para>the parameter. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -346,9 +356,10 @@
           <declname>isVerbose</declname>
         </param>
         <briefdescription>
+<para>Set the verbosity of the solver. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the verbosity of the solver. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>isVerbose</parametername>
 </parameternamelist>
@@ -369,9 +380,10 @@
         <argsstring>() const</argsstring>
         <name>verbose</name>
         <briefdescription>
+<para>Is solver verbose? </para>
         </briefdescription>
         <detaileddescription>
-<para>Is solver verbose? <simplesect kind="return"><para>true if the solver is verbose. </para>
+<para><simplesect kind="return"><para>true if the solver is verbose. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -389,9 +401,10 @@
           <declname>warmStart</declname>
         </param>
         <briefdescription>
+<para>Enable the warm start. </para>
         </briefdescription>
         <detaileddescription>
-<para>Enable the warm start. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>warmStart</parametername>
 </parameternamelist>
@@ -412,9 +425,10 @@
         <argsstring>() const</argsstring>
         <name>warmStart</name>
         <briefdescription>
+<para>Is warm start enabled? </para>
         </briefdescription>
         <detaileddescription>
-<para>Is warm start enabled? <simplesect kind="return"><para>true if warm start is enabled. </para>
+<para><simplesect kind="return"><para>true if warm start is enabled. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -432,9 +446,10 @@
           <declname>accelerationLookback</declname>
         </param>
         <briefdescription>
+<para>Set the memory for acceleration. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the memory for acceleration. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>accelerationLookBack</parametername>
 </parameternamelist>
@@ -457,9 +472,10 @@
         <argsstring>()</argsstring>
         <name>accelerationLookback</name>
         <briefdescription>
+<para>Get the memory acceleration. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the memory acceleration. <simplesect kind="return"><para>the memory acceleration. </para>
+<para><simplesect kind="return"><para>the memory acceleration. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -477,9 +493,9 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
+<para>Set the filename used to store the data. @filename name of the file where the data will be stored. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set the filename used to store the data. @filename name of the file where the data will be stored. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -491,9 +507,10 @@
         <argsstring>() const</argsstring>
         <name>writeDataFilename</name>
         <briefdescription>
+<para>Get the filename. </para>
         </briefdescription>
         <detaileddescription>
-<para>Get the filename. <simplesect kind="return"><para>a string containing the filename. </para>
+<para><simplesect kind="return"><para>a string containing the filename. </para>
 </simplesect>
 </para>
         </detaileddescription>

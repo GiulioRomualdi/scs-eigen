@@ -63,8 +63,8 @@
         <section id="pub-types">
           <h2><a href="#pub-types">Public types</a></h2>
           <dl class="m-doc">
-            <dt id="ad26870adda3b9792e35ec2dae9b37e32">
-              <span class="m-doc-wrap-bumper">enum class <a href="#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc-self">Status</a> { </span><span class="m-doc-wrap"><a href="#ad26870adda3b9792e35ec2dae9b37e32a16e74ec57f0aee76aa89065c4cecfb63" class="m-doc">infeasible_inaccurate</a>,
+            <dt>
+              <span class="m-doc-wrap-bumper">enum class <a href="#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc">Status</a> { </span><span class="m-doc-wrap"><a href="#ad26870adda3b9792e35ec2dae9b37e32a16e74ec57f0aee76aa89065c4cecfb63" class="m-doc">infeasible_inaccurate</a>,
               <a href="#ad26870adda3b9792e35ec2dae9b37e32a3aa9ba57c878bca44a01c8f46b0d6c9f" class="m-doc">unbounded_inaccurate</a>,
               <a href="#ad26870adda3b9792e35ec2dae9b37e32a1e1d797794489f86365e23b2457ea573" class="m-doc">sigint</a>,
               <a href="#ad26870adda3b9792e35ec2dae9b37e32a26934eb377001f66e37289a5c93fe284" class="m-doc">failed</a>,
@@ -76,7 +76,7 @@
               <a href="#ad26870adda3b9792e35ec2dae9b37e32a2d8f758a90af2a96cc98f42595c3876e" class="m-doc">solved_inaccurate</a>,
               <a href="#ad26870adda3b9792e35ec2dae9b37e32aad921d60486366258809553a3db49a4a" class="m-doc">unknown</a> }</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Status of scs solver.</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -85,125 +85,78 @@
             <dt id="a7801544c71d1e3f54b08ec1e04bb6440">
               <span class="m-doc-wrap-bumper">auto <a href="#a7801544c71d1e3f54b08ec1e04bb6440" class="m-doc-self">isValid</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Check if the solution is valid.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt>
-              int <a href="#a6b59ffcce9120168c12887d98212abdd" class="m-doc">iteration</a>
+            <dt id="a6b59ffcce9120168c12887d98212abdd">
+              int <a href="#a6b59ffcce9120168c12887d98212abdd" class="m-doc-self">iteration</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#ac09f740c3edd370177afecaf60899dff" class="m-doc">primalObjective</a>
+            <dd>Number of iterations taken by the solver.</dd>
+            <dt id="ac09f740c3edd370177afecaf60899dff">
+              double <a href="#ac09f740c3edd370177afecaf60899dff" class="m-doc-self">primalObjective</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#ae89404a42a1510b3640bf8d7dac2fc10" class="m-doc">dualObjective</a>
+            <dd>Primal objective value.</dd>
+            <dt id="ae89404a42a1510b3640bf8d7dac2fc10">
+              double <a href="#ae89404a42a1510b3640bf8d7dac2fc10" class="m-doc-self">dualObjective</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#a9704ccf4734dd48279c838d9e169c298" class="m-doc">primalResidue</a>
+            <dd>Dual objective value.</dd>
+            <dt id="a9704ccf4734dd48279c838d9e169c298">
+              double <a href="#a9704ccf4734dd48279c838d9e169c298" class="m-doc-self">primalResidue</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#a6177fc396cdd7fd3c07ac521eb16aae5" class="m-doc">residueInfeasibility</a>
+            <dd>Primal equality residue.</dd>
+            <dt id="a6177fc396cdd7fd3c07ac521eb16aae5">
+              double <a href="#a6177fc396cdd7fd3c07ac521eb16aae5" class="m-doc-self">residueInfeasibility</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#a65aec123e825cba9c65727ff83be6e0d" class="m-doc">residueUnbounded</a>
+            <dd>infeasibility certificate residue.</dd>
+            <dt id="a65aec123e825cba9c65727ff83be6e0d">
+              double <a href="#a65aec123e825cba9c65727ff83be6e0d" class="m-doc-self">residueUnbounded</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#aa5e8cc0dbf5fe828f71a5a700e88e94a" class="m-doc">relativeDualityGap</a>
+            <dd>unbounded certificate residue</dd>
+            <dt id="aa5e8cc0dbf5fe828f71a5a700e88e94a">
+              double <a href="#aa5e8cc0dbf5fe828f71a5a700e88e94a" class="m-doc-self">relativeDualityGap</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#af2f461e09687817c892e170b4dd9e083" class="m-doc">setupTime</a>
+            <dd>relative duality gap</dd>
+            <dt id="af2f461e09687817c892e170b4dd9e083">
+              double <a href="#af2f461e09687817c892e170b4dd9e083" class="m-doc-self">setupTime</a>
             </dt>
-            <dd></dd>
-            <dt>
-              double <a href="#adde4a7e039832203be2676220b6b810e" class="m-doc">solveTime</a>
+            <dd>Time taken for SCS to setup in milliseconds.</dd>
+            <dt id="adde4a7e039832203be2676220b6b810e">
+              double <a href="#adde4a7e039832203be2676220b6b810e" class="m-doc-self">solveTime</a>
             </dt>
-            <dd></dd>
+            <dd>Time taken for SCS to solve the problem in milliseconds.</dd>
             <dt id="a67d826aa13fb6381c33667da932e7f3c">
               Eigen::VectorXd <a href="#a67d826aa13fb6381c33667da932e7f3c" class="m-doc-self">solution</a>
             </dt>
-            <dd><span></span></dd>
+            <dd><a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a> of the problem stored in <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>.</dd>
             <dt id="ad962ce777626e47d50db9f89d4938ea4">
               Eigen::VectorXd <a href="#ad962ce777626e47d50db9f89d4938ea4" class="m-doc-self">completeSolution</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Complete <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a> of the problem solved by SCS. It contains also the slack variables.</dd>
             <dt id="abc13501fd64a0a4028d2558bcf58948f">
               Eigen::VectorXd <a href="#abc13501fd64a0a4028d2558bcf58948f" class="m-doc-self">dualVariable</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Dual solution.</dd>
             <dt id="a94ec8268c4ae8a68420fe22d0a31ec4d">
               Eigen::VectorXd <a href="#a94ec8268c4ae8a68420fe22d0a31ec4d" class="m-doc-self">primalEqualitySlack</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Equality slack variables.</dd>
             <dt id="a0ea5eacd27af3d5869ca9fc028e3ec2c">
-              Status <a href="#a0ea5eacd27af3d5869ca9fc028e3ec2c" class="m-doc-self">status</a>
+              <a href="struct_scs_eigen_1_1_solution.html#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc">Status</a> <a href="#a0ea5eacd27af3d5869ca9fc028e3ec2c" class="m-doc-self">status</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Status of the <a href="struct_scs_eigen_1_1_solution.html" class="m-doc">Solution</a>..</dd>
           </dl>
         </section>
         <section>
-          <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="a6b59ffcce9120168c12887d98212abdd"><div>
+          <h2>Enum documentation</h2>
+          <section class="m-doc-details" id="ad26870adda3b9792e35ec2dae9b37e32"><div>
             <h3>
-              int ScsEigen::<wbr />Solution::<wbr /><a href="#a6b59ffcce9120168c12887d98212abdd" class="m-doc-self">iteration</a>
+              enum class ScsEigen::<wbr />Solution::<wbr /><a href="#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc-self">Status</a>
             </h3>
-<p>Number of iterations taken by the solver</p>
-          </div></section>
-          <section class="m-doc-details" id="ac09f740c3edd370177afecaf60899dff"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#ac09f740c3edd370177afecaf60899dff" class="m-doc-self">primalObjective</a>
-            </h3>
-<p>Primal objective value</p>
-          </div></section>
-          <section class="m-doc-details" id="ae89404a42a1510b3640bf8d7dac2fc10"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#ae89404a42a1510b3640bf8d7dac2fc10" class="m-doc-self">dualObjective</a>
-            </h3>
-<p>Dual objective value</p>
-          </div></section>
-          <section class="m-doc-details" id="a9704ccf4734dd48279c838d9e169c298"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#a9704ccf4734dd48279c838d9e169c298" class="m-doc-self">primalResidue</a>
-            </h3>
-<p>Primal equality residue</p>
-          </div></section>
-          <section class="m-doc-details" id="a6177fc396cdd7fd3c07ac521eb16aae5"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#a6177fc396cdd7fd3c07ac521eb16aae5" class="m-doc-self">residueInfeasibility</a>
-            </h3>
-<p>infeasibility certificate residue.</p>
-          </div></section>
-          <section class="m-doc-details" id="a65aec123e825cba9c65727ff83be6e0d"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#a65aec123e825cba9c65727ff83be6e0d" class="m-doc-self">residueUnbounded</a>
-            </h3>
-<p>unbounded certificate residue</p>
-          </div></section>
-          <section class="m-doc-details" id="aa5e8cc0dbf5fe828f71a5a700e88e94a"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#aa5e8cc0dbf5fe828f71a5a700e88e94a" class="m-doc-self">relativeDualityGap</a>
-            </h3>
-<p>relative duality gap</p>
-          </div></section>
-          <section class="m-doc-details" id="af2f461e09687817c892e170b4dd9e083"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#af2f461e09687817c892e170b4dd9e083" class="m-doc-self">setupTime</a>
-            </h3>
-<p>Time taken for SCS to setup in milliseconds.</p>
-          </div></section>
-          <section class="m-doc-details" id="adde4a7e039832203be2676220b6b810e"><div>
-            <h3>
-              double ScsEigen::<wbr />Solution::<wbr /><a href="#adde4a7e039832203be2676220b6b810e" class="m-doc-self">solveTime</a>
-            </h3>
-<p>Time taken for SCS to solve the problem in milliseconds.</p>
+            <p>Status of scs solver.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>You can find further information <a href="https://github.com/cvxgrp/scs/blob/07ca69c296312c260027c755f545f05bf45156eb/include/glbopts.h#L18-L28">here</a>.</p></aside>
           </div></section>
         </section>
       </div>

@@ -73,15 +73,15 @@
             <dt>
               class <a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>
             </dt>
-            <dd><span></span></dd>
+            <dd></dd>
             <dt>
               class <a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>
             </dt>
-            <dd><span></span></dd>
+            <dd></dd>
             <dt>
               class <a href="class_scs_eigen_1_1_logger.html" class="m-doc">Logger</a>
             </dt>
-            <dd><span></span></dd>
+            <dd></dd>
             <dt>
               class <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a>
             </dt>
@@ -114,7 +114,7 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#adf50c2b94805bbb8ad9e92be2dd65f1b" class="m-doc">choleskyDecomposition</a>(</span><span class="m-doc-wrap">const Eigen::Ref&lt;const Eigen::MatrixXd&gt;&amp; A) -&gt; std::pair&lt;bool, Eigen::MatrixXd&gt;</span>
             </dt>
-            <dd></dd>
+            <dd>Compute the Cholesky decomposition of a PSD matrix A.</dd>
           </dl>
         </section>
         <section>
@@ -129,7 +129,25 @@
             <h3>
               <span class="m-doc-wrap-bumper">std::pair&lt;bool, Eigen::MatrixXd&gt; ScsEigen::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adf50c2b94805bbb8ad9e92be2dd65f1b" class="m-doc-self">choleskyDecomposition</a>(</span><span class="m-doc-wrap">const Eigen::Ref&lt;const Eigen::MatrixXd&gt;&amp; A)</span></span>
             </h3>
-<p>Compute the Cholesky decomposition of a PSD matrix A.</p><aside class="m-note m-info"><h4>Note</h4><p>please be sure the matrix A is PSD.</p></aside>
+            <p>Compute the Cholesky decomposition of a PSD matrix A.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">A</td>
+                  <td>a PSD matrix</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a pair containing a Boolean and and the Cholesky decomposition of the matrix A. The bolean is true if the decomposition went fine.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>please be sure the matrix A is PSD.</p></aside>
           </div></section>
         </section>
       </div>

@@ -14,6 +14,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Description of the constraint. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -28,6 +29,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Number of variables associated to the constraint. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -42,6 +44,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Size of the constraint. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -55,6 +58,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Lower bound. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -68,6 +72,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Upper bound. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -81,12 +86,13 @@
         <argsstring>()=default</argsstring>
         <name>Constraint</name>
         <briefdescription>
+<para>Constructor,. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="36" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="39" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a4eff2a5d67e203512d97ba14f834c3cc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,12 +109,31 @@
           <defval>&quot;&quot;</defval>
         </param>
         <briefdescription>
+<para>Constructor,. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfVariables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of variables associated to the constraint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string describing the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="38" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="46" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a8670822e57e2c03e496c7f2efb3027b3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,12 +145,23 @@
           <declname>description</declname>
         </param>
         <briefdescription>
+<para>Set the description of the constraint. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string describing the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="41" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="52" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1ac667af1a25af66015f973151eae25806" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -137,12 +173,25 @@
           <declname>numberOfVariables</declname>
         </param>
         <briefdescription>
+<para>Set the number of variables. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfVariables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a positive number describing the number of variables. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="43" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="59" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -154,12 +203,25 @@
           <declname>lowerBound</declname>
         </param>
         <briefdescription>
+<para>Set the lower bound. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lowerBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector representing the lower bound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="45" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="66" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -171,12 +233,25 @@
           <declname>upperBound</declname>
         </param>
         <briefdescription>
+<para>Set the upper bound. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>upperBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector representing the upper bound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="46" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="73" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -192,12 +267,33 @@
           <declname>upperBound</declname>
         </param>
         <briefdescription>
+<para>Set the lower and the upper bounds. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lowerBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector representing the lower bound. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upperBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector representing the upper bound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="48" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="81" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1ac8898e02e58e7678ce862032c7f4d430" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -209,12 +305,25 @@
           <declname>numberOfConstraints</declname>
         </param>
         <briefdescription>
+<para>Set the number of constraints (i.e. the size of lowerBound and upperBound). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfConstraints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a positive number describing the size of lowerBound and upperBound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="51" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="90" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -224,12 +333,13 @@
         <argsstring>()=default</argsstring>
         <name>~Constraint</name>
         <briefdescription>
+<para>Desctructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="55" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="96" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1adad6357b9ef7336cd288b77374bb9f57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string_view</type>
@@ -237,12 +347,16 @@
         <argsstring>() const</argsstring>
         <name>getDescription</name>
         <briefdescription>
+<para>Get the description. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the string containng the description </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="56" column="22"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="102" column="22"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a612d47e6b3975322e8be687f1bd365ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -250,12 +364,16 @@
         <argsstring>() const</argsstring>
         <name>getNumberOfVariables</name>
         <briefdescription>
+<para>Get the number of variables. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the number of variables, </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="57" column="9"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="108" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a2ade7a7665aede297ee2e9fe76f0785d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -263,12 +381,16 @@
         <argsstring>() const</argsstring>
         <name>getNumberOfConstraints</name>
         <briefdescription>
+<para>Get the number of constraints. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the number of constraints, </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="58" column="9"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="114" column="9"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a79b5a575b52f5443438c7449c0e32b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Eigen::Ref&lt; const Eigen::VectorXd &gt;</type>
@@ -276,12 +398,16 @@
         <argsstring>() const</argsstring>
         <name>getLowerBound</name>
         <briefdescription>
+<para>Get the vector containing the lowerBound. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the lower bound. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="59" column="16"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="120" column="16"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a869dab5651f45854bb782451a3b09fba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Eigen::Ref&lt; const Eigen::VectorXd &gt;</type>
@@ -289,18 +415,22 @@
         <argsstring>() const</argsstring>
         <name>getUpperBound</name>
         <briefdescription>
+<para>Get the vector containing the upperBound. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the upper bound. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="60" column="16"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="126" column="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="class_scs_eigen_1_1_constraint" kindref="compound">Constraint</ref> class describes a generic convex constraint set of the form <formula id="0">\[ l \le _\mathcal{k} f(x) \le _\mathcal{k} u \]</formula> Where <formula id="1">$ \le _\mathcal{k} $</formula> represents a generalized inequality. </para>
+<para><ref refid="class_scs_eigen_1_1_constraint" kindref="compound">Constraint</ref> class describes a generic convex constraint set of the form <formula id="0">\[ l \le _k f(x) \le _k u \]</formula> Where <formula id="1">$ \le _k $</formula> represents a generalized inequality. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -314,7 +444,7 @@
         <link refid="class_scs_eigen_1_1_constraint"/>
       </node>
     </inheritancegraph>
-    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="28" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" bodystart="27" bodyend="61"/>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="28" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" bodystart="27" bodyend="127"/>
     <listofallmembers>
       <member refid="class_scs_eigen_1_1_constraint_1a3afcea63471f33b51f1c5fd699847450" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>Constraint</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a4eff2a5d67e203512d97ba14f834c3cc" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>Constraint</name></member>

@@ -61,14 +61,14 @@
             </li>
           </ul>
         </div>
-<p><a href="class_scs_eigen_1_1_cost.html" class="m-doc">Cost</a></p>
+<p><a href="class_scs_eigen_1_1_cost.html" class="m-doc">Cost</a> describes a generic convex cost.</p>
         <section id="derived-classes">
           <h2><a href="#derived-classes">Derived classes</a></h2>
           <dl class="m-doc">
             <dt>
               class <a href="class_scs_eigen_1_1_linear_cost.html" class="m-doc">LinearCost</a>
             </dt>
-            <dd><span></span></dd>
+            <dd></dd>
             <dt>
               class <a href="class_scs_eigen_1_1_quadratic_cost.html" class="m-doc">QuadraticCost</a>
             </dt>
@@ -81,56 +81,164 @@
             <dt id="a099de56842e4bbfc12892ad7dec383b4">
               <span class="m-doc-wrap-bumper"><a href="#a099de56842e4bbfc12892ad7dec383b4" class="m-doc-self">Cost</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">protected</span> <span class="m-label m-flat m-info">defaulted</span></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a79b224fe51825a03670957aad9b350eb">
-              <span class="m-doc-wrap-bumper"><a href="#a79b224fe51825a03670957aad9b350eb" class="m-doc-self">Cost</a>(</span><span class="m-doc-wrap">int numverOfVariables,
+            <dd>Constructor,.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a6509692dccc78a53638c1f6155dfd9c4" class="m-doc">Cost</a>(</span><span class="m-doc-wrap">int numberOfVariables,
               std::string_view description = &quot;&quot;) <span class="m-label m-flat m-warning">protected</span></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Constructor,.</dd>
             <dt id="a92c54573567656b7ed835ddb47697073">
               <span class="m-doc-wrap-bumper"><a href="#a92c54573567656b7ed835ddb47697073" class="m-doc-self">~Cost</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">defaulted</span></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Desctructor.</dd>
           </dl>
         </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="ad8f79dc6098cb2b1482a82db470a9729">
-              <span class="m-doc-wrap-bumper">auto <a href="#ad8f79dc6098cb2b1482a82db470a9729" class="m-doc-self">getDescrition</a>(</span><span class="m-doc-wrap">) const -&gt; std::string_view</span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a03439c4a344eee8b6f3d9309eb81603d" class="m-doc">getDescription</a>(</span><span class="m-doc-wrap">) const -&gt; std::string_view</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a841cf2d15b830469bcd6ebd78aa632c2">
-              <span class="m-doc-wrap-bumper">auto <a href="#a841cf2d15b830469bcd6ebd78aa632c2" class="m-doc-self">getNumberOfVariables</a>(</span><span class="m-doc-wrap">) const -&gt; int</span>
+            <dd>Get the description.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a841cf2d15b830469bcd6ebd78aa632c2" class="m-doc">getNumberOfVariables</a>(</span><span class="m-doc-wrap">) const -&gt; int</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Get the number of variables.</dd>
           </dl>
         </section>
         <section id="pro-methods">
           <h2><a href="#pro-methods">Protected functions</a></h2>
           <dl class="m-doc">
-            <dt id="a51b18f3e291710eaf037f22c7f99a49e">
-              <span class="m-doc-wrap-bumper">void <a href="#a51b18f3e291710eaf037f22c7f99a49e" class="m-doc-self">setDescription</a>(</span><span class="m-doc-wrap">std::string_view description)</span>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a51b18f3e291710eaf037f22c7f99a49e" class="m-doc">setDescription</a>(</span><span class="m-doc-wrap">std::string_view description)</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a548c1b9db0a769a437ddb905dd6277cb">
-              <span class="m-doc-wrap-bumper">auto <a href="#a548c1b9db0a769a437ddb905dd6277cb" class="m-doc-self">setNumberOfVariables</a>(</span><span class="m-doc-wrap">int numberOfVariables) -&gt; bool</span>
+            <dd>Set the description of the constraint.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a548c1b9db0a769a437ddb905dd6277cb" class="m-doc">setNumberOfVariables</a>(</span><span class="m-doc-wrap">int numberOfVariables) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Set the number of variables.</dd>
           </dl>
         </section>
         <section id="pro-attribs">
           <h2><a href="#pro-attribs">Protected variables</a></h2>
           <dl class="m-doc">
-            <dt id="ae5290a735fa7ba1076c3c1070535238f">
-              std::string <a href="#ae5290a735fa7ba1076c3c1070535238f" class="m-doc-self">m_description</a>
+            <dt>
+              std::string <a href="#ae5290a735fa7ba1076c3c1070535238f" class="m-doc">m_description</a>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a50367c6000fc4c60fe03f18f4a122f1f">
-              int <a href="#a50367c6000fc4c60fe03f18f4a122f1f" class="m-doc-self">m_numberOfVariables</a>
+            <dd></dd>
+            <dt>
+              int <a href="#a50367c6000fc4c60fe03f18f4a122f1f" class="m-doc">m_numberOfVariables</a>
             </dt>
-            <dd><span></span></dd>
+            <dd></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a6509692dccc78a53638c1f6155dfd9c4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> ScsEigen::<wbr />Cost::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6509692dccc78a53638c1f6155dfd9c4" class="m-doc-self">Cost</a>(</span><span class="m-doc-wrap">int numberOfVariables,
+              std::string_view description = &quot;&quot;) <span class="m-label m-warning">protected</span></span></span>
+            </h3>
+            <p>Constructor,.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">numberOfVariables</td>
+                  <td>number of variables associated to the constraint.</td>
+                </tr>
+                <tr>
+                  <td>description</td>
+                  <td>string describing the constraint.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a03439c4a344eee8b6f3d9309eb81603d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::string_view ScsEigen::<wbr />Cost::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a03439c4a344eee8b6f3d9309eb81603d" class="m-doc-self">getDescription</a>(</span><span class="m-doc-wrap">) const</span></span>
+            </h3>
+            <p>Get the description.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>the string containng the description</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a841cf2d15b830469bcd6ebd78aa632c2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int ScsEigen::<wbr />Cost::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a841cf2d15b830469bcd6ebd78aa632c2" class="m-doc-self">getNumberOfVariables</a>(</span><span class="m-doc-wrap">) const</span></span>
+            </h3>
+            <p>Get the number of variables.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>the number of variables,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a51b18f3e291710eaf037f22c7f99a49e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void ScsEigen::<wbr />Cost::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a51b18f3e291710eaf037f22c7f99a49e" class="m-doc-self">setDescription</a>(</span><span class="m-doc-wrap">std::string_view description) <span class="m-label m-warning">protected</span></span></span>
+            </h3>
+            <p>Set the description of the constraint.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">description</td>
+                  <td>string describing the constraint.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a548c1b9db0a769a437ddb905dd6277cb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Cost::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a548c1b9db0a769a437ddb905dd6277cb" class="m-doc-self">setNumberOfVariables</a>(</span><span class="m-doc-wrap">int numberOfVariables) <span class="m-label m-warning">protected</span></span></span>
+            </h3>
+            <p>Set the number of variables.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">numberOfVariables</td>
+                  <td>a positive number describing the number of variables.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>true in case of success/false otherwise</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="ae5290a735fa7ba1076c3c1070535238f"><div>
+            <h3>
+              std::string ScsEigen::<wbr />Cost::<wbr /><a href="#ae5290a735fa7ba1076c3c1070535238f" class="m-doc-self">m_description</a> <span class="m-label m-warning">protected</span>
+            </h3>
+<p>Description of the cost.</p>
+          </div></section>
+          <section class="m-doc-details" id="a50367c6000fc4c60fe03f18f4a122f1f"><div>
+            <h3>
+              int ScsEigen::<wbr />Cost::<wbr /><a href="#a50367c6000fc4c60fe03f18f4a122f1f" class="m-doc-self">m_numberOfVariables</a> <span class="m-label m-warning">protected</span>
+            </h3>
+<p>Number of variables associated to the constraint.</p>
+          </div></section>
         </section>
       </div>
     </div>

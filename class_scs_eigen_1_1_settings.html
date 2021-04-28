@@ -72,10 +72,10 @@
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a59f20801a308c291ef04135567c2c289" class="m-doc">Settings</a>(</span><span class="m-doc-wrap">)</span>
+            <dt id="a59f20801a308c291ef04135567c2c289">
+              <span class="m-doc-wrap-bumper"><a href="#a59f20801a308c291ef04135567c2c289" class="m-doc-self">Settings</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
-            <dd></dd>
+            <dd>Constructor.</dd>
             <dt>
               <span class="m-doc-wrap-bumper"><a href="#a1e28473c6477d1e711fb695a390854e8" class="m-doc">~Settings</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
@@ -96,90 +96,84 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a531fe1b4803f54def6ebf706c61aeaa1" class="m-doc">scale</a>(</span><span class="m-doc-wrap">double scale) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the scaling factor.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a986a2955a31f6af4f981eaffefffdeed" class="m-doc">scale</a>(</span><span class="m-doc-wrap">) const -&gt; double</span>
             </dt>
-            <dd></dd>
+            <dd>Get the scaling factor.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a0cdeacc819ef4e9fb3eabef340024188" class="m-doc">rho</a>(</span><span class="m-doc-wrap">double rho) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the equality constraint scaling.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#adccc8d5b84b5ae29752244c28b5d7480" class="m-doc">rho</a>(</span><span class="m-doc-wrap">) const -&gt; double</span>
             </dt>
-            <dd></dd>
+            <dd>Get the scaling factor.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a4d19a58cace9e4c347ba76a8db479067" class="m-doc">maxIterations</a>(</span><span class="m-doc-wrap">int iterations) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the maximum number of iterations.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a15fcaa4b039714cc110c3d82c1046bb4" class="m-doc">maxIterations</a>(</span><span class="m-doc-wrap">) const -&gt; int</span>
             </dt>
-            <dd></dd>
+            <dd>Get the number of iterations.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a4dbe1ed1d6551c37849b7536fb583c23" class="m-doc">eps</a>(</span><span class="m-doc-wrap">double eps) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the convergence tolerance.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a1bc11dc28c3b87686f67ba9d49860876" class="m-doc">eps</a>(</span><span class="m-doc-wrap">) const -&gt; double</span>
             </dt>
-            <dd></dd>
+            <dd>Get the convergence tolerance.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#aa789c9cb0240758ac071a91aa656a7ed" class="m-doc">alpha</a>(</span><span class="m-doc-wrap">double alpha) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the relaxation parameter.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a598f1e7c4f6baeeb3fc715b4d0e2a759" class="m-doc">alpha</a>(</span><span class="m-doc-wrap">) const -&gt; double</span>
             </dt>
-            <dd></dd>
+            <dd>Get the relaxation parameter.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">void <a href="#addba2e0452303be38f3e994f04558877" class="m-doc">verbose</a>(</span><span class="m-doc-wrap">bool isVerbose)</span>
             </dt>
-            <dd></dd>
+            <dd>Set the verbosity of the solver.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a11828b4076d90f9746b75dbff15cfad6" class="m-doc">verbose</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Is solver verbose?</dd>
             <dt>
               <span class="m-doc-wrap-bumper">void <a href="#a273e4d92aa36ac488aa3877c6cc4f249" class="m-doc">warmStart</a>(</span><span class="m-doc-wrap">bool warmStart)</span>
             </dt>
-            <dd></dd>
+            <dd>Enable the warm start.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a6d885754a55598e5c27251fbb9c64084" class="m-doc">warmStart</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Is warm start enabled?</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#ad2e3ca5563bf63bebab716912472d2fd" class="m-doc">accelerationLookback</a>(</span><span class="m-doc-wrap">int accelerationLookback) -&gt; bool</span>
             </dt>
-            <dd></dd>
+            <dd>Set the memory for acceleration.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a4484d59f67b17b165d3edfe1871116fc" class="m-doc">accelerationLookback</a>(</span><span class="m-doc-wrap">) -&gt; int</span>
             </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a90a2277b02ef5338d460a769749f763a" class="m-doc">writeDataFilename</a>(</span><span class="m-doc-wrap">std::string_view filename)</span>
+            <dd>Get the memory acceleration.</dd>
+            <dt id="a90a2277b02ef5338d460a769749f763a">
+              <span class="m-doc-wrap-bumper">void <a href="#a90a2277b02ef5338d460a769749f763a" class="m-doc-self">writeDataFilename</a>(</span><span class="m-doc-wrap">std::string_view filename)</span>
             </dt>
-            <dd></dd>
+            <dd>Set the filename used to store the data. @filename name of the file where the data will be stored.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a839e898efea250937e54006f99d9ddb4" class="m-doc">writeDataFilename</a>(</span><span class="m-doc-wrap">) const -&gt; std::string_view</span>
             </dt>
-            <dd></dd>
+            <dd>Get the filename.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a59f20801a308c291ef04135567c2c289"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a59f20801a308c291ef04135567c2c289" class="m-doc-self">Settings</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-<p>Constructor.</p>
-          </div></section>
           <section class="m-doc-details" id="a1e28473c6477d1e711fb695a390854e8"><div>
             <h3>
               <span class="m-doc-wrap-bumper"> ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1e28473c6477d1e711fb695a390854e8" class="m-doc-self">~Settings</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
-<p>Destructor, Required for the pimpl idiom.</p>
+<p>brief Destructor, Required for the pimpl idiom.</p>
           </div></section>
           <section class="m-doc-details" id="afba198b168189e61ee30590253e7cdbd"><div>
             <h3>
@@ -196,7 +190,7 @@
                 </tr>
               </tbody>
             </table>
-<p>Enable the heuristic data rescaling.</p><aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
+<p>brief Enable the heuristic data rescaling.</p><aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
           </div></section>
           <section class="m-doc-details" id="ab3b821782ca60239ee1b488e25f0ffc0"><div>
             <h3>
@@ -210,12 +204,13 @@
                 </tr>
               </tfoot>
             </table>
-<p>Is rescaling enabled?</p>
+<p>brief Is rescaling enabled?</p>
           </div></section>
           <section class="m-doc-details" id="a531fe1b4803f54def6ebf706c61aeaa1"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a531fe1b4803f54def6ebf706c61aeaa1" class="m-doc-self">scale</a>(</span><span class="m-doc-wrap">double scale)</span></span>
             </h3>
+            <p>Set the scaling factor.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -233,12 +228,13 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the scaling factor.</p><aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
+<aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
           </div></section>
           <section class="m-doc-details" id="a986a2955a31f6af4f981eaffefffdeed"><div>
             <h3>
               <span class="m-doc-wrap-bumper">double ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a986a2955a31f6af4f981eaffefffdeed" class="m-doc-self">scale</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the scaling factor.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -247,12 +243,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the scaling factor</p>
           </div></section>
           <section class="m-doc-details" id="a0cdeacc819ef4e9fb3eabef340024188"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0cdeacc819ef4e9fb3eabef340024188" class="m-doc-self">rho</a>(</span><span class="m-doc-wrap">double rho)</span></span>
             </h3>
+            <p>Set the equality constraint scaling.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -270,12 +266,13 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the equality constraint scaling.</p><aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
+<aside class="m-note m-danger"><h4>Warning</h4><p>If you call this function you should reinitialize the problem.</p></aside>
           </div></section>
           <section class="m-doc-details" id="adccc8d5b84b5ae29752244c28b5d7480"><div>
             <h3>
               <span class="m-doc-wrap-bumper">double ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adccc8d5b84b5ae29752244c28b5d7480" class="m-doc-self">rho</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the scaling factor.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -284,12 +281,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the scaling factor.</p>
           </div></section>
           <section class="m-doc-details" id="a4d19a58cace9e4c347ba76a8db479067"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4d19a58cace9e4c347ba76a8db479067" class="m-doc-self">maxIterations</a>(</span><span class="m-doc-wrap">int iterations)</span></span>
             </h3>
+            <p>Set the maximum number of iterations.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -307,12 +304,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the maximum number of iterations.</p>
           </div></section>
           <section class="m-doc-details" id="a15fcaa4b039714cc110c3d82c1046bb4"><div>
             <h3>
               <span class="m-doc-wrap-bumper">int ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a15fcaa4b039714cc110c3d82c1046bb4" class="m-doc-self">maxIterations</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the number of iterations.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -321,12 +318,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the number of iterations.</p>
           </div></section>
           <section class="m-doc-details" id="a4dbe1ed1d6551c37849b7536fb583c23"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4dbe1ed1d6551c37849b7536fb583c23" class="m-doc-self">eps</a>(</span><span class="m-doc-wrap">double eps)</span></span>
             </h3>
+            <p>Set the convergence tolerance.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -344,12 +341,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the convergence tolerance.</p>
           </div></section>
           <section class="m-doc-details" id="a1bc11dc28c3b87686f67ba9d49860876"><div>
             <h3>
               <span class="m-doc-wrap-bumper">double ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1bc11dc28c3b87686f67ba9d49860876" class="m-doc-self">eps</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the convergence tolerance.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -358,12 +355,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the convergence tolerance.</p>
           </div></section>
           <section class="m-doc-details" id="aa789c9cb0240758ac071a91aa656a7ed"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa789c9cb0240758ac071a91aa656a7ed" class="m-doc-self">alpha</a>(</span><span class="m-doc-wrap">double alpha)</span></span>
             </h3>
+            <p>Set the relaxation parameter.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -381,12 +378,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the relaxation parameter.</p>
           </div></section>
           <section class="m-doc-details" id="a598f1e7c4f6baeeb3fc715b4d0e2a759"><div>
             <h3>
               <span class="m-doc-wrap-bumper">double ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a598f1e7c4f6baeeb3fc715b4d0e2a759" class="m-doc-self">alpha</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the relaxation parameter.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -395,12 +392,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the relaxation parameter.</p>
           </div></section>
           <section class="m-doc-details" id="addba2e0452303be38f3e994f04558877"><div>
             <h3>
               <span class="m-doc-wrap-bumper">void ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#addba2e0452303be38f3e994f04558877" class="m-doc-self">verbose</a>(</span><span class="m-doc-wrap">bool isVerbose)</span></span>
             </h3>
+            <p>Set the verbosity of the solver.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -412,12 +409,12 @@
                 </tr>
               </tbody>
             </table>
-<p>Set the verbosity of the solver.</p>
           </div></section>
           <section class="m-doc-details" id="a11828b4076d90f9746b75dbff15cfad6"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a11828b4076d90f9746b75dbff15cfad6" class="m-doc-self">verbose</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Is solver verbose?</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -426,12 +423,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Is solver verbose?</p>
           </div></section>
           <section class="m-doc-details" id="a273e4d92aa36ac488aa3877c6cc4f249"><div>
             <h3>
               <span class="m-doc-wrap-bumper">void ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a273e4d92aa36ac488aa3877c6cc4f249" class="m-doc-self">warmStart</a>(</span><span class="m-doc-wrap">bool warmStart)</span></span>
             </h3>
+            <p>Enable the warm start.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -443,12 +440,12 @@
                 </tr>
               </tbody>
             </table>
-<p>Enable the warm start.</p>
           </div></section>
           <section class="m-doc-details" id="a6d885754a55598e5c27251fbb9c64084"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6d885754a55598e5c27251fbb9c64084" class="m-doc-self">warmStart</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Is warm start enabled?</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -457,12 +454,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Is warm start enabled?</p>
           </div></section>
           <section class="m-doc-details" id="ad2e3ca5563bf63bebab716912472d2fd"><div>
             <h3>
               <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad2e3ca5563bf63bebab716912472d2fd" class="m-doc-self">accelerationLookback</a>(</span><span class="m-doc-wrap">int accelerationLookback)</span></span>
             </h3>
+            <p>Set the memory for acceleration.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -471,12 +468,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Set the memory for acceleration.</p>
           </div></section>
           <section class="m-doc-details" id="a4484d59f67b17b165d3edfe1871116fc"><div>
             <h3>
               <span class="m-doc-wrap-bumper">int ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4484d59f67b17b165d3edfe1871116fc" class="m-doc-self">accelerationLookback</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
+            <p>Get the memory acceleration.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -485,18 +482,12 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the memory acceleration.</p>
-          </div></section>
-          <section class="m-doc-details" id="a90a2277b02ef5338d460a769749f763a"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">void ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a90a2277b02ef5338d460a769749f763a" class="m-doc-self">writeDataFilename</a>(</span><span class="m-doc-wrap">std::string_view filename)</span></span>
-            </h3>
-<p>Set the filename used to store the data. @filename name of the file where the data will be stored.</p>
           </div></section>
           <section class="m-doc-details" id="a839e898efea250937e54006f99d9ddb4"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::string_view ScsEigen::<wbr />Settings::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a839e898efea250937e54006f99d9ddb4" class="m-doc-self">writeDataFilename</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
+            <p>Get the filename.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -505,7 +496,6 @@
                 </tr>
               </tfoot>
             </table>
-<p>Get the filename.</p>
           </div></section>
         </section>
       </div>

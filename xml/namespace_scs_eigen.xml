@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Logger.h" line="44" column="14" declfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Logger.h" declline="44" declcolumn="14"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Logger.h" line="73" column="14" declfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Logger.h" declline="73" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_scs_eigen_1adf50c2b94805bbb8ad9e92be2dd65f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::pair&lt; bool, Eigen::MatrixXd &gt;</type>
@@ -37,15 +37,27 @@
           <declname>A</declname>
         </param>
         <briefdescription>
+<para>Compute the Cholesky decomposition of a PSD matrix A. </para>
         </briefdescription>
         <detaileddescription>
-<para>Compute the Cholesky decomposition of a PSD matrix A. <simplesect kind="note"><para>please be sure the matrix A is PSD. </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a PSD matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pair containing a Boolean and and the Cholesky decomposition of the matrix A. The bolean is true if the decomposition went fine. </para>
+</simplesect>
+<simplesect kind="note"><para>please be sure the matrix A is PSD. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" line="25" column="11" declfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" declline="25" declcolumn="11"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" line="28" column="11" declfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" declline="28" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

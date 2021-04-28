@@ -46,7 +46,6 @@
         <h1>
           <span class="m-breadcrumb"><a href="namespace_scs_eigen.html">ScsEigen</a>::<wbr/></span>Logger <span class="m-thin">class</span>
         </h1>
-        <p><span></span></p>
         <div class="m-block m-default">
           <h3>Contents</h3>
           <ul>
@@ -60,16 +59,18 @@
             </li>
           </ul>
         </div>
+<p><a href="class_scs_eigen_1_1_logger.html" class="m-doc">Logger</a> is a Singleton that can be used to print info errors and warnings in the terminal.</p>
         <section id="pub-types">
           <h2><a href="#pub-types">Public types</a></h2>
           <dl class="m-doc">
-            <dt id="a3c88012a341b1a5e3efc5ecd4aa0bd16">
-              <span class="m-doc-wrap-bumper">enum class <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16" class="m-doc-self">Level</a>: std::size_t { </span><span class="m-doc-wrap"><a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16acb5e100e5a9a3e7f6d1fd97512215282" class="m-doc">error</a> = 0,
-              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16a7b83d3f08fa392b79e3f553b585971cd" class="m-doc">warning</a> = 1,
-              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16acaf9b6b99962bf5c2264824231d7a40c" class="m-doc">info</a> = 2,
-              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16aad42f6697b035b7580e4fef93be20b4d" class="m-doc">debug</a> = 3 }</span>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum class <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16" class="m-doc">Level</a>: std::size_t { </span><span class="m-doc-wrap"><a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16a334c4a4c42fdb79d7ebc3e73b517e6f8" class="m-doc">none</a> = 0,
+              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16acb5e100e5a9a3e7f6d1fd97512215282" class="m-doc">error</a> = 1,
+              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16a7b83d3f08fa392b79e3f553b585971cd" class="m-doc">warning</a> = 2,
+              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16acaf9b6b99962bf5c2264824231d7a40c" class="m-doc">info</a> = 3,
+              <a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16aad42f6697b035b7580e4fef93be20b4d" class="m-doc">debug</a> = 4 }</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Level is an enum representing the level of the print.</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -78,23 +79,23 @@
             <dt id="a18e31e3e9944b4c867e574df8de86c32">
               <span class="m-doc-wrap-bumper">void <a href="#a18e31e3e9944b4c867e574df8de86c32" class="m-doc-self">error</a>(</span><span class="m-doc-wrap">std::string_view error)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Print an error message.</dd>
             <dt id="abdb81e6a9cedf8fda6432fd67d623611">
               <span class="m-doc-wrap-bumper">void <a href="#abdb81e6a9cedf8fda6432fd67d623611" class="m-doc-self">info</a>(</span><span class="m-doc-wrap">std::string_view info)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Print an info message.</dd>
             <dt id="a6d24ea22d949e37388b50842d3e9729d">
               <span class="m-doc-wrap-bumper">void <a href="#a6d24ea22d949e37388b50842d3e9729d" class="m-doc-self">warning</a>(</span><span class="m-doc-wrap">std::string_view warning)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Print a warning message.</dd>
             <dt id="a3ab9fdf2476422459f6c64ed6ef77c45">
               <span class="m-doc-wrap-bumper">void <a href="#a3ab9fdf2476422459f6c64ed6ef77c45" class="m-doc-self">debug</a>(</span><span class="m-doc-wrap">std::string_view debug)</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a248345ff05af127d0a028897aa06791f">
-              <span class="m-doc-wrap-bumper">void <a href="#a248345ff05af127d0a028897aa06791f" class="m-doc-self">setLevel</a>(</span><span class="m-doc-wrap">Level level)</span>
+            <dd>Print a debug message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a248345ff05af127d0a028897aa06791f" class="m-doc">setLevel</a>(</span><span class="m-doc-wrap"><a href="class_scs_eigen_1_1_logger.html#a3c88012a341b1a5e3efc5ecd4aa0bd16" class="m-doc">Level</a> level)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>set the level of the verbosity.</dd>
           </dl>
         </section>
         <section id="friends">
@@ -107,7 +108,24 @@
           </dl>
         </section>
         <section>
+          <h2>Enum documentation</h2>
+          <section class="m-doc-details" id="a3c88012a341b1a5e3efc5ecd4aa0bd16"><div>
+            <h3>
+              enum class ScsEigen::<wbr />Logger::<wbr /><a href="#a3c88012a341b1a5e3efc5ecd4aa0bd16" class="m-doc-self">Level</a>: std::size_t
+            </h3>
+            <p>Level is an enum representing the level of the print.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>If the level is set to Logger::Level::error only the errors will be print. If set to Logger::Level::info warnings and errors are printed.</p></aside>
+          </div></section>
+        </section>
+        <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a248345ff05af127d0a028897aa06791f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void ScsEigen::<wbr />Logger::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a248345ff05af127d0a028897aa06791f" class="m-doc-self">setLevel</a>(</span><span class="m-doc-wrap"><a href="class_scs_eigen_1_1_logger.html#a3c88012a341b1a5e3efc5ecd4aa0bd16" class="m-doc">Level</a> level)</span></span>
+            </h3>
+            <p>set the level of the verbosity.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>If the level is set to Logger::Level::error only the errors will be print. If set to Logger::Level::info warnings and errors are printed. Set the level equal to Logger::Level::none if you want to disable all the messages.</p></aside>
+          </div></section>
           <section class="m-doc-details" id="a1e4f4f687b8afd611f0c6146b30794e3"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="class_scs_eigen_1_1_logger.html" class="m-doc">Logger</a>*const </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1e4f4f687b8afd611f0c6146b30794e3" class="m-doc-self">log</a>(</span><span class="m-doc-wrap">)</span></span>

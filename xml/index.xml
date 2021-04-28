@@ -25,11 +25,11 @@
     <member refid="class_scs_eigen_1_1_cost_1ae5290a735fa7ba1076c3c1070535238f" kind="variable"><name>m_description</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a50367c6000fc4c60fe03f18f4a122f1f" kind="variable"><name>m_numberOfVariables</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a099de56842e4bbfc12892ad7dec383b4" kind="function"><name>Cost</name></member>
-    <member refid="class_scs_eigen_1_1_cost_1a79b224fe51825a03670957aad9b350eb" kind="function"><name>Cost</name></member>
+    <member refid="class_scs_eigen_1_1_cost_1a6509692dccc78a53638c1f6155dfd9c4" kind="function"><name>Cost</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a51b18f3e291710eaf037f22c7f99a49e" kind="function"><name>setDescription</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a548c1b9db0a769a437ddb905dd6277cb" kind="function"><name>setNumberOfVariables</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a92c54573567656b7ed835ddb47697073" kind="function"><name>~Cost</name></member>
-    <member refid="class_scs_eigen_1_1_cost_1ad8f79dc6098cb2b1482a82db470a9729" kind="function"><name>getDescrition</name></member>
+    <member refid="class_scs_eigen_1_1_cost_1a03439c4a344eee8b6f3d9309eb81603d" kind="function"><name>getDescription</name></member>
     <member refid="class_scs_eigen_1_1_cost_1a841cf2d15b830469bcd6ebd78aa632c2" kind="function"><name>getNumberOfVariables</name></member>
   </compound>
   <compound refid="struct_scs_eigen_1_1_settings_1_1_impl" kind="struct"><name>ScsEigen::Settings::Impl</name>
@@ -58,6 +58,7 @@
   </compound>
   <compound refid="class_scs_eigen_1_1_logger" kind="class"><name>ScsEigen::Logger</name>
     <member refid="class_scs_eigen_1_1_logger_1a3c88012a341b1a5e3efc5ecd4aa0bd16" kind="enum"><name>Level</name></member>
+    <member refid="class_scs_eigen_1_1_logger_1a3c88012a341b1a5e3efc5ecd4aa0bd16a334c4a4c42fdb79d7ebc3e73b517e6f8" kind="enumvalue"><name>none</name></member>
     <member refid="class_scs_eigen_1_1_logger_1a3c88012a341b1a5e3efc5ecd4aa0bd16acb5e100e5a9a3e7f6d1fd97512215282" kind="enumvalue"><name>error</name></member>
     <member refid="class_scs_eigen_1_1_logger_1a3c88012a341b1a5e3efc5ecd4aa0bd16a7b83d3f08fa392b79e3f553b585971cd" kind="enumvalue"><name>warning</name></member>
     <member refid="class_scs_eigen_1_1_logger_1a3c88012a341b1a5e3efc5ecd4aa0bd16acaf9b6b99962bf5c2264824231d7a40c" kind="enumvalue"><name>info</name></member>
@@ -71,6 +72,7 @@
     <member refid="class_scs_eigen_1_1_logger_1a248345ff05af127d0a028897aa06791f" kind="function"><name>setLevel</name></member>
   </compound>
   <compound refid="class_scs_eigen_1_1_mathematical_program" kind="class"><name>ScsEigen::MathematicalProgram</name>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" kind="typedef"><name>dictionary</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a53a94f6e6715e12142037b62e29617aa" kind="variable"><name>m_pimpl</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a249d15ba08a77fc13a6239a4bd462a11" kind="function"><name>MathematicalProgram</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1acb917134e6000cff89944e9bb0d59ea7" kind="function"><name>~MathematicalProgram</name></member>
@@ -78,13 +80,13 @@
     <member refid="class_scs_eigen_1_1_mathematical_program_1a5a2d66d46baca622ab05f5ffcaf651d3" kind="function"><name>numberOfVariables</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a66adf1561d9a8e48f99209d1df305361" kind="function"><name>addLinearCost</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1acfe40cb174a5638c22444a5e21b3fff3" kind="function"><name>getLinearCost</name></member>
-    <member refid="class_scs_eigen_1_1_mathematical_program_1ac1207ea6249819d5624026a8f7dc3704" kind="function"><name>getLinearCosts</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1a47933e1f46b712585e336944cf38a27b" kind="function"><name>getLinearCosts</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a9248c4f32d5aeae9cafdc8b932f315c4" kind="function"><name>addQuadraticCost</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1af46e64dd3e9ea89b13562d63d41ab8b5" kind="function"><name>getQuadraticCost</name></member>
-    <member refid="class_scs_eigen_1_1_mathematical_program_1a4190d6d62462513c06f81fc2c3103659" kind="function"><name>getQuadraticCosts</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1a2b0894253a917166c69912457d80b29c" kind="function"><name>getQuadraticCosts</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1ac5f5b786fc6caa14cfb47f5b690ac27a" kind="function"><name>addLinearConstraint</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1aeb216c8ee64a31014c3ed46ec1718039" kind="function"><name>getLinearConstraint</name></member>
-    <member refid="class_scs_eigen_1_1_mathematical_program_1a990078e2c1558397a3bfa40be3a9cddc" kind="function"><name>getLinearConstraints</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1a443e22c9c5b6afcfd6636075c03e77c1" kind="function"><name>getLinearConstraints</name></member>
   </compound>
   <compound refid="class_scs_eigen_1_1_quadratic_cost" kind="class"><name>ScsEigen::QuadraticCost</name>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1a229b229e10087e878eea474508944c4c" kind="variable"><name>m_Q</name></member>
@@ -94,7 +96,7 @@
     <member refid="class_scs_eigen_1_1_quadratic_cost_1af674face1ba64003b95bf20d67c54365" kind="function"><name>QuadraticCost</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1af300ff8fa68b0b27ee3f596d6e77720e" kind="function"><name>setQ</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1a041cf02a21d79d542aebac9fd8d48a3d" kind="function"><name>setB</name></member>
-    <member refid="class_scs_eigen_1_1_quadratic_cost_1a0757ec9b2eea0fa0155526aa981b0218" kind="function"><name>setC</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_cost_1a85c0cea5a27013d17ab80d2f876215f2" kind="function"><name>setC</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1afbb1f9ae9afe86a26fb70c0fddf933f3" kind="function"><name>getQ</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1aecfac3690572988b70b68663034fbb66" kind="function"><name>getB</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1a797aaf5010123e00562cf71841f26135" kind="function"><name>getC</name></member>
