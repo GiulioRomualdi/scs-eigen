@@ -21,8 +21,8 @@ namespace ScsEigen
  * Constraint class describes a generic convex constraint set of the form
  * \f[
  * l \le _\mathcal{k} f(x)  \le _\mathcal{k} u
- * Where \f$ \le _\mathcal{k} \f$ represents a generalized inequality.
  * \f]
+ * Where \f$ \le _\mathcal{k} \f$ represents a generalized inequality.
  */
 class Constraint
 {
