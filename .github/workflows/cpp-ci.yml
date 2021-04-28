@@ -1,0 +1,180 @@
+name: C++ CI Workflow
+
+on:
+  push:
+  pull_request:
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  # Execute a "nightly" build at 2 AM UTC
+  - cron:  '0 2 * * *'
+
+env:
+  scs_TAG: v2.1.2
+  Catch2_TAG: v2.13.4
+
+jobs:
+  check-style:
+    name: Find Trailing Whitespace
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find Trailing Whitespace
+        run: |
+          set +e
+          lines=$(git grep --cached -In '[[:blank:]]$')
+          if [ ! -z "$lines" ]; then
+             echo -e "\n The following lines contain trailing whitespace: \n"
+             echo -e "${lines}"
+             echo -e "\nFailed.\n"
+             exit 1
+          fi
+          exit 0
+
+  build:
+    needs: check-style
+    name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build_type: [Release, Debug]
+        os: [ubuntu-20.04]
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@master
+
+    # Print environment variables to simplify development and debugging
+    - name: Environment Variables
+      shell: bash
+      run: env
+
+    # ============
+    # DEPENDENCIES
+    # ============
+
+    # Remove apt repos that are known to break from time to time
+    # See https://github.com/actions/virtual-environments/issues/323
+    - name: Remove broken apt repos [Ubuntu]
+      if: startsWith(matrix.os, 'ubuntu')
+      run: |
+        for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
+
+    - name: Dependencies [Windows]
+      if: matrix.os == 'windows-latest'
+      run: |
+        vcpkg.exe install catch2:x64-windows eigen3:x64-windows
+
+    - name: Dependencies [macOS]
+      if: matrix.os == 'macOS-latest'
+      run: |
+
+        # https://github.com/actions/virtual-environments/issues/2322
+        rm -f /usr/local/bin/2to3
+
+        # https://github.com/actions/virtual-environments/issues/2391
+        brew unlink gcc@8
+        brew unlink gcc@9
+
+        brew update
+        brew install eigen catch2
+
+    - name: Dependencies [Ubuntu]
+      if: startsWith(matrix.os, 'ubuntu')
+      run: |
+
+        sudo apt-get update
+        sudo apt-get install git build-essential cmake libeigen3-dev
+
+    - name: Cache Source-based Dependencies
+      id: cache-source-deps
+      uses: actions/cache@v1
+      with:
+        path: ${{ github.workspace }}/install/deps
+        key: source-deps-${{ runner.os }}-${{runner.temp}}-os-${{ matrix.os }}-build-type-${{ matrix.build_type }}-scs-${{ env.scs_TAG }}-catch2-${{ env.Catch2_TAG }}
+
+
+    - name: Source-based Dependencies [Windows]
+      if: steps.cache-source-deps.outputs.cache-hit != 'true' && matrix.os == 'windows-latest'
+      shell: bash
+      run: |
+        # scs
+        cd ${GITHUB_WORKSPACE}
+        git clone -b ${scs_TAG} https://github.com/dic-iit/scs-cmake-buildsystem
+        cd scs-cmake-buildsystem
+        mkdir -p build
+        cd build
+        cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_INSTALLATION_ROOT}/scripts/buildsystems/vcpkg.cmake \
+                     -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install/deps ..
+
+        cmake --build . --config ${{ matrix.build_type }} --target INSTALL
+
+
+    - name: Source-based Dependencies [Ubuntu/macOS]
+      if: steps.cache-source-deps.outputs.cache-hit != 'true' && (startsWith(matrix.os, 'ubuntu') || matrix.os == 'macOS-latest')
+      shell: bash
+      run: |
+        # scs
+        cd ${GITHUB_WORKSPACE}
+        git clone -b ${scs_TAG} https://github.com/dic-iit/scs-cmake-buildsystem
+        cd scs-cmake-buildsystem
+        mkdir -p build
+        cd build
+        cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install/deps -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install/deps ..
+        cmake --build . --config ${{ matrix.build_type }} --target install
+
+
+    - name: Source-based Dependencies [Ubuntu]
+      if: steps.cache-source-deps.outputs.cache-hit != 'true' && startsWith(matrix.os, 'ubuntu')
+      shell: bash
+      run: |
+        # Catch2
+        git clone -b ${Catch2_TAG} https://github.com/catchorg/Catch2.git
+        cd Catch2
+        mkdir -p build
+        cd build
+        cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install/deps \
+               -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install/deps \
+               -DBUILD_TESTING=OFF ..
+
+        cmake --build . --config ${{ matrix.build_type }} --target install
+
+    # ===================
+    # CMAKE-BASED PROJECT
+    # ===================
+
+    - name: Configure [Windows]
+      # Use bash also on Windows (otherwise cd, mkdir, ... do not work)
+      if: matrix.os == 'windows-latest'
+      shell: bash
+      run: |
+        mkdir -p build
+        cd build
+        cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_INSTALLATION_ROOT}/scripts/buildsystems/vcpkg.cmake \
+              -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install/deps \
+              -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
+              -DBUILD_TESTING:BOOL=ON ..
+
+    - name: Configure [Ubuntu/macOS]
+      if: (startsWith(matrix.os, 'ubuntu') || matrix.os == 'macOS-latest')
+      shell: bash
+      run: |
+        mkdir -p build
+        cd build
+        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install/deps \
+              -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
+              -DBUILD_TESTING:BOOL=ON \
+              -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
+
+    - name: Build
+      shell: bash
+      run: |
+        cd build
+        export PATH=$PATH:/d/a/scs-eigen/scs-eigen/install/bin:/d/a/scs-eigen/scs-eigen/install/deps/bin
+        cmake --build . --config ${{ matrix.build_type }}
+
+    - name: Test
+      shell: bash
+      run: |
+        cd build
+        export PATH=$PATH:/d/a/scs-eigen/scs-eigen/install/bin:/d/a/scs-eigen/scs-eigen/install/deps/bin
+        ctest --output-on-failure -C ${{ matrix.build_type }} .
