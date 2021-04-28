@@ -6,8 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><image type="html" name="License-MIT-yellow.svg" inline="yes"></image>
-</para>
+<para>Simple C++ wrapper for <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> library.</para>
 <sect1 id="index_1autotoc_md1">
 <title>Dependencies</title>
 <para>The project depends only on <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> and <ulink url="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen3</ulink>. Please install <computeroutput>scs</computeroutput> using the <computeroutput>cmake-build</computeroutput> system provided in <ulink url="https://github.com/dic-iit/scs-cmake-buildsystem">this repository</ulink>.</para>
@@ -15,24 +14,16 @@
 <sect1 id="index_1autotoc_md2">
 <title>Usage</title>
 <para><orderedlist>
-<listitem><para>Clone the repository</para>
-</listitem></orderedlist>
-</para>
-<para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/GiulioRomualdi/scs-eigen</highlight></codeline>
+<listitem><para>Clone the repository <programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/GiulioRomualdi/scs-eigen</highlight></codeline>
 </programlisting></para>
-<para><orderedlist>
-<listitem><para>Build it</para>
-</listitem></orderedlist>
-</para>
-<para><programlisting><codeline><highlight class="normal">cd<sp/>scs-eigen</highlight></codeline>
+</listitem><listitem><para>Build it <programlisting><codeline><highlight class="normal">cd<sp/>scs-eigen</highlight></codeline>
 <codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
 <codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
 <codeline><highlight class="normal">cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=&lt;custom-folder&gt;<sp/>../</highlight></codeline>
 <codeline><highlight class="normal">make</highlight></codeline>
 <codeline><highlight class="normal">make<sp/>install</highlight></codeline>
 </programlisting></para>
-<para><orderedlist>
-<listitem><para>Add the following environmental variable <programlisting><codeline><highlight class="normal">ScsEigen_DIR=/path/where/you/installed/</highlight></codeline>
+</listitem><listitem><para>Add the following environmental variable <programlisting><codeline><highlight class="normal">ScsEigen_DIR=/path/where/you/installed/</highlight></codeline>
 </programlisting></para>
 </listitem></orderedlist>
 </para>
