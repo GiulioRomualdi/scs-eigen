@@ -1,18 +1,17 @@
 # scs-eigen
 
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+Simple C++ wrapper for [`scs`](https://github.com/cvxgrp/scs) library.
+
 
 ## Dependencies
 The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page). Please install `scs` using the `cmake-build` system provided in [this repository](https://github.com/dic-iit/scs-cmake-buildsystem).
 
 ## Usage
 1. Clone the repository
-
    ```
    git clone https://github.com/GiulioRomualdi/scs-eigen
    ```
 2. Build it
-
    ```
    cd scs-eigen
    mkdir build
