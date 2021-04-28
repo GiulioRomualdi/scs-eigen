@@ -1,4 +1,6 @@
-# scs-eigen ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+# scs-eigen
+
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Dependencies
 The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page). Please install `scs` using the `cmake-build` system provided in [this repository](https://github.com/dic-iit/scs-cmake-buildsystem).
@@ -52,9 +54,9 @@ auto solver = ScsEigen::Solver();
 `ScsEigen::MathematicalProgram` can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to `ScsEigen::MathematicalProgram`, `ScsEigen::Solver` will perform the so called conic-embedding to convert them in a form compatible with `scs`.
 
 We provide a list of self-contained example that can be used as a refernce to build an optimization problem:
-- [`qp.md`](./qp.md) contains an example of Quadratic Programming (QP) problem
+- [QP](pages/qp.md) contains an example of Quadratic Programming (QP) problem
 
 ## License
 Materials in this repository are distributed under the following license:
 
-> All software is licensed under the MIT License. See [LICENSE](https://github.com/GiulioRomualdi/scs-eigen/blob/main/LICENSE) file for details.
+> All software is licensed under the MIT License. See [LICENSE](../../LICENSE) file for details.
