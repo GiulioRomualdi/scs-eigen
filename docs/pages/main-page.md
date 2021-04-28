@@ -59,4 +59,4 @@ We provide a list of self-contained example that can be used as a refernce to bu
 ## License
 Materials in this repository are distributed under the following license:
 
-> All software is licensed under the MIT License. See [LICENSE](../../LICENSE) file for details.
+> All software is licensed under the MIT License. See [LICENSE](https://github.com/GiulioRomualdi/scs-eigen/blob/main/LICENSE) file for details.
