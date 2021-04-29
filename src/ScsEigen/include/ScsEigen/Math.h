@@ -26,6 +26,12 @@ namespace ScsEigen
  * @note please be sure the matrix A is PSD.
  */
 std::pair<bool, Eigen::MatrixXd> choleskyDecomposition(const Eigen::Ref<const Eigen::MatrixXd>& A);
+
+/**
+ * @brief Unitary vector
+ */
+using Vector1d = Eigen::Matrix<double, 1, 1>;
+
 } // namespace ScsEigen
 
 #endif // SCS_EIGEN_LINEAR_MATH_H
