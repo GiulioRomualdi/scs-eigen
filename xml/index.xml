@@ -87,6 +87,9 @@
     <member refid="class_scs_eigen_1_1_mathematical_program_1ac5f5b786fc6caa14cfb47f5b690ac27a" kind="function"><name>addLinearConstraint</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1aeb216c8ee64a31014c3ed46ec1718039" kind="function"><name>getLinearConstraint</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a443e22c9c5b6afcfd6636075c03e77c1" kind="function"><name>getLinearConstraints</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1a62c7cc52a7149e3b6282933f184f9c50" kind="function"><name>addQuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1adf9889688dc1dcabfe7c05561c3d52a5" kind="function"><name>getQuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_mathematical_program_1aba0449c315a4bbf5d07696bea8f5f086" kind="function"><name>getQuadraticConstraints</name></member>
   </compound>
   <compound refid="class_scs_eigen_1_1_quadratic_constraint" kind="class"><name>ScsEigen::QuadraticConstraint</name>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1a54485d8fc105e9ed6a1ac8bcdaf886bf" kind="variable"><name>m_Q</name></member>

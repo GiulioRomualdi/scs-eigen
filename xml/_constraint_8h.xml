@@ -36,6 +36,8 @@
       <node id="5">
         <label>QuadraticConstraint.h</label>
         <link refid="_quadratic_constraint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>Constraint.h</label>

@@ -5,6 +5,7 @@
     <includes local="no">string</includes>
     <includes local="no">Eigen/Dense</includes>
     <includes refid="_constraint_8h" local="no">ScsEigen/Constraint.h</includes>
+    <includedby refid="_mathematical_program_8h" local="no">MathematicalProgram.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>string</label>
@@ -31,6 +32,24 @@
         <label>Eigen/Dense</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Solver.h</label>
+        <link refid="_solver_8h"/>
+      </node>
+      <node id="1">
+        <label>QuadraticConstraint.h</label>
+        <link refid="_quadratic_constraint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MathematicalProgram.h</label>
+        <link refid="_mathematical_program_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_scs_eigen_1_1_quadratic_constraint" prot="public">ScsEigen::QuadraticConstraint</innerclass>
     <innernamespace refid="namespace_scs_eigen">ScsEigen</innernamespace>
     <briefdescription>

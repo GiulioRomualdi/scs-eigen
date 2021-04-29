@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="57" column="17" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="57" bodyend="-1"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="58" column="17" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="51" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="52" column="21" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="62" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="63" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1acb917134e6000cff89944e9bb0d59ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="67" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="68" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a923b25789b93b60f71af60d182c4df85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="72" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="73" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a5a2d66d46baca622ab05f5ffcaf651d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="77" column="18"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="78" column="18"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a66adf1561d9a8e48f99209d1df305361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="85" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="86" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1acfe40cb174a5638c22444a5e21b3fff3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::weak_ptr&lt; <ref refid="class_scs_eigen_1_1_linear_cost" kindref="compound">LinearCost</ref> &gt;</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="94" column="19"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="95" column="19"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a47933e1f46b712585e336944cf38a27b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" kindref="member">dictionary</ref>&lt; <ref refid="class_scs_eigen_1_1_linear_cost" kindref="compound">LinearCost</ref> &gt; &amp;</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="99" column="22"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="100" column="22"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a9248c4f32d5aeae9cafdc8b932f315c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="107" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="108" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1af46e64dd3e9ea89b13562d63d41ab8b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::weak_ptr&lt; <ref refid="class_scs_eigen_1_1_quadratic_cost" kindref="compound">QuadraticCost</ref> &gt;</type>
@@ -260,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="116" column="19"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="117" column="19"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a2b0894253a917166c69912457d80b29c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" kindref="member">dictionary</ref>&lt; <ref refid="class_scs_eigen_1_1_quadratic_cost" kindref="compound">QuadraticCost</ref> &gt; &amp;</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="121" column="22"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="122" column="22"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1ac5f5b786fc6caa14cfb47f5b690ac27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="129" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="130" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1aeb216c8ee64a31014c3ed46ec1718039" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::weak_ptr&lt; <ref refid="class_scs_eigen_1_1_linear_constraint" kindref="compound">LinearConstraint</ref> &gt;</type>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="138" column="19"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="139" column="19"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a443e22c9c5b6afcfd6636075c03e77c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" kindref="member">dictionary</ref>&lt; <ref refid="class_scs_eigen_1_1_linear_constraint" kindref="compound">LinearConstraint</ref> &gt; &amp;</type>
@@ -362,7 +362,95 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="143" column="22"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="144" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1a62c7cc52a7149e3b6282933f184f9c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ScsEigen::MathematicalProgram::addQuadraticConstraint</definition>
+        <argsstring>(std::shared_ptr&lt; QuadraticConstraint &gt; constraint, std::string_view name)</argsstring>
+        <name>addQuadraticConstraint</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> &gt;</type>
+          <declname>constraint</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the quadratic constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>constraint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a shared pointer to the constraint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>the User is in charge to set the vectors related to the constraint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="153" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1adf9889688dc1dcabfe7c05561c3d52a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::weak_ptr&lt; <ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> &gt;</type>
+        <definition>std::weak_ptr&lt;QuadraticConstraint&gt; ScsEigen::MathematicalProgram::getQuadraticConstraint</definition>
+        <argsstring>(std::string_view name) const</argsstring>
+        <name>getQuadraticConstraint</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get the quadratic constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a weak_ptr to the constraint. </para>
+</simplesect>
+<simplesect kind="note"><para>if the constraint associated to the name &quot;name&quot; is not found an unlockable weak_ptr is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="162" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_mathematical_program_1aba0449c315a4bbf5d07696bea8f5f086" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" kindref="member">dictionary</ref>&lt; <ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> &gt; &amp;</type>
+        <definition>const dictionary&lt;QuadraticConstraint&gt;&amp; ScsEigen::MathematicalProgram::getQuadraticConstraints</definition>
+        <argsstring>() const</argsstring>
+        <name>getQuadraticConstraints</name>
+        <briefdescription>
+<para>Get all the quadratic constraints stored the in the <ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">MathematicalProgram</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="167" column="22"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -387,16 +475,19 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;linear<sp/>constraint&quot;</highlight><highlight class="normal">));</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="49" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="48" bodyend="144"/>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" line="50" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/MathematicalProgram.h" bodystart="49" bodyend="168"/>
     <listofallmembers>
       <member refid="class_scs_eigen_1_1_mathematical_program_1ac5f5b786fc6caa14cfb47f5b690ac27a" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>addLinearConstraint</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a66adf1561d9a8e48f99209d1df305361" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>addLinearCost</name></member>
+      <member refid="class_scs_eigen_1_1_mathematical_program_1a62c7cc52a7149e3b6282933f184f9c50" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>addQuadraticConstraint</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a9248c4f32d5aeae9cafdc8b932f315c4" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>addQuadraticCost</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1afe781329fc472bcc3ea27fa5fef308d2" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>dictionary</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1aeb216c8ee64a31014c3ed46ec1718039" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getLinearConstraint</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a443e22c9c5b6afcfd6636075c03e77c1" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getLinearConstraints</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1acfe40cb174a5638c22444a5e21b3fff3" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getLinearCost</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a47933e1f46b712585e336944cf38a27b" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getLinearCosts</name></member>
+      <member refid="class_scs_eigen_1_1_mathematical_program_1adf9889688dc1dcabfe7c05561c3d52a5" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getQuadraticConstraint</name></member>
+      <member refid="class_scs_eigen_1_1_mathematical_program_1aba0449c315a4bbf5d07696bea8f5f086" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getQuadraticConstraints</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1af46e64dd3e9ea89b13562d63d41ab8b5" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getQuadraticCost</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a2b0894253a917166c69912457d80b29c" prot="public" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>getQuadraticCosts</name></member>
       <member refid="class_scs_eigen_1_1_mathematical_program_1a53a94f6e6715e12142037b62e29617aa" prot="private" virt="non-virtual"><scope>ScsEigen::MathematicalProgram</scope><name>m_pimpl</name></member>

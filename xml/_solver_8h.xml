@@ -17,12 +17,12 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>cmath</label>
       </node>
       <node id="5">
@@ -34,6 +34,16 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ScsEigen/QuadraticConstraint.h</label>
+        <link refid="_quadratic_constraint_8h"/>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -74,11 +84,13 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="8">
         <label>optional</label>
       </node>
-      <node id="12">
+      <node id="13">
         <label>ScsEigen/QuadraticCost.h</label>
         <link refid="_quadratic_cost_8h"/>
         <childnode refid="5" relation="include">
@@ -98,7 +110,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>ScsEigen/Settings.h</label>
         <link refid="_settings_8h"/>
         <childnode refid="2" relation="include">
@@ -107,10 +119,10 @@
       <node id="6">
         <label>unordered_map</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>ScsEigen/Solution.h</label>
         <link refid="_solution_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>

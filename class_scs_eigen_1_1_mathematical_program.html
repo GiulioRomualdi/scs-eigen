@@ -148,6 +148,19 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a443e22c9c5b6afcfd6636075c03e77c1" class="m-doc-self">getLinearConstraints</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc">dictionary</a>&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt;&amp;</span>
             </dt>
             <dd>Get all the linear constraints stored the in the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a62c7cc52a7149e3b6282933f184f9c50" class="m-doc">addQuadraticConstraint</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_constraint.html" class="m-doc">QuadraticConstraint</a>&gt; constraint,
+              std::string_view name) -&gt; bool</span>
+            </dt>
+            <dd>Set the quadratic constraint.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#adf9889688dc1dcabfe7c05561c3d52a5" class="m-doc">getQuadraticConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const -&gt; std::weak_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_constraint.html" class="m-doc">QuadraticConstraint</a>&gt;</span>
+            </dt>
+            <dd>Get the quadratic constraint.</dd>
+            <dt id="aba0449c315a4bbf5d07696bea8f5f086">
+              <span class="m-doc-wrap-bumper">auto <a href="#aba0449c315a4bbf5d07696bea8f5f086" class="m-doc-self">getQuadraticConstraints</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="class_scs_eigen_1_1_mathematical_program.html#afe781329fc472bcc3ea27fa5fef308d2" class="m-doc">dictionary</a>&lt;<a href="class_scs_eigen_1_1_quadratic_constraint.html" class="m-doc">QuadraticConstraint</a>&gt;&amp;</span>
+            </dt>
+            <dd>Get all the quadratic constraints stored the in the <a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">MathematicalProgram</a> class.</dd>
           </dl>
         </section>
         <section>
@@ -274,6 +287,53 @@
               <span class="m-doc-wrap-bumper">std::weak_ptr&lt;<a href="class_scs_eigen_1_1_linear_constraint.html" class="m-doc">LinearConstraint</a>&gt; ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aeb216c8ee64a31014c3ed46ec1718039" class="m-doc-self">getLinearConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const</span></span>
             </h3>
             <p>Get the linear constraint.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">name</td>
+                  <td>name of the constraint.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a weak_ptr to the constraint.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>if the constraint associated to the name &quot;name&quot; is not found an unlockable weak_ptr is returned.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a62c7cc52a7149e3b6282933f184f9c50"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a62c7cc52a7149e3b6282933f184f9c50" class="m-doc-self">addQuadraticConstraint</a>(</span><span class="m-doc-wrap">std::shared_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_constraint.html" class="m-doc">QuadraticConstraint</a>&gt; constraint,
+              std::string_view name)</span></span>
+            </h3>
+            <p>Set the quadratic constraint.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">constraint</td>
+                  <td>a shared pointer to the constraint.</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>the name of the constraint.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>the User is in charge to set the vectors related to the constraint.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="adf9889688dc1dcabfe7c05561c3d52a5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::weak_ptr&lt;<a href="class_scs_eigen_1_1_quadratic_constraint.html" class="m-doc">QuadraticConstraint</a>&gt; ScsEigen::<wbr />MathematicalProgram::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adf9889688dc1dcabfe7c05561c3d52a5" class="m-doc-self">getQuadraticConstraint</a>(</span><span class="m-doc-wrap">std::string_view name) const</span></span>
+            </h3>
+            <p>Get the quadratic constraint.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
