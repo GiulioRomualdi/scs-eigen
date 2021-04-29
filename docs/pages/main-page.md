@@ -8,11 +8,11 @@ The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](
 
 ## Usage
 1. Clone the repository
-   ```
+   ```ansi
    git clone https://github.com/GiulioRomualdi/scs-eigen
    ```
 2. Build it
-   ```
+   ```ansi
    cd scs-eigen
    mkdir build
    cd build
@@ -21,7 +21,7 @@ The project depends only on [`scs`](https://github.com/cvxgrp/scs) and [Eigen3](
    make install
    ```
 3. Add the following environmental variable
-   ```
+   ```ansi
    ScsEigen_DIR=/path/where/you/installed/
    ```
 
