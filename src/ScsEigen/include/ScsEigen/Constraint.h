@@ -63,14 +63,14 @@ protected:
      * @param lowerBound vector representing the lower bound.
      * @return true in case of success/false otherwise
      */
-    bool setLowerBound(const Eigen::Ref<const Eigen::VectorXd>& lowerBound);
+    virtual bool setLowerBound(const Eigen::Ref<const Eigen::VectorXd>& lowerBound);
 
     /**
      * @brief Set the upper bound.
      * @param upperBound vector representing the upper bound.
      * @return true in case of success/false otherwise
      */
-    bool setUpperBound(const Eigen::Ref<const Eigen::VectorXd>& upperBound);
+    virtual bool setUpperBound(const Eigen::Ref<const Eigen::VectorXd>& upperBound);
 
     /**
      * @brief Set the lower and the upper bounds.

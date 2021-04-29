@@ -13,6 +13,7 @@ set(${LIBRARY_NAME}_HDR
   include/ScsEigen/QuadraticCost.h
   include/ScsEigen/Constraint.h
   include/ScsEigen/LinearConstraint.h
+  include/ScsEigen/QuadraticConstraint.h
   include/ScsEigen/MathematicalProgram.h
   include/ScsEigen/Solution.h
   include/ScsEigen/Solver.h)
@@ -26,6 +27,7 @@ set(${LIBRARY_NAME}_SRC
   src/QuadraticCost.cpp
   src/Constraint.cpp
   src/LinearConstraint.cpp
+  src/QuadraticConstraint.cpp
   src/MathematicalProgram.cpp
   src/Solution.cpp
   src/Solver.cpp)
