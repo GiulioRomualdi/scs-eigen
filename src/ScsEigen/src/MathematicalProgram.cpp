@@ -20,6 +20,7 @@ struct MathematicalProgram::Impl
     MathematicalProgram::dictionary<QuadraticCost> quadraticCosts;
 
     MathematicalProgram::dictionary<LinearConstraint> linearConstraints;
+    MathematicalProgram::dictionary<QuadraticConstraint> quadraticConstraints;
 };
 
 MathematicalProgram::MathematicalProgram()
@@ -202,4 +203,62 @@ const MathematicalProgram::dictionary<LinearConstraint>&
 MathematicalProgram::getLinearConstraints() const
 {
     return m_pimpl->linearConstraints;
+}
+
+bool MathematicalProgram::addQuadraticConstraint(std::shared_ptr<QuadraticConstraint> constraint,
+                                                 std::string_view name)
+{
+    if (m_pimpl->numberOfVariables == 0)
+    {
+        log()->error("[MathematicalProgram::addQuadraticConstraint] Please set the number of "
+                     "variables.");
+        return false;
+    }
+
+    if (m_pimpl->quadraticConstraints.find(name) != m_pimpl->quadraticConstraints.end())
+    {
+        log()->error("[MathematicalProgram::addQuadraticConstraint] The constraint named "
+                     + std::string(name) + "already exists.");
+        return false;
+    }
+
+    if (constraint == nullptr)
+    {
+        log()->error("[MathematicalProgram::addQuadraticConstraint] The constraint is not valid.");
+        return false;
+    }
+
+    if (constraint->getNumberOfVariables() != m_pimpl->numberOfVariables)
+    {
+        log()->error("[MathematicalProgram::addQuadraticConstraint] The size of the constraint is "
+                     "different from the number of variables stored in the MathematicalProgram. "
+                     "Expected:"
+                     + std::to_string(m_pimpl->numberOfVariables)
+                     + " passed:" + std::to_string(constraint->getNumberOfVariables()) + ".");
+        return false;
+    }
+
+    m_pimpl->quadraticConstraints[name] = constraint;
+    return true;
+}
+
+std::weak_ptr<QuadraticConstraint>
+MathematicalProgram::getQuadraticConstraint(std::string_view name) const
+{
+    auto constraint = m_pimpl->quadraticConstraints.find(name);
+    if (constraint != m_pimpl->quadraticConstraints.end())
+    {
+        return constraint->second;
+    }
+
+    log()->warning("[MathematicalProgram::getQuadraticConstraint] The constraint named "
+                   + std::string(name) + "does not exists. An invalid weak_ptr will be returned.");
+
+    return std::shared_ptr<QuadraticConstraint>();
+}
+
+const MathematicalProgram::dictionary<QuadraticConstraint>&
+MathematicalProgram::getQuadraticConstraints() const
+{
+    return m_pimpl->quadraticConstraints;
 }

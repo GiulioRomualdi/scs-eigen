@@ -14,6 +14,7 @@
 
 #include <ScsEigen/LinearConstraint.h>
 #include <ScsEigen/LinearCost.h>
+#include <ScsEigen/QuadraticConstraint.h>
 #include <ScsEigen/QuadraticCost.h>
 
 /**
@@ -141,6 +142,29 @@ public:
      * @brief Get all the linear constraints stored the in the MathematicalProgram class.
      */
     const dictionary<LinearConstraint>& getLinearConstraints() const;
+
+    /**
+     * @brief Set the quadratic constraint
+     * @param constraint a shared pointer to the constraint.
+     * @param name the name of the constraint.
+     * @note the User is in charge to set the vectors related to the constraint.
+     */
+    bool
+    addQuadraticConstraint(std::shared_ptr<QuadraticConstraint> constraint, std::string_view name);
+
+    /**
+     * @brief Get the quadratic constraint.
+     * @param name name of the constraint.
+     * @return a weak_ptr to the constraint.
+     * @note if the constraint associated to the name "name" is not found an unlockable weak_ptr is
+     * returned.
+     */
+    std::weak_ptr<QuadraticConstraint> getQuadraticConstraint(std::string_view name) const;
+
+    /**
+     * @brief Get all the quadratic constraints stored the in the MathematicalProgram class.
+     */
+    const dictionary<QuadraticConstraint>& getQuadraticConstraints() const;
 };
 
 } // namespace ScsEigen
