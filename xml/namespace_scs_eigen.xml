@@ -8,10 +8,27 @@
     <innerclass refid="class_scs_eigen_1_1_linear_cost" prot="public">ScsEigen::LinearCost</innerclass>
     <innerclass refid="class_scs_eigen_1_1_logger" prot="public">ScsEigen::Logger</innerclass>
     <innerclass refid="class_scs_eigen_1_1_mathematical_program" prot="public">ScsEigen::MathematicalProgram</innerclass>
+    <innerclass refid="class_scs_eigen_1_1_quadratic_constraint" prot="public">ScsEigen::QuadraticConstraint</innerclass>
     <innerclass refid="class_scs_eigen_1_1_quadratic_cost" prot="public">ScsEigen::QuadraticCost</innerclass>
     <innerclass refid="class_scs_eigen_1_1_settings" prot="public">ScsEigen::Settings</innerclass>
     <innerclass refid="struct_scs_eigen_1_1_solution" prot="public">ScsEigen::Solution</innerclass>
     <innerclass refid="class_scs_eigen_1_1_solver" prot="public">ScsEigen::Solver</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_scs_eigen_1a1e2728eed9a8df80a7f4fe00a5e22dab" prot="public" static="no">
+        <type>Eigen::Matrix&lt; double, 1, 1 &gt;</type>
+        <definition>using ScsEigen::Vector1d = typedef Eigen::Matrix&lt;double, 1, 1&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector1d</name>
+        <briefdescription>
+<para>Unitary vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" line="33" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Math.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespace_scs_eigen_1a643a0e72058cf88ed506e1c175ba8ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_scs_eigen_1_1_logger" kindref="compound">Logger</ref> *const</type>

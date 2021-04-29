@@ -213,7 +213,7 @@
         <argsstring>() const</argsstring>
         <name>getQ</name>
         <briefdescription>
-<para>Get the hessian <formula id="19">$Q$</formula>. </para>
+<para>Get the hessian <formula id="17">$Q$</formula>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -241,7 +241,7 @@
         <argsstring>() const</argsstring>
         <name>getC</name>
         <briefdescription>
-<para>Get the scalar <formula id="20">$c$</formula>. </para>
+<para>Get the scalar <formula id="21">$c$</formula>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -253,7 +253,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="class_scs_eigen_1_1_quadratic_cost" kindref="compound">QuadraticCost</ref> is a concrete implementation of <ref refid="class_scs_eigen_1_1_cost" kindref="compound">Cost</ref>. It implements a cost of the form <formula id="15">\[ f(x) = \frac{1}{2} x ^\top Q x + b^\top x + c \]</formula> where <formula id="3">$x \in \mathbb{R}^n$</formula> is the optimization variable. <formula id="16">$Q \in S^n_+$</formula> is a semipositive definite matrix, <formula id="17">$b \in \mathbb{R}^n$</formula> and the scalar <formula id="18">$c \in \mathbb{R}$</formula> </para>
+<para><ref refid="class_scs_eigen_1_1_quadratic_cost" kindref="compound">QuadraticCost</ref> is a concrete implementation of <ref refid="class_scs_eigen_1_1_cost" kindref="compound">Cost</ref>. It implements a cost of the form <formula id="18">\[ f(x) = \frac{1}{2} x ^\top Q x + b^\top x + c \]</formula> where <formula id="3">$x \in \mathbb{R}^n$</formula> is the optimization variable. <formula id="16">$Q \in S^n_+$</formula> is a semipositive definite matrix, <formula id="19">$b \in \mathbb{R}^n$</formula> and the scalar <formula id="20">$c \in \mathbb{R}$</formula> </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

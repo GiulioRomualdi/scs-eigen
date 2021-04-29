@@ -3,6 +3,7 @@
   <compounddef id="class_scs_eigen_1_1_constraint" kind="class" language="C++" prot="public">
     <compoundname>ScsEigen::Constraint</compoundname>
     <derivedcompoundref refid="class_scs_eigen_1_1_linear_constraint" prot="public" virt="non-virtual">ScsEigen::LinearConstraint</derivedcompoundref>
+    <derivedcompoundref refid="class_scs_eigen_1_1_quadratic_constraint" prot="public" virt="non-virtual">ScsEigen::QuadraticConstraint</derivedcompoundref>
     <includes refid="_constraint_8h" local="no">Constraint.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_scs_eigen_1_1_constraint_1adc6fe54c2b1d0cabba8a635c10fe9f6e" prot="protected" static="no" mutable="no">
@@ -442,6 +443,12 @@
       <node id="1">
         <label>ScsEigen::Constraint</label>
         <link refid="class_scs_eigen_1_1_constraint"/>
+      </node>
+      <node id="3">
+        <label>ScsEigen::QuadraticConstraint</label>
+        <link refid="class_scs_eigen_1_1_quadratic_constraint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="28" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" bodystart="27" bodyend="127"/>

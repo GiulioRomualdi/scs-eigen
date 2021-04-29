@@ -88,6 +88,16 @@
     <member refid="class_scs_eigen_1_1_mathematical_program_1aeb216c8ee64a31014c3ed46ec1718039" kind="function"><name>getLinearConstraint</name></member>
     <member refid="class_scs_eigen_1_1_mathematical_program_1a443e22c9c5b6afcfd6636075c03e77c1" kind="function"><name>getLinearConstraints</name></member>
   </compound>
+  <compound refid="class_scs_eigen_1_1_quadratic_constraint" kind="class"><name>ScsEigen::QuadraticConstraint</name>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a54485d8fc105e9ed6a1ac8bcdaf886bf" kind="variable"><name>m_Q</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1ac98e09aa78d5126b41f38795552dcc25" kind="variable"><name>m_b</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad2098ea431aeaa02d0175cb884a34c0d" kind="function"><name>QuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a806bf9e2fad5ec5dea672af5a56f3345" kind="function"><name>QuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" kind="function"><name>setQ</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" kind="function"><name>setB</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1afe213646bd85fcf299465ee7abd9a42c" kind="function"><name>getQ</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1aea39eed0e88e80f0ee28479dcc213f13" kind="function"><name>getB</name></member>
+  </compound>
   <compound refid="class_scs_eigen_1_1_quadratic_cost" kind="class"><name>ScsEigen::QuadraticCost</name>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1a229b229e10087e878eea474508944c4c" kind="variable"><name>m_Q</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_cost_1a53199cc9234faff17c3429185f77b5c3" kind="variable"><name>m_b</name></member>
@@ -170,6 +180,7 @@
     <member refid="class_scs_eigen_1_1_solver_1a795031c498a9bccce8f6cc1515d8190e" kind="function"><name>solution</name></member>
   </compound>
   <compound refid="namespace_scs_eigen" kind="namespace"><name>ScsEigen</name>
+    <member refid="namespace_scs_eigen_1a1e2728eed9a8df80a7f4fe00a5e22dab" kind="typedef"><name>Vector1d</name></member>
     <member refid="namespace_scs_eigen_1a643a0e72058cf88ed506e1c175ba8ede" kind="function"><name>log</name></member>
     <member refid="namespace_scs_eigen_1adf50c2b94805bbb8ad9e92be2dd65f1b" kind="function"><name>choleskyDecomposition</name></member>
   </compound>
@@ -190,6 +201,8 @@
   <compound refid="_mathematical_program_8h" kind="file"><name>MathematicalProgram.h</name>
   </compound>
   <compound refid="qp_8md" kind="file"><name>qp.md</name>
+  </compound>
+  <compound refid="_quadratic_constraint_8h" kind="file"><name>QuadraticConstraint.h</name>
   </compound>
   <compound refid="_quadratic_cost_8h" kind="file"><name>QuadraticCost.h</name>
   </compound>

@@ -14,16 +14,16 @@
 <sect1 id="index_1autotoc_md2">
 <title>Usage</title>
 <para><orderedlist>
-<listitem><para>Clone the repository <programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/GiulioRomualdi/scs-eigen</highlight></codeline>
+<listitem><para>Clone the repository <programlisting filename=".ansi"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/GiulioRomualdi/scs-eigen</highlight></codeline>
 </programlisting></para>
-</listitem><listitem><para>Build it <programlisting><codeline><highlight class="normal">cd<sp/>scs-eigen</highlight></codeline>
+</listitem><listitem><para>Build it <programlisting filename=".ansi"><codeline><highlight class="normal">cd<sp/>scs-eigen</highlight></codeline>
 <codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
 <codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
 <codeline><highlight class="normal">cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=&lt;custom-folder&gt;<sp/>../</highlight></codeline>
 <codeline><highlight class="normal">make</highlight></codeline>
 <codeline><highlight class="normal">make<sp/>install</highlight></codeline>
 </programlisting></para>
-</listitem><listitem><para>Add the following environmental variable <programlisting><codeline><highlight class="normal">ScsEigen_DIR=/path/where/you/installed/</highlight></codeline>
+</listitem><listitem><para>Add the following environmental variable <programlisting filename=".ansi"><codeline><highlight class="normal">ScsEigen_DIR=/path/where/you/installed/</highlight></codeline>
 </programlisting></para>
 </listitem></orderedlist>
 </para>

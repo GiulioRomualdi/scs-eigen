@@ -10,6 +10,7 @@
     <innerfile refid="_logger_8h">Logger.h</innerfile>
     <innerfile refid="_math_8h">Math.h</innerfile>
     <innerfile refid="_mathematical_program_8h">MathematicalProgram.h</innerfile>
+    <innerfile refid="_quadratic_constraint_8h">QuadraticConstraint.h</innerfile>
     <innerfile refid="_quadratic_cost_8h">QuadraticCost.h</innerfile>
     <innerfile refid="_settings_8h">Settings.h</innerfile>
     <innerfile refid="_solution_8h">Solution.h</innerfile>
