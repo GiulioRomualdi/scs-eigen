@@ -43,7 +43,7 @@ double upperBound = -1;
 
 ```
 
-Once the matrices used to described the QCQP problem have been defined you can create `ScsEigen::Solve` and initialize the number of variables.
+Once the matrices used to described the QCQP problem have been defined you can create `ScsEigen::Solver` and initialize the number of variables.
 
 ```cpp
 ScsEigen::Solver solver;

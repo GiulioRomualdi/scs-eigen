@@ -49,7 +49,7 @@ Eigen::Vector3d upperBound;
 upperBound << 1, 0.7, 0.7;
 ```
 
-Once the matrices used to described the QP problem have been defined you can create `ScsEigen::Solve` and initialize the number of variables.
+Once the matrices used to described the QP problem have been defined you can create `ScsEigen::Solver` and initialize the number of variables.
 
 ```cpp
 ScsEigen::Solver solver;
