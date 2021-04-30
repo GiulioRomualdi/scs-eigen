@@ -1,6 +1,6 @@
 # Quadratic Programming problem
 
-**scs-eigen** can be used to solve Quadratic Programming (QP) problems n the for
+**scs-eigen** can be used to solve Quadratic Programming (QP) problems in the for
 \f[
 \begin{array}{rl}
 \text{minimize }      &  \frac{1}{2} x^\top P x + q^\top x + r \\
@@ -17,6 +17,8 @@ The following example shows how **scs-eigen** can be used to solve the QP proble
 \text{subject to }    &  \begin{bmatrix} 1 \\ 0 \\0  \end{bmatrix} \le \begin{bmatrix} 1  & 1\\ 1 & 0 \\0 & 1  \end{bmatrix} x \le \begin{bmatrix} 1 \\ 0.7 \\0.7  \end{bmatrix}
 \end{array}
 \f]
+
+@image html ../images/qp.png
 
 First of all you should include ScsEigen
 
@@ -47,7 +49,7 @@ Eigen::Vector3d upperBound;
 upperBound << 1, 0.7, 0.7;
 ```
 
-Once the matrices used to described the QP problem has been defined you can create `ScsEigen::Solve` and initialize the number of variables.
+Once the matrices used to described the QP problem have been defined you can create `ScsEigen::Solve` and initialize the number of variables.
 
 ```cpp
 ScsEigen::Solver solver;
@@ -59,11 +61,11 @@ Now you can set the constraints and the cost using `ScsEigen::MathematicalProgra
 ```cpp
 solver.mathematicalProgram().addLinearConstraint(
         std::make_shared<ScsEigen::LinearConstraint>(A, lowerBound, upperBound),
-        "linear constraint"));
+        "linear constraint");
 
 solver.mathematicalProgram().addQuadraticCost(
         std::make_shared<ScsEigen::QuadraticCost>(H, gradient),
-        "quadratic cost"));
+        "quadratic cost");
 
 ```
 
