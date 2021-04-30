@@ -10,8 +10,8 @@
     <member refid="class_scs_eigen_1_1_constraint_1a4eff2a5d67e203512d97ba14f834c3cc" kind="function"><name>Constraint</name></member>
     <member refid="class_scs_eigen_1_1_constraint_1a8670822e57e2c03e496c7f2efb3027b3" kind="function"><name>setDescription</name></member>
     <member refid="class_scs_eigen_1_1_constraint_1ac667af1a25af66015f973151eae25806" kind="function"><name>setNumberOfVariables</name></member>
-    <member refid="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" kind="function"><name>setLowerBound</name></member>
-    <member refid="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" kind="function"><name>setUpperBound</name></member>
+    <member refid="class_scs_eigen_1_1_constraint_1a4d263e6c85fd45679e6a1a252ee6c8ce" kind="function"><name>setLowerBound</name></member>
+    <member refid="class_scs_eigen_1_1_constraint_1a380eb0271203ca9885cf0740bf05ac99" kind="function"><name>setUpperBound</name></member>
     <member refid="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" kind="function"><name>setBounds</name></member>
     <member refid="class_scs_eigen_1_1_constraint_1ac8898e02e58e7678ce862032c7f4d430" kind="function"><name>setNumberOfConstraints</name></member>
     <member refid="class_scs_eigen_1_1_constraint_1a9defe57e0321444a0034f7f402260145" kind="function"><name>~Constraint</name></member>
@@ -94,10 +94,11 @@
   <compound refid="class_scs_eigen_1_1_quadratic_constraint" kind="class"><name>ScsEigen::QuadraticConstraint</name>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1a54485d8fc105e9ed6a1ac8bcdaf886bf" kind="variable"><name>m_Q</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1ac98e09aa78d5126b41f38795552dcc25" kind="variable"><name>m_b</name></member>
-    <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad2098ea431aeaa02d0175cb884a34c0d" kind="function"><name>QuadraticConstraint</name></member>
-    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a806bf9e2fad5ec5dea672af5a56f3345" kind="function"><name>QuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a02ed91ed973be8952c2d66742f598cd0" kind="function"><name>QuadraticConstraint</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1ac922bc7170456e6e05b071889eb87829" kind="function"><name>QuadraticConstraint</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" kind="function"><name>setQ</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" kind="function"><name>setB</name></member>
+    <member refid="class_scs_eigen_1_1_quadratic_constraint_1a56989cdf9fc6a5dbc2d2891e3f04ee0c" kind="function"><name>setLowerBound</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1afe213646bd85fcf299465ee7abd9a42c" kind="function"><name>getQ</name></member>
     <member refid="class_scs_eigen_1_1_quadratic_constraint_1aea39eed0e88e80f0ee28479dcc213f13" kind="function"><name>getB</name></member>
   </compound>
@@ -203,6 +204,8 @@
   </compound>
   <compound refid="_mathematical_program_8h" kind="file"><name>MathematicalProgram.h</name>
   </compound>
+  <compound refid="qcqp_8md" kind="file"><name>qcqp.md</name>
+  </compound>
   <compound refid="qp_8md" kind="file"><name>qp.md</name>
   </compound>
   <compound refid="_quadratic_constraint_8h" kind="file"><name>QuadraticConstraint.h</name>
@@ -218,6 +221,8 @@
   <compound refid="_solver_8h" kind="file"><name>Solver.h</name>
   </compound>
   <compound refid="md_pages_qp" kind="page"><name>md_pages_qp</name>
+  </compound>
+  <compound refid="md_pages_qcqp" kind="page"><name>md_pages_qcqp</name>
   </compound>
   <compound refid="dir_b1b6c5c8f339aff7f2a48e3ef87abf67" kind="dir"><name>impl</name>
   </compound>

@@ -49,8 +49,9 @@
 <title>How to use the library</title>
 <para><bold>scs-eigen</bold> introduces the <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> class that can be used to easily design a convex optimization problem.</para>
 <para><computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput>, <computeroutput><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> will perform the so called conic-embedding to convert them in a form compatible with <computeroutput>scs</computeroutput>.</para>
-<para>We provide a list of self-contained example that can be used as a refernce to build an optimization problem:<itemizedlist>
+<para>We provide a list of self-contained examples that can be used as a refernce to build an optimization problem:<itemizedlist>
 <listitem><para><ref refid="md_pages_qp" kindref="compound">QP</ref> contains an example of Quadratic Programming (QP) problem</para>
+</listitem><listitem><para><ref refid="md_pages_qcqp" kindref="compound">QCQP</ref> contains an example of Quadratic Constraint Quadratic Programming (QCQP) problem</para>
 </listitem></itemizedlist>
 </para>
 </sect1>

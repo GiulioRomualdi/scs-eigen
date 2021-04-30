@@ -262,10 +262,10 @@
       <member refid="class_scs_eigen_1_1_linear_constraint_1ad8d8082608406466df7b7558efc94d56" prot="public" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setA</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setBounds</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a8670822e57e2c03e496c7f2efb3027b3" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setDescription</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setLowerBound</name></member>
+      <member refid="class_scs_eigen_1_1_constraint_1a4d263e6c85fd45679e6a1a252ee6c8ce" prot="protected" virt="virtual"><scope>ScsEigen::LinearConstraint</scope><name>setLowerBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac8898e02e58e7678ce862032c7f4d430" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setNumberOfConstraints</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac667af1a25af66015f973151eae25806" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setNumberOfVariables</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" prot="protected" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>setUpperBound</name></member>
+      <member refid="class_scs_eigen_1_1_constraint_1a380eb0271203ca9885cf0740bf05ac99" prot="protected" virt="virtual"><scope>ScsEigen::LinearConstraint</scope><name>setUpperBound</name></member>
       <member refid="class_scs_eigen_1_1_linear_constraint_1a83d269b97746f9002a05e48ffa860af5" prot="public" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>SparsityPattern</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a9defe57e0321444a0034f7f402260145" prot="public" virt="non-virtual"><scope>ScsEigen::LinearConstraint</scope><name>~Constraint</name></member>
     </listofallmembers>

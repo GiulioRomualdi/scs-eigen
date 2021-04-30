@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>scs-eigen</title>
+  <title>qcqp.md file | scs-eigen</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -44,24 +44,9 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          scs-eigen
+          qcqp.md <span class="m-thin">file</span>
         </h1>
-<p>Simple C++ wrapper for <a href="https://github.com/cvxgrp/scs"><code>scs</code></a> library.</p><section id="autotoc_md1"><h2><a href="#autotoc_md1">Dependencies</a></h2><p>The project depends only on <a href="https://github.com/cvxgrp/scs"><code>scs</code></a> and <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen3</a>. Please install <code>scs</code> using the <code>cmake-build</code> system provided in <a href="https://github.com/dic-iit/scs-cmake-buildsystem">this repository</a>.</p></section><section id="autotoc_md2"><h2><a href="#autotoc_md2">Usage</a></h2><ol><li>Clone the repository <code class="m-console">git clone https://github.com/GiulioRomualdi/scs-eigen</code></li><li><p>Build it</p><pre class="m-console">cd scs-eigen
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=&lt;custom-folder&gt; ../
-make
-make install</pre></li><li>Add the following environmental variable <code class="m-console">ScsEigen_DIR=/path/where/you/installed/</code></li></ol></section><section id="autotoc_md3"><h2><a href="#autotoc_md3">How to include the library in your CMake project</a></h2><p><strong>scs-eigen</strong> provides native <code>CMake</code> support which allows the library to be easily used in <code>CMake</code> projects. <strong>scs-eigen</strong> exports a CMake target called <code>ScsEigen::ScsEigen</code> which can be imported using the <code>find_package</code> CMake command and used by calling <code>target_link_libraries</code> as in the following example:</p><pre class="m-code"><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.0</span><span class="p">)</span>
-<span class="nb">project</span><span class="p">(</span><span class="s">myproject</span><span class="p">)</span>
-<span class="nb">find_package</span><span class="p">(</span><span class="s">ScsEigen</span> <span class="s">REQUIRED</span><span class="p">)</span>
-<span class="nb">add_executable</span><span class="p">(</span><span class="s">example</span> <span class="s">example.cpp</span><span class="p">)</span>
-<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">example</span> <span class="s">ScsEigen::ScsEigen</span><span class="p">)</span></pre><p>In your code</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;ScsEigen/ScsEigen.h&gt;</span><span class="cp"></span>
-
-<span class="p">...</span>
-
-<span class="k">auto</span> <span class="n">solver</span> <span class="o">=</span> <span class="n">ScsEigen</span><span class="o">::</span><span class="n">Solver</span><span class="p">();</span>
-
-<span class="p">...</span></pre></section><section id="autotoc_md4"><h2><a href="#autotoc_md4">How to use the library</a></h2><p><strong>scs-eigen</strong> introduces the <code><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a></code> class that can be used to easily design a convex optimization problem.</p><p><code><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a></code> can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to <code><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a></code>, <code><a href="class_scs_eigen_1_1_solver.html" class="m-doc">ScsEigen::<wbr />Solver</a></code> will perform the so called conic-embedding to convert them in a form compatible with <code>scs</code>.</p><p>We provide a list of self-contained examples that can be used as a refernce to build an optimization problem:</p><ul><li><a href="md_pages_qp.html" class="m-doc">QP</a> contains an example of Quadratic Programming (QP) problem</li><li><a href="md_pages_qcqp.html" class="m-doc">QCQP</a> contains an example of Quadratic Constraint Quadratic Programming (QCQP) problem</li></ul></section><section id="autotoc_md5"><h2><a href="#autotoc_md5">License</a></h2><p>Materials in this repository are distributed under the following license:</p><blockquote><p>All software is licensed under the MIT License. See <a href="https://github.com/GiulioRomualdi/scs-eigen/blob/main/LICENSE">LICENSE</a> file for details.</p></blockquote></section>
+        <p><span></span></p>
       </div>
     </div>
   </div>

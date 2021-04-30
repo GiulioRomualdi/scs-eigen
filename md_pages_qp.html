@@ -46,7 +46,7 @@
         <h1>
           Quadratic Programming problem
         </h1>
-<p><strong>scs-eigen</strong> can be used to solve Quadratic Programming (QP) problems n the for</p><div class="m-math"><svg style="width: 15.530em; height: 2.803em;" viewBox="119.727596 -28.652836 149.087771 26.907349">
+<p><strong>scs-eigen</strong> can be used to solve Quadratic Programming (QP) problems in the for</p><div class="m-math"><svg style="width: 15.530em; height: 2.803em;" viewBox="119.727596 -28.652836 149.087771 26.907349">
 <title>
 \[ \begin{array}{rl} \text{minimize } &amp; \frac{1}{2} x^\top P x + q^\top x + r \\ \text{subject to } &amp; l \le A x \le u \end{array} \]
 </title>
@@ -388,7 +388,7 @@ $i \in \{1,...,m\}$
 <use x='281.268987' y='-42.710031' xlink:href='#eq11-g0-51'/>
 <use x='281.268987' y='-21.190525' xlink:href='#eq11-g0-53'/>
 </g>
-</svg></div><p>First of all you should include <a href="namespace_scs_eigen.html" class="m-doc">ScsEigen</a></p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;ScsEigen/ScsEigen.h&gt;</span><span class="cp"></span></pre><p>You can also define the Hessian, gradient the constraint matrix and vectors.</p><pre class="m-code"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix2d</span> <span class="n">H</span><span class="p">;</span>
+</svg></div><img class="m-image" src="qp.png" alt="Image" /><p>First of all you should include <a href="namespace_scs_eigen.html" class="m-doc">ScsEigen</a></p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;ScsEigen/ScsEigen.h&gt;</span><span class="cp"></span></pre><p>You can also define the Hessian, gradient the constraint matrix and vectors.</p><pre class="m-code"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix2d</span> <span class="n">H</span><span class="p">;</span>
 <span class="n">H</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
      <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">;</span>
 <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span> <span class="n">gradient</span><span class="p">;</span>
@@ -405,14 +405,14 @@ $i \in \{1,...,m\}$
 <span class="n">lowerBound</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <span class="n">upperBound</span><span class="p">;</span>
-<span class="n">upperBound</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">;</span></pre><p>Once the matrices used to described the QP problem has been defined you can create <code>ScsEigen::Solve</code> and initialize the number of variables.</p><pre class="m-code"><span class="n">ScsEigen</span><span class="o">::</span><span class="n">Solver</span> <span class="n">solver</span><span class="p">;</span>
+<span class="n">upperBound</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">;</span></pre><p>Once the matrices used to described the QP problem have been defined you can create <code>ScsEigen::Solve</code> and initialize the number of variables.</p><pre class="m-code"><span class="n">ScsEigen</span><span class="o">::</span><span class="n">Solver</span> <span class="n">solver</span><span class="p">;</span>
 <span class="n">solver</span><span class="p">.</span><span class="n">setNumberOfVariabels</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre><p>Now you can set the constraints and the cost using <code><a href="class_scs_eigen_1_1_mathematical_program.html" class="m-doc">ScsEigen::<wbr />MathematicalProgram</a></code> class</p><pre class="m-code"><span class="n">solver</span><span class="p">.</span><span class="n">mathematicalProgram</span><span class="p">().</span><span class="n">addLinearConstraint</span><span class="p">(</span>
         <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ScsEigen</span><span class="o">::</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">lowerBound</span><span class="p">,</span> <span class="n">upperBound</span><span class="p">),</span>
-        <span class="s">&quot;linear constraint&quot;</span><span class="p">));</span>
+        <span class="s">&quot;linear constraint&quot;</span><span class="p">);</span>
 
 <span class="n">solver</span><span class="p">.</span><span class="n">mathematicalProgram</span><span class="p">().</span><span class="n">addQuadraticCost</span><span class="p">(</span>
         <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ScsEigen</span><span class="o">::</span><span class="n">QuadraticCost</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">gradient</span><span class="p">),</span>
-        <span class="s">&quot;quadratic cost&quot;</span><span class="p">));</span></pre><p>You can finally solve the problem and get the solution</p><pre class="m-code"><span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">();</span>
+        <span class="s">&quot;quadratic cost&quot;</span><span class="p">);</span></pre><p>You can finally solve the problem and get the solution</p><pre class="m-code"><span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">();</span>
 <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">solution</span><span class="p">().</span><span class="n">solution</span><span class="p">;</span></pre><p>The complete example follows</p><pre class="m-code"><span class="c">### CMakeLists.txt</span>
 <span class="nb">project</span><span class="p">(</span><span class="s">QP</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">ScsEigen</span> <span class="s">REQUIRED</span><span class="p">)</span>

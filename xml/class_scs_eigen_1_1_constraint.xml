@@ -194,11 +194,12 @@
         </inbodydescription>
         <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="59" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a4d263e6c85fd45679e6a1a252ee6c8ce" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
-        <definition>bool ScsEigen::Constraint::setLowerBound</definition>
+        <definition>virtual bool ScsEigen::Constraint::setLowerBound</definition>
         <argsstring>(const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lowerBound)</argsstring>
         <name>setLowerBound</name>
+        <reimplementedby refid="class_scs_eigen_1_1_quadratic_constraint_1a56989cdf9fc6a5dbc2d2891e3f04ee0c">setLowerBound</reimplementedby>
         <param>
           <type>const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</type>
           <declname>lowerBound</declname>
@@ -222,11 +223,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="66" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="66" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a380eb0271203ca9885cf0740bf05ac99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
-        <definition>bool ScsEigen::Constraint::setUpperBound</definition>
+        <definition>virtual bool ScsEigen::Constraint::setUpperBound</definition>
         <argsstring>(const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;upperBound)</argsstring>
         <name>setUpperBound</name>
         <param>
@@ -252,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="73" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/Constraint.h" line="73" column="18"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -467,10 +468,10 @@
       <member refid="class_scs_eigen_1_1_constraint_1a1fbfe4874bb4acb3544679410b41019f" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>m_upperBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setBounds</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a8670822e57e2c03e496c7f2efb3027b3" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setDescription</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setLowerBound</name></member>
+      <member refid="class_scs_eigen_1_1_constraint_1a4d263e6c85fd45679e6a1a252ee6c8ce" prot="protected" virt="virtual"><scope>ScsEigen::Constraint</scope><name>setLowerBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac8898e02e58e7678ce862032c7f4d430" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setNumberOfConstraints</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac667af1a25af66015f973151eae25806" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setNumberOfVariables</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" prot="protected" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>setUpperBound</name></member>
+      <member refid="class_scs_eigen_1_1_constraint_1a380eb0271203ca9885cf0740bf05ac99" prot="protected" virt="virtual"><scope>ScsEigen::Constraint</scope><name>setUpperBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a9defe57e0321444a0034f7f402260145" prot="public" virt="non-virtual"><scope>ScsEigen::Constraint</scope><name>~Constraint</name></member>
     </listofallmembers>
   </compounddef>

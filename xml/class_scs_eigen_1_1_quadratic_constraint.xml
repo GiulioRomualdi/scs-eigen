@@ -33,16 +33,16 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1ad2098ea431aeaa02d0175cb884a34c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1a02ed91ed973be8952c2d66742f598cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>ScsEigen::QuadraticConstraint::QuadraticConstraint</definition>
-        <argsstring>()=default</argsstring>
+        <argsstring>()</argsstring>
         <name>QuadraticConstraint</name>
         <briefdescription>
 <para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>If you initialize the class with this constructor please remember to call the <ref refid="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" kindref="member">QuadraticConstraint::setQ()</ref>, <ref refid="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" kindref="member">QuadraticConstraint::setB()</ref> and QuadraticConstraint::setC() methods before calling <ref refid="class_scs_eigen_1_1_solver_1a77f4aea8f4131a2ebb340a5777bebafd" kindref="member">Solver::solve()</ref> </para>
+<para><simplesect kind="note"><para>If you initialize the class with this constructor please remember to call the <ref refid="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" kindref="member">QuadraticConstraint::setQ()</ref>, <ref refid="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" kindref="member">QuadraticConstraint::setB()</ref> <ref refid="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" kindref="member">QuadraticConstraint::setBounds()</ref> methods before calling <ref refid="class_scs_eigen_1_1_solver_1a77f4aea8f4131a2ebb340a5777bebafd" kindref="member">Solver::solve()</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -50,10 +50,10 @@
         </inbodydescription>
         <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="44" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1a806bf9e2fad5ec5dea672af5a56f3345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1ac922bc7170456e6e05b071889eb87829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>ScsEigen::QuadraticConstraint::QuadraticConstraint</definition>
-        <argsstring>(const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;b, double lowerBound, double upperBound)</argsstring>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;b, double upperBound)</argsstring>
         <name>QuadraticConstraint</name>
         <param>
           <type>const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</type>
@@ -62,10 +62,6 @@
         <param>
           <type>const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</type>
           <declname>b</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>lowerBound</declname>
         </param>
         <param>
           <type>double</type>
@@ -91,6 +87,22 @@
 <para>the gradient of the constraint function. </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lowerBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector containing the lower bound. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upperBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector containing the upper bound. </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 <simplesect kind="note"><para>In case of error an invalid <ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> will be build. </para>
 </simplesect>
@@ -98,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="52" column="5"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="54" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -128,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="62" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="63" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -158,7 +170,43 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="69" column="10"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="70" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1a56989cdf9fc6a5dbc2d2891e3f04ee0c" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool ScsEigen::QuadraticConstraint::setLowerBound</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lowerBound) final</argsstring>
+        <name>setLowerBound</name>
+        <reimplements refid="class_scs_eigen_1_1_constraint_1a4d263e6c85fd45679e6a1a252ee6c8ce">setLowerBound</reimplements>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</type>
+          <declname>lowerBound</declname>
+        </param>
+        <briefdescription>
+<para>Set the lower bound. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lowerBound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector representing the lower bound. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+<simplesect kind="warning"><para>In case of <ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> the only admissible lower bound is<itemizedlist>
+<listitem><para>std::numeric_limits&lt;double&gt;::infinity() </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="79" column="10"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1afe213646bd85fcf299465ee7abd9a42c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Eigen::Ref&lt; const Eigen::MatrixXd &gt;</type>
@@ -172,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="74" column="16"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="84" column="16"/>
       </memberdef>
       <memberdef kind="function" id="class_scs_eigen_1_1_quadratic_constraint_1aea39eed0e88e80f0ee28479dcc213f13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Eigen::Ref&lt; const Eigen::VectorXd &gt;</type>
@@ -186,13 +234,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="79" column="16"/>
+        <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="89" column="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> is a concrete implementation of <ref refid="class_scs_eigen_1_1_constraint" kindref="compound">Constraint</ref>. It implements a constraint of the form <formula id="15">\[ l \le \frac{1}{2} x ^\top Q x + b^\top x \le u \]</formula> where <formula id="3">$x \in \mathbb{R}^n$</formula> is the optimization variable. <formula id="16">$Q \in S^n_+$</formula> is a semipositive definite matrix. </para>
+<para><ref refid="class_scs_eigen_1_1_quadratic_constraint" kindref="compound">QuadraticConstraint</ref> is a concrete implementation of <ref refid="class_scs_eigen_1_1_constraint" kindref="compound">Constraint</ref>. It implements a constraint of the form <formula id="15">\[ \frac{1}{2} x ^\top Q x + b^\top x \le u \]</formula> where <formula id="3">$x \in \mathbb{R}^n$</formula> is the optimization variable. <formula id="16">$Q \in S^n_+$</formula> is a semipositive definite matrix. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -218,7 +266,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="32" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" bodystart="31" bodyend="80"/>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" line="32" column="1" bodyfile="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/QuadraticConstraint.h" bodystart="31" bodyend="90"/>
     <listofallmembers>
       <member refid="class_scs_eigen_1_1_constraint_1a3afcea63471f33b51f1c5fd699847450" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>Constraint</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a4eff2a5d67e203512d97ba14f834c3cc" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>Constraint</name></member>
@@ -236,16 +284,16 @@
       <member refid="class_scs_eigen_1_1_constraint_1ac4dea5e437ad52876c9aca9972cf9aff" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>m_numberOfVariables</name></member>
       <member refid="class_scs_eigen_1_1_quadratic_constraint_1a54485d8fc105e9ed6a1ac8bcdaf886bf" prot="private" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>m_Q</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a1fbfe4874bb4acb3544679410b41019f" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>m_upperBound</name></member>
-      <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad2098ea431aeaa02d0175cb884a34c0d" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>QuadraticConstraint</name></member>
-      <member refid="class_scs_eigen_1_1_quadratic_constraint_1a806bf9e2fad5ec5dea672af5a56f3345" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>QuadraticConstraint</name></member>
+      <member refid="class_scs_eigen_1_1_quadratic_constraint_1a02ed91ed973be8952c2d66742f598cd0" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>QuadraticConstraint</name></member>
+      <member refid="class_scs_eigen_1_1_quadratic_constraint_1ac922bc7170456e6e05b071889eb87829" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>QuadraticConstraint</name></member>
       <member refid="class_scs_eigen_1_1_quadratic_constraint_1a8d5f1cf9e43001a13145eb669998f75e" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setB</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a6abf0e54bc5d6debf923935ea74918d0" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setBounds</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a8670822e57e2c03e496c7f2efb3027b3" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setDescription</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1ad67ff9161b3be73b547132e4d2a67538" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setLowerBound</name></member>
+      <member refid="class_scs_eigen_1_1_quadratic_constraint_1a56989cdf9fc6a5dbc2d2891e3f04ee0c" prot="public" virt="virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setLowerBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac8898e02e58e7678ce862032c7f4d430" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setNumberOfConstraints</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1ac667af1a25af66015f973151eae25806" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setNumberOfVariables</name></member>
       <member refid="class_scs_eigen_1_1_quadratic_constraint_1ad304616c04e74f12ae2c4a903a3364bf" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setQ</name></member>
-      <member refid="class_scs_eigen_1_1_constraint_1a8c3094527b8f75371093cbcf03c3c630" prot="protected" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setUpperBound</name></member>
+      <member refid="class_scs_eigen_1_1_constraint_1a380eb0271203ca9885cf0740bf05ac99" prot="protected" virt="virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>setUpperBound</name></member>
       <member refid="class_scs_eigen_1_1_constraint_1a9defe57e0321444a0034f7f402260145" prot="public" virt="non-virtual"><scope>ScsEigen::QuadraticConstraint</scope><name>~Constraint</name></member>
     </listofallmembers>
   </compounddef>
