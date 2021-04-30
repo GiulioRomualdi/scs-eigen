@@ -273,6 +273,69 @@ struct Solver::Impl
         return true;
     }
 
+    // A QuadraticConstraint encodes constraint of the form
+    //   0.5 xᵀQx + pᵀx < u
+    // We transform the constraint in a rotated Lorentz cone 2(u - pᵀx) ≥ xᵀQx.
+    bool quadraticConstraintEmbedding()
+    {
+        std::vector<int> AiVarIndex(this->mathematicalProgram.numberOfVariables());
+        std::iota(std::begin(AiVarIndex), std::end(AiVarIndex), 0);
+
+        for (const auto& [name, constraint] : this->mathematicalProgram.getQuadraticConstraints())
+        {
+
+            if (!constraint->getLowerBound().array().isInf().all())
+            {
+                log()->error("[Solver::Impl::quadraticConstraintEmbedding] The only admissible "
+                             "lower bound is -inf. Constraint name: "
+                             + std::string(name) + ".");
+                return false;
+            }
+
+            const auto numberOfVariables = constraint->getNumberOfVariables();
+
+            // we create a vector containing the triplets of the matrix A_cone
+            std::vector<Eigen::Triplet<double>> AConeTriplets;
+
+            // Set the constraint
+            for (int i = 0; i < constraint->getB().rows(); ++i)
+            {
+                AConeTriplets.emplace_back(0, i, -constraint->getB()(i));
+            }
+
+            // Decompose Q in CᵀC
+            // Q is always SDP. Please check QuadraticConstraint::setQ()
+            const auto [outcome, C] = choleskyDecomposition(constraint->getQ());
+            if (!outcome)
+            {
+                log()->error("[Solver::Impl::quadraticConstraintEmbedding] Unable to compute the "
+                             "Cholesky decomposition for the hessian matrix associated to the "
+                             "quadratic constraint named: "
+                             + std::string(name) + ".");
+                return false;
+            }
+
+            // get the element different from zero and store it in the triplets
+            for (int i = 0; i < C.rows(); ++i)
+                for (int j = 0; j < C.cols(); ++j)
+                    if (C(i, j) != 0)
+                        AConeTriplets.emplace_back(2 + i, j, C(i, j));
+
+            // add the slack variables as optimization variable
+            AiVarIndex.push_back(this->optimizationVariables);
+
+            Eigen::VectorXd bCone = Eigen::VectorXd::Zero(2 + C.cols());
+            bCone(0) = constraint->getUpperBound()[0];
+            bCone(1) = 2;
+
+            // Add the secondOrderCone to the constraints
+            this->rotateSecondOrderConeEmbedding(AConeTriplets, bCone, AiVarIndex);
+        }
+
+        return true;
+    }
+
+
     void prepareScsData()
     {
         this->data->n = this->optimizationVariables;
@@ -374,6 +437,13 @@ bool Solver::solve()
     if (!m_pimpl->linearConstraintEmbedding())
     {
         log()->error("[Solver::solve] Unable to perform linear constraint embedding.");
+        return false;
+    }
+
+
+    if (!m_pimpl->quadraticConstraintEmbedding())
+    {
+        log()->error("[Solver::solve] Unable to perform quadratic constraint embedding.");
         return false;
     }
 
