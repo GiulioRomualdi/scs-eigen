@@ -34,7 +34,7 @@
 <codeline><highlight class="normal">Eigen::Vector3d<sp/>upperBound;</highlight></codeline>
 <codeline><highlight class="normal">upperBound<sp/>&lt;&lt;<sp/>1,<sp/>0.7,<sp/>0.7;</highlight></codeline>
 </programlisting></para>
-<para>Once the matrices used to described the QP problem have been defined you can create <computeroutput>ScsEigen::Solve</computeroutput> and initialize the number of variables.</para>
+<para>Once the matrices used to described the QP problem have been defined you can create <computeroutput><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> and initialize the number of variables.</para>
 <para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref><sp/>solver;</highlight></codeline>
 <codeline><highlight class="normal">solver.setNumberOfVariabels(2);</highlight></codeline>
 </programlisting></para>

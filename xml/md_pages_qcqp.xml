@@ -27,7 +27,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>upperBound<sp/>=<sp/>-1;</highlight></codeline>
 </programlisting></para>
-<para>Once the matrices used to described the QCQP problem have been defined you can create <computeroutput>ScsEigen::Solve</computeroutput> and initialize the number of variables.</para>
+<para>Once the matrices used to described the QCQP problem have been defined you can create <computeroutput><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> and initialize the number of variables.</para>
 <para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref><sp/>solver;</highlight></codeline>
 <codeline><highlight class="normal">solver.setNumberOfVariabels(2);</highlight></codeline>
 </programlisting></para>
