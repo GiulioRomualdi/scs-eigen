@@ -49,7 +49,7 @@
 <codeline><highlight class="normal">project(QCQP)</highlight></codeline>
 <codeline><highlight class="normal">find_package(ScsEigen<sp/>REQUIRED)</highlight></codeline>
 <codeline><highlight class="normal">add_executable(QCQP<sp/>qcqp.cpp)</highlight></codeline>
-<codeline><highlight class="normal">target_link_libraries(QP<sp/>ScsEigen::ScsEigen)</highlight></codeline>
+<codeline><highlight class="normal">target_link_libraries(QCQP<sp/>ScsEigen::ScsEigen)</highlight></codeline>
 </programlisting></para>
 <para><programlisting filename=".cpp"><codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ScsEigen/ScsEigen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
