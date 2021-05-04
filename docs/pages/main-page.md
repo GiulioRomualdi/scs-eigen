@@ -52,7 +52,7 @@ auto solver = ScsEigen::Solver();
 
 `ScsEigen::MathematicalProgram` can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to `ScsEigen::MathematicalProgram`, `ScsEigen::Solver` will perform the so called conic-embedding to convert them in a form compatible with `scs`.
 
-We provide a list of self-contained examples that can be used as a refernce to build an optimization problem:
+We provide a list of self-contained examples that can be used as a reference to build an optimization problem:
 - [QP](pages/qp.md) contains an example of Quadratic Programming (QP) problem
 - [QCQP](pages/qcqp.md) contains an example of Quadratic Constraint Quadratic Programming (QCQP) problem
 
