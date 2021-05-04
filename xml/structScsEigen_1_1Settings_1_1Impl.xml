@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structScsEigen_1_1Settings_1_1Impl" kind="struct" language="C++" prot="public">
+    <compoundname>ScsEigen::Settings::Impl</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScsEigen_1_1Settings_1_1Impl_1ac25fb4f7bfb3e99892bcd81f05743839" prot="public" static="no" mutable="no">
+        <type>ScsSettings</type>
+        <definition>ScsSettings ScsEigen::Settings::Impl::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scs Setting struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/impl/SettingsImpl.h" line="26" column="17" bodyfile="ScsEigen/impl/SettingsImpl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScsEigen_1_1Settings_1_1Impl_1aac5e20edc9e67cd4a1aadab4d3cad561" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ScsEigen::Settings::Impl::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>name of the file where the solution is stored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/impl/SettingsImpl.h" line="27" column="17" bodyfile="ScsEigen/impl/SettingsImpl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="1">
+        <label>ScsEigen::Settings::Impl</label>
+        <link refid="structScsEigen_1_1Settings_1_1Impl"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>filename</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ScsEigen/impl/SettingsImpl.h" line="24" column="1" bodyfile="ScsEigen/impl/SettingsImpl.h" bodystart="25" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structScsEigen_1_1Settings_1_1Impl_1aac5e20edc9e67cd4a1aadab4d3cad561" prot="public" virt="non-virtual"><scope>ScsEigen::Settings::Impl</scope><name>filename</name></member>
+      <member refid="structScsEigen_1_1Settings_1_1Impl_1ac25fb4f7bfb3e99892bcd81f05743839" prot="public" virt="non-virtual"><scope>ScsEigen::Settings::Impl</scope><name>settings</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

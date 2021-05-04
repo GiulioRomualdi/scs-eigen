@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>scs-eigen</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Simple C++ wrapper for <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> library.</para>
+<para><anchor id="index_1md__home_runner_work_scs_eigen_scs_eigen_docs_pages_main_page"/> Simple C++ wrapper for <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> library.</para>
 <sect1 id="index_1autotoc_md1">
 <title>Dependencies</title>
 <para>The project depends only on <ulink url="https://github.com/cvxgrp/scs"><computeroutput>scs</computeroutput></ulink> and <ulink url="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen3</ulink>. Please install <computeroutput>scs</computeroutput> using the <computeroutput>cmake-build</computeroutput> system provided in <ulink url="https://github.com/dic-iit/scs-cmake-buildsystem">this repository</ulink>.</para>
@@ -40,18 +40,18 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">auto<sp/>solver<sp/>=<sp/><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref>();</highlight></codeline>
+<codeline><highlight class="normal">auto<sp/>solver<sp/>=<sp/><ref refid="classScsEigen_1_1Solver" kindref="compound">ScsEigen::Solver</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">...</highlight></codeline>
 </programlisting></para>
 </sect1>
 <sect1 id="index_1autotoc_md4">
 <title>How to use the library</title>
-<para><bold>scs-eigen</bold> introduces the <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> class that can be used to easily design a convex optimization problem.</para>
-<para><computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to <computeroutput><ref refid="class_scs_eigen_1_1_mathematical_program" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput>, <computeroutput><ref refid="class_scs_eigen_1_1_solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> will perform the so called conic-embedding to convert them in a form compatible with <computeroutput>scs</computeroutput>.</para>
-<para>We provide a list of self-contained examples that can be used as a refernce to build an optimization problem:<itemizedlist>
-<listitem><para><ref refid="md_pages_qp" kindref="compound">QP</ref> contains an example of Quadratic Programming (QP) problem</para>
-</listitem><listitem><para><ref refid="md_pages_qcqp" kindref="compound">QCQP</ref> contains an example of Quadratic Constraint Quadratic Programming (QCQP) problem</para>
+<para><bold>scs-eigen</bold> introduces the <computeroutput><ref refid="classScsEigen_1_1MathematicalProgram" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> class that can be used to easily design a convex optimization problem.</para>
+<para><computeroutput><ref refid="classScsEigen_1_1MathematicalProgram" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> can be seen as an helper that allows you to easily add convex costraints and convex costs. Once the cost and the constraints have been added to <computeroutput><ref refid="classScsEigen_1_1MathematicalProgram" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput>, <computeroutput><ref refid="classScsEigen_1_1Solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> will perform the so called conic-embedding to convert them in a form compatible with <computeroutput>scs</computeroutput>.</para>
+<para>We provide a list of self-contained examples that can be used as a reference to build an optimization problem:<itemizedlist>
+<listitem><para><ref refid="md__home_runner_work_scs_eigen_scs_eigen_docs_pages_qp" kindref="compound">QP</ref> contains an example of Quadratic Programming (QP) problem</para>
+</listitem><listitem><para><ref refid="md__home_runner_work_scs_eigen_scs_eigen_docs_pages_qcqp" kindref="compound">QCQP</ref> contains an example of Quadratic Constraint Quadratic Programming (QCQP) problem</para>
 </listitem></itemizedlist>
 </para>
 </sect1>
@@ -62,5 +62,6 @@
 </blockquote></para>
 </sect1>
     </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/docs/pages/main-page.md"/>
   </compounddef>
 </doxygen>

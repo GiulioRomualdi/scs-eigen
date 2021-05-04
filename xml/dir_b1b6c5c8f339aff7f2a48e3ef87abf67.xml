@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_b1b6c5c8f339aff7f2a48e3ef87abf67" kind="dir">
-    <compoundname>impl</compoundname>
-    <innerfile refid="_settings_impl_8h">SettingsImpl.h</innerfile>
+    <compoundname>ScsEigen/impl</compoundname>
+    <innerfile refid="SettingsImpl_8h">SettingsImpl.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/impl/"/>
+    <location file="ScsEigen/impl/"/>
   </compounddef>
 </doxygen>

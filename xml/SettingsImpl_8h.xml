@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="SettingsImpl_8h" kind="file" language="C++">
+    <compoundname>SettingsImpl.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">scs.h</includes>
+    <includes refid="Settings_8h" local="no">ScsEigen/Settings.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>scs.h</label>
+      </node>
+      <node id="1">
+        <label>ScsEigen/impl/SettingsImpl.h</label>
+        <link refid="SettingsImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ScsEigen/Settings.h</label>
+        <link refid="Settings_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structScsEigen_1_1Settings_1_1Impl" prot="public">ScsEigen::Settings::Impl</innerclass>
+    <innernamespace refid="namespaceScsEigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+<simplesect kind="date"><para>2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="ScsEigen/impl/SettingsImpl.h"/>
+  </compounddef>
+</doxygen>

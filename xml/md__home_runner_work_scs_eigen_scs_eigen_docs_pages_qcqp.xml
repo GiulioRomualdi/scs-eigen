@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="md__home_runner_work_scs_eigen_scs_eigen_docs_pages_qcqp" kind="page">
+    <compoundname>md__home_runner_work_scs_eigen_scs_eigen_docs_pages_qcqp</compoundname>
+    <title>Quadratic Constrained Quadratic Programming problem</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><bold>scs-eigen</bold> can be used to solve Quadratic Constrained Quadratic Programming (QCQP) problems in the for <formula id="22">\[ \begin{array}{rl} \text{minimize } &amp; \frac{1}{2} x^\top P_0 x + q_0^\top x + r \\ \text{subject to } &amp; \frac{1}{2} x^\top P_i x + q_i^\top x \le u_i \end{array} \]</formula> where <formula id="3">$x \in \mathbb{R}^n$</formula> is the optimization variable. The objective function is defined by a positive semidefinite matrix <formula id="23">$P_0 \in S^n_+$</formula> and vector <formula id="24">$q_0 \in \mathbb{R}^n$</formula>. The quadratic constraints are defined positive semidefinite matrices <formula id="25">$P_i \in S^n_+$</formula> and vectors <formula id="26">$q_i \in \mathbb{R}^n$</formula>.</para>
+<para>The following example shows how <bold>scs-eigen</bold> can be used to solve the QCQP problem:</para>
+<para><formula id="27">\[ \begin{array}{rl} \text{minimize } &amp; \frac{1}{2} x^\top \begin{bmatrix} 3 &amp; 2 \\ 2 &amp; 4\end{bmatrix} x + \begin{bmatrix} 3 &amp; 1 \end{bmatrix} x \\ \text{subject to } &amp; \frac{1}{2} x^\top \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2\end{bmatrix} x + \begin{bmatrix} -4 &amp; -5 \end{bmatrix} x \le -1 \end{array} \]</formula></para>
+<para><image type="html" name="qcqp.png"></image>
+</para>
+<para>First of all you should include <ref refid="namespaceScsEigen" kindref="compound">ScsEigen</ref></para>
+<para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;ScsEigen/ScsEigen.h&gt;</highlight></codeline>
+</programlisting></para>
+<para>You can also define the Hessian, gradient the constraint matrix and vectors.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal">Eigen::Matrix2d<sp/>H;</highlight></codeline>
+<codeline><highlight class="normal">H<sp/>&lt;&lt;<sp/>3,<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>2,<sp/>4;</highlight></codeline>
+<codeline><highlight class="normal">Eigen::Vector2d<sp/>gradient;</highlight></codeline>
+<codeline><highlight class="normal">gradient<sp/>&lt;&lt;<sp/>3,<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Eigen::Matrix2d<sp/>A<sp/>=<sp/>2<sp/>*<sp/>Eigen::Matrix2d::Identity();</highlight></codeline>
+<codeline><highlight class="normal">Eigen::Vector2d<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal">b<sp/>&lt;&lt;<sp/>-4,<sp/>-5;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>upperBound<sp/>=<sp/>-1;</highlight></codeline>
+</programlisting></para>
+<para>Once the matrices used to described the QCQP problem have been defined you can create <computeroutput><ref refid="classScsEigen_1_1Solver" kindref="compound">ScsEigen::Solver</ref></computeroutput> and initialize the number of variables.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="classScsEigen_1_1Solver" kindref="compound">ScsEigen::Solver</ref><sp/>solver;</highlight></codeline>
+<codeline><highlight class="normal">solver.setNumberOfVariabels(2);</highlight></codeline>
+</programlisting></para>
+<para>Now you can set the constraints and the cost using <computeroutput><ref refid="classScsEigen_1_1MathematicalProgram" kindref="compound">ScsEigen::MathematicalProgram</ref></computeroutput> class</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal">solver.<ref refid="classScsEigen_1_1Solver_1a00d3a52b9f6700bfd5bb924ceac479b2" kindref="member">mathematicalProgram</ref>().<ref refid="classScsEigen_1_1MathematicalProgram_1a62c7cc52a7149e3b6282933f184f9c50" kindref="member">addQuadraticConstraint</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;ScsEigen::QuadraticConstraint&gt;(A,<sp/>b,<sp/>upperBound),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;quadratic<sp/>constraint&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">solver.<ref refid="classScsEigen_1_1Solver_1a00d3a52b9f6700bfd5bb924ceac479b2" kindref="member">mathematicalProgram</ref>().<ref refid="classScsEigen_1_1MathematicalProgram_1a9248c4f32d5aeae9cafdc8b932f315c4" kindref="member">addQuadraticCost</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;ScsEigen::QuadraticCost&gt;(H,<sp/>gradient),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;quadratic<sp/>cost&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>You can finally solve the problem and get the solution</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal">solver.<ref refid="classScsEigen_1_1Solver_1a77f4aea8f4131a2ebb340a5777bebafd" kindref="member">solve</ref>();</highlight></codeline>
+<codeline><highlight class="normal">Eigen::Vector2d<sp/>solution<sp/>=<sp/>solver.<ref refid="classScsEigen_1_1Solver_1a795031c498a9bccce8f6cc1515d8190e" kindref="member">solution</ref>().<ref refid="structScsEigen_1_1Solution_1a67d826aa13fb6381c33667da932e7f3c" kindref="member">solution</ref>;</highlight></codeline>
+</programlisting></para>
+<para>The complete example follows</para>
+<para><programlisting filename=".cmake"><codeline><highlight class="normal">###<sp/>CMakeLists.txt</highlight></codeline>
+<codeline><highlight class="normal">project(QCQP)</highlight></codeline>
+<codeline><highlight class="normal">find_package(ScsEigen<sp/>REQUIRED)</highlight></codeline>
+<codeline><highlight class="normal">add_executable(QCQP<sp/>qcqp.cpp)</highlight></codeline>
+<codeline><highlight class="normal">target_link_libraries(QCQP<sp/>ScsEigen::ScsEigen)</highlight></codeline>
+</programlisting></para>
+<para><programlisting filename=".cpp"><codeline><highlight class="comment">///<sp/>qp.cpp</highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ScsEigen/ScsEigen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Matrix2d<sp/>H;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>H<sp/>&lt;&lt;<sp/>3,<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/>4;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>gradient;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>gradient<sp/>&lt;&lt;<sp/>3,<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Matrix2d<sp/>A<sp/>=<sp/>2<sp/>*<sp/>Eigen::Matrix2d::Identity();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>&lt;&lt;<sp/>-4,<sp/>-5;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScsEigen_1_1Solver" kindref="compound">ScsEigen::Solver</ref><sp/>solver;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>solver.<ref refid="classScsEigen_1_1Solver_1a00d3a52b9f6700bfd5bb924ceac479b2" kindref="member">mathematicalProgram</ref>().setNumberOVfariables(2);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!solver.<ref refid="classScsEigen_1_1Solver_1a00d3a52b9f6700bfd5bb924ceac479b2" kindref="member">mathematicalProgram</ref>().<ref refid="classScsEigen_1_1MathematicalProgram_1a9248c4f32d5aeae9cafdc8b932f315c4" kindref="member">addQuadraticCost</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;ScsEigen::QuadraticCost&gt;(H,<sp/>gradient),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;quadratic<sp/>cost&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!solver.<ref refid="classScsEigen_1_1Solver_1a00d3a52b9f6700bfd5bb924ceac479b2" kindref="member">mathematicalProgram</ref>().<ref refid="classScsEigen_1_1MathematicalProgram_1a62c7cc52a7149e3b6282933f184f9c50" kindref="member">addQuadraticConstraint</ref>(<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;ScsEigen::QuadraticConstraint&gt;(A,<sp/>b,<sp/>upperBound),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;quadratic<sp/>constraint&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!solver.<ref refid="classScsEigen_1_1Solver_1a77f4aea8f4131a2ebb340a5777bebafd" kindref="member">solve</ref>())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!solver.<ref refid="classScsEigen_1_1Solver_1a795031c498a9bccce8f6cc1515d8190e" kindref="member">solution</ref>().<ref refid="structScsEigen_1_1Solution_1a7801544c71d1e3f54b08ec1e04bb6440" kindref="member">isValid</ref>())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(solver.<ref refid="classScsEigen_1_1Solver_1a795031c498a9bccce8f6cc1515d8190e" kindref="member">solution</ref>().<ref refid="structScsEigen_1_1Solution_1a0ea5eacd27af3d5869ca9fc028e3ec2c" kindref="member">status</ref><sp/>!=<sp/>ScsEigen::Solution::Status::solved)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Eigen::Vector2d<sp/>solution<sp/>=<sp/>solver.<ref refid="classScsEigen_1_1Solver_1a795031c498a9bccce8f6cc1515d8190e" kindref="member">solution</ref>().<ref refid="structScsEigen_1_1Solution_1a67d826aa13fb6381c33667da932e7f3c" kindref="member">solution</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="/home/runner/work/scs-eigen/scs-eigen/docs/pages/qcqp.md"/>
+  </compounddef>
+</doxygen>

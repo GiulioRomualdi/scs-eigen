@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classScsEigen_1_1Cost" kind="class" language="C++" prot="public">
+    <compoundname>ScsEigen::Cost</compoundname>
+    <derivedcompoundref refid="classScsEigen_1_1LinearCost" prot="public" virt="non-virtual">ScsEigen::LinearCost</derivedcompoundref>
+    <derivedcompoundref refid="classScsEigen_1_1QuadraticCost" prot="public" virt="non-virtual">ScsEigen::QuadraticCost</derivedcompoundref>
+    <includes local="no">ScsEigen/Cost.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classScsEigen_1_1Cost_1ae5290a735fa7ba1076c3c1070535238f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ScsEigen::Cost::m_description</definition>
+        <argsstring></argsstring>
+        <name>m_description</name>
+        <initializer>{&quot;Generic <ref refid="classScsEigen_1_1Cost" kindref="compound">Cost</ref>&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Description of the cost. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="26" column="17" bodyfile="ScsEigen/Cost.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScsEigen_1_1Cost_1a50367c6000fc4c60fe03f18f4a122f1f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ScsEigen::Cost::m_numberOfVariables</definition>
+        <argsstring></argsstring>
+        <name>m_numberOfVariables</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of variables associated to the constraint. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="27" column="9" bodyfile="ScsEigen/Cost.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a099de56842e4bbfc12892ad7dec383b4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScsEigen::Cost::Cost</definition>
+        <argsstring>()=default</argsstring>
+        <name>Cost</name>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a6509692dccc78a53638c1f6155dfd9c4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScsEigen::Cost::Cost</definition>
+        <argsstring>(int numberOfVariables, std::string_view description=&quot;&quot;)</argsstring>
+        <name>Cost</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfVariables</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>description</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfVariables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of variables associated to the constraint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string describing the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a51b18f3e291710eaf037f22c7f99a49e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScsEigen::Cost::setDescription</definition>
+        <argsstring>(std::string_view description)</argsstring>
+        <name>setDescription</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Set the description of the constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string describing the constraint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a548c1b9db0a769a437ddb905dd6277cb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ScsEigen::Cost::setNumberOfVariables</definition>
+        <argsstring>(int numberOfVariables)</argsstring>
+        <name>setNumberOfVariables</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfVariables</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfVariables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a positive number describing the number of variables. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case of success/false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="52" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a92c54573567656b7ed835ddb47697073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScsEigen::Cost::~Cost</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Cost</name>
+        <briefdescription>
+<para>Desctructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a03439c4a344eee8b6f3d9309eb81603d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view ScsEigen::Cost::getDescription</definition>
+        <argsstring>() const</argsstring>
+        <name>getDescription</name>
+        <briefdescription>
+<para>Get the description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the string containng the description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="64" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classScsEigen_1_1Cost_1a841cf2d15b830469bcd6ebd78aa632c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScsEigen::Cost::getNumberOfVariables</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfVariables</name>
+        <briefdescription>
+<para>Get the number of variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of variables, </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Cost.h" line="70" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classScsEigen_1_1Cost" kindref="compound">Cost</ref> describes a generic convex cost. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ScsEigen::Cost</label>
+        <link refid="classScsEigen_1_1Cost"/>
+      </node>
+      <node id="2">
+        <label>ScsEigen::LinearCost</label>
+        <link refid="classScsEigen_1_1LinearCost"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ScsEigen::QuadraticCost</label>
+        <link refid="classScsEigen_1_1QuadraticCost"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ScsEigen::Cost</label>
+        <link refid="classScsEigen_1_1Cost"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_description</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ScsEigen/Cost.h" line="23" column="1" bodyfile="ScsEigen/Cost.h" bodystart="24" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classScsEigen_1_1Cost_1a099de56842e4bbfc12892ad7dec383b4" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>Cost</name></member>
+      <member refid="classScsEigen_1_1Cost_1a6509692dccc78a53638c1f6155dfd9c4" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>Cost</name></member>
+      <member refid="classScsEigen_1_1Cost_1a03439c4a344eee8b6f3d9309eb81603d" prot="public" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>getDescription</name></member>
+      <member refid="classScsEigen_1_1Cost_1a841cf2d15b830469bcd6ebd78aa632c2" prot="public" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>getNumberOfVariables</name></member>
+      <member refid="classScsEigen_1_1Cost_1ae5290a735fa7ba1076c3c1070535238f" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>m_description</name></member>
+      <member refid="classScsEigen_1_1Cost_1a50367c6000fc4c60fe03f18f4a122f1f" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>m_numberOfVariables</name></member>
+      <member refid="classScsEigen_1_1Cost_1a51b18f3e291710eaf037f22c7f99a49e" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>setDescription</name></member>
+      <member refid="classScsEigen_1_1Cost_1a548c1b9db0a769a437ddb905dd6277cb" prot="protected" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>setNumberOfVariables</name></member>
+      <member refid="classScsEigen_1_1Cost_1a92c54573567656b7ed835ddb47697073" prot="public" virt="non-virtual"><scope>ScsEigen::Cost</scope><name>~Cost</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_ad15fc2797b0ca89f03771028baf5f9f" kind="dir">
     <compoundname>ScsEigen</compoundname>
-    <innerdir refid="dir_b1b6c5c8f339aff7f2a48e3ef87abf67">impl</innerdir>
-    <innerfile refid="_constraint_8h">Constraint.h</innerfile>
-    <innerfile refid="_cost_8h">Cost.h</innerfile>
-    <innerfile refid="_linear_constraint_8h">LinearConstraint.h</innerfile>
-    <innerfile refid="_linear_cost_8h">LinearCost.h</innerfile>
-    <innerfile refid="_logger_8h">Logger.h</innerfile>
-    <innerfile refid="_math_8h">Math.h</innerfile>
-    <innerfile refid="_mathematical_program_8h">MathematicalProgram.h</innerfile>
-    <innerfile refid="_quadratic_constraint_8h">QuadraticConstraint.h</innerfile>
-    <innerfile refid="_quadratic_cost_8h">QuadraticCost.h</innerfile>
-    <innerfile refid="_settings_8h">Settings.h</innerfile>
-    <innerfile refid="_solution_8h">Solution.h</innerfile>
-    <innerfile refid="_solver_8h">Solver.h</innerfile>
+    <innerdir refid="dir_b1b6c5c8f339aff7f2a48e3ef87abf67">ScsEigen/impl</innerdir>
+    <innerfile refid="Constraint_8h">Constraint.h</innerfile>
+    <innerfile refid="Cost_8h">Cost.h</innerfile>
+    <innerfile refid="LinearConstraint_8h">LinearConstraint.h</innerfile>
+    <innerfile refid="LinearCost_8h">LinearCost.h</innerfile>
+    <innerfile refid="Logger_8h">Logger.h</innerfile>
+    <innerfile refid="Math_8h">Math.h</innerfile>
+    <innerfile refid="MathematicalProgram_8h">MathematicalProgram.h</innerfile>
+    <innerfile refid="QuadraticConstraint_8h">QuadraticConstraint.h</innerfile>
+    <innerfile refid="QuadraticCost_8h">QuadraticCost.h</innerfile>
+    <innerfile refid="Settings_8h">Settings.h</innerfile>
+    <innerfile refid="Solution_8h">Solution.h</innerfile>
+    <innerfile refid="Solver_8h">Solver.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/scs-eigen/scs-eigen/src/ScsEigen/include/ScsEigen/"/>
+    <location file="ScsEigen/"/>
   </compounddef>
 </doxygen>

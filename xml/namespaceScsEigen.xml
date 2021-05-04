@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceScsEigen" kind="namespace" language="C++">
+    <compoundname>ScsEigen</compoundname>
+    <innerclass refid="classScsEigen_1_1Constraint" prot="public">ScsEigen::Constraint</innerclass>
+    <innerclass refid="classScsEigen_1_1Cost" prot="public">ScsEigen::Cost</innerclass>
+    <innerclass refid="classScsEigen_1_1LinearConstraint" prot="public">ScsEigen::LinearConstraint</innerclass>
+    <innerclass refid="classScsEigen_1_1LinearCost" prot="public">ScsEigen::LinearCost</innerclass>
+    <innerclass refid="classScsEigen_1_1Logger" prot="public">ScsEigen::Logger</innerclass>
+    <innerclass refid="classScsEigen_1_1MathematicalProgram" prot="public">ScsEigen::MathematicalProgram</innerclass>
+    <innerclass refid="classScsEigen_1_1QuadraticConstraint" prot="public">ScsEigen::QuadraticConstraint</innerclass>
+    <innerclass refid="classScsEigen_1_1QuadraticCost" prot="public">ScsEigen::QuadraticCost</innerclass>
+    <innerclass refid="classScsEigen_1_1Settings" prot="public">ScsEigen::Settings</innerclass>
+    <innerclass refid="structScsEigen_1_1Solution" prot="public">ScsEigen::Solution</innerclass>
+    <innerclass refid="classScsEigen_1_1Solver" prot="public">ScsEigen::Solver</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceScsEigen_1a1e2728eed9a8df80a7f4fe00a5e22dab" prot="public" static="no">
+        <type>Eigen::Matrix&lt; double, 1, 1 &gt;</type>
+        <definition>using ScsEigen::Vector1d = typedef Eigen::Matrix&lt;double, 1, 1&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector1d</name>
+        <briefdescription>
+<para>Unitary vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Math.h" line="33" column="1" bodyfile="ScsEigen/Math.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceScsEigen_1a643a0e72058cf88ed506e1c175ba8ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScsEigen_1_1Logger" kindref="compound">Logger</ref> *const</type>
+        <definition>Logger* const ScsEigen::log</definition>
+        <argsstring>()</argsstring>
+        <name>log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an the instance of the log </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Logger.h" line="73" column="14" declfile="ScsEigen/Logger.h" declline="73" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScsEigen_1adf50c2b94805bbb8ad9e92be2dd65f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; bool, Eigen::MatrixXd &gt;</type>
+        <definition>std::pair&lt;bool, Eigen::MatrixXd&gt; ScsEigen::choleskyDecomposition</definition>
+        <argsstring>(const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A)</argsstring>
+        <name>choleskyDecomposition</name>
+        <param>
+          <type>const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</type>
+          <declname>A</declname>
+        </param>
+        <briefdescription>
+<para>Compute the Cholesky decomposition of a PSD matrix A. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a PSD matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pair containing a Boolean and and the Cholesky decomposition of the matrix A. The bolean is true if the decomposition went fine. </para>
+</simplesect>
+<simplesect kind="note"><para>please be sure the matrix A is PSD. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ScsEigen/Math.h" line="28" column="11" declfile="ScsEigen/Math.h" declline="28" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespaceScsEigen" kindref="compound">ScsEigen</ref> namespace. </para>
+    </detaileddescription>
+    <location file="ScsEigen/Constraint.h" line="18" column="1"/>
+  </compounddef>
+</doxygen>

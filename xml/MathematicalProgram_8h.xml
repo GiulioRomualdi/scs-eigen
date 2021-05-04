@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="MathematicalProgram_8h" kind="file" language="C++">
+    <compoundname>MathematicalProgram.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="LinearConstraint_8h" local="no">ScsEigen/LinearConstraint.h</includes>
+    <includes refid="LinearCost_8h" local="no">ScsEigen/LinearCost.h</includes>
+    <includes refid="QuadraticConstraint_8h" local="no">ScsEigen/QuadraticConstraint.h</includes>
+    <includes refid="QuadraticCost_8h" local="no">ScsEigen/QuadraticCost.h</includes>
+    <includedby refid="Solver_8h" local="no">ScsEigen/Solver.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>ScsEigen/LinearConstraint.h</label>
+        <link refid="LinearConstraint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ScsEigen/QuadraticConstraint.h</label>
+        <link refid="QuadraticConstraint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ScsEigen/Constraint.h</label>
+        <link refid="Constraint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="10">
+        <label>ScsEigen/Cost.h</label>
+        <link refid="Cost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ScsEigen/MathematicalProgram.h</label>
+        <link refid="MathematicalProgram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="12">
+        <label>ScsEigen/QuadraticCost.h</label>
+        <link refid="QuadraticCost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ScsEigen/LinearCost.h</label>
+        <link refid="LinearCost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ScsEigen/Solver.h</label>
+        <link refid="Solver_8h"/>
+      </node>
+      <node id="1">
+        <label>ScsEigen/MathematicalProgram.h</label>
+        <link refid="MathematicalProgram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classScsEigen_1_1MathematicalProgram" prot="public">ScsEigen::MathematicalProgram</innerclass>
+    <innernamespace refid="namespaceScsEigen">ScsEigen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giulio Romualdi </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the terms of the MIT License. </para>
+</simplesect>
+<simplesect kind="date"><para>2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="ScsEigen/MathematicalProgram.h"/>
+  </compounddef>
+</doxygen>

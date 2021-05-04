@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScsEigen::Solution struct | scs-eigen</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">scs-eigen</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="4">
+            <li><a href="https://github.com/GiulioRomualdi/scs-eigen">GitHub</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceScsEigen.html">ScsEigen</a>::<wbr/></span>Solution <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Solution_8h.html">&lt;ScsEigen/Solution.h&gt;</a></div>
+        </h1>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p><a href="structScsEigen_1_1Solution.html" class="m-doc">Solution</a> class contains the solution of the convex problem.</p>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">enum class <a href="#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc">Status</a> { </span><span class="m-doc-wrap"><a href="#ad26870adda3b9792e35ec2dae9b37e32a16e74ec57f0aee76aa89065c4cecfb63" class="m-doc">infeasible_inaccurate</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a3aa9ba57c878bca44a01c8f46b0d6c9f" class="m-doc">unbounded_inaccurate</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a1e1d797794489f86365e23b2457ea573" class="m-doc">sigint</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a26934eb377001f66e37289a5c93fe284" class="m-doc">failed</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a44560d82707cce3b8111a770924cf0e2" class="m-doc">indeterminate</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32afc988471d247479f88a57e29916bbf82" class="m-doc">infeasible</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32afceb11066a5e52940fe5a2565bc29d9a" class="m-doc">unbounded</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a937993609f879126ce444c9fcd31b252" class="m-doc">unfinished</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32aac6f263f90369bef9b31137c03c77c09" class="m-doc">solved</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32a2d8f758a90af2a96cc98f42595c3876e" class="m-doc">solved_inaccurate</a>,
+              <a href="#ad26870adda3b9792e35ec2dae9b37e32aad921d60486366258809553a3db49a4a" class="m-doc">unknown</a> }</span>
+            </dt>
+            <dd>Status of scs solver.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a7801544c71d1e3f54b08ec1e04bb6440">
+              <span class="m-doc-wrap-bumper">auto <a href="#a7801544c71d1e3f54b08ec1e04bb6440" class="m-doc-self">isValid</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
+            </dt>
+            <dd>Check if the solution is valid.</dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a6b59ffcce9120168c12887d98212abdd">
+              int <a href="#a6b59ffcce9120168c12887d98212abdd" class="m-doc-self">iteration</a>
+            </dt>
+            <dd>Number of iterations taken by the solver.</dd>
+            <dt id="ac09f740c3edd370177afecaf60899dff">
+              double <a href="#ac09f740c3edd370177afecaf60899dff" class="m-doc-self">primalObjective</a>
+            </dt>
+            <dd>Primal objective value.</dd>
+            <dt id="ae89404a42a1510b3640bf8d7dac2fc10">
+              double <a href="#ae89404a42a1510b3640bf8d7dac2fc10" class="m-doc-self">dualObjective</a>
+            </dt>
+            <dd>Dual objective value.</dd>
+            <dt id="a9704ccf4734dd48279c838d9e169c298">
+              double <a href="#a9704ccf4734dd48279c838d9e169c298" class="m-doc-self">primalResidue</a>
+            </dt>
+            <dd>Primal equality residue.</dd>
+            <dt id="a6177fc396cdd7fd3c07ac521eb16aae5">
+              double <a href="#a6177fc396cdd7fd3c07ac521eb16aae5" class="m-doc-self">residueInfeasibility</a>
+            </dt>
+            <dd>infeasibility certificate residue.</dd>
+            <dt id="a65aec123e825cba9c65727ff83be6e0d">
+              double <a href="#a65aec123e825cba9c65727ff83be6e0d" class="m-doc-self">residueUnbounded</a>
+            </dt>
+            <dd>unbounded certificate residue</dd>
+            <dt id="aa5e8cc0dbf5fe828f71a5a700e88e94a">
+              double <a href="#aa5e8cc0dbf5fe828f71a5a700e88e94a" class="m-doc-self">relativeDualityGap</a>
+            </dt>
+            <dd>relative duality gap</dd>
+            <dt id="af2f461e09687817c892e170b4dd9e083">
+              double <a href="#af2f461e09687817c892e170b4dd9e083" class="m-doc-self">setupTime</a>
+            </dt>
+            <dd>Time taken for SCS to setup in milliseconds.</dd>
+            <dt id="adde4a7e039832203be2676220b6b810e">
+              double <a href="#adde4a7e039832203be2676220b6b810e" class="m-doc-self">solveTime</a>
+            </dt>
+            <dd>Time taken for SCS to solve the problem in milliseconds.</dd>
+            <dt id="a67d826aa13fb6381c33667da932e7f3c">
+              Eigen::VectorXd <a href="#a67d826aa13fb6381c33667da932e7f3c" class="m-doc-self">solution</a>
+            </dt>
+            <dd><a href="structScsEigen_1_1Solution.html" class="m-doc">Solution</a> of the problem stored in <a href="classScsEigen_1_1MathematicalProgram.html" class="m-doc">MathematicalProgram</a>.</dd>
+            <dt id="ad962ce777626e47d50db9f89d4938ea4">
+              Eigen::VectorXd <a href="#ad962ce777626e47d50db9f89d4938ea4" class="m-doc-self">completeSolution</a>
+            </dt>
+            <dd>Complete <a href="structScsEigen_1_1Solution.html" class="m-doc">Solution</a> of the problem solved by SCS. It contains also the slack variables.</dd>
+            <dt id="abc13501fd64a0a4028d2558bcf58948f">
+              Eigen::VectorXd <a href="#abc13501fd64a0a4028d2558bcf58948f" class="m-doc-self">dualVariable</a>
+            </dt>
+            <dd>Dual solution.</dd>
+            <dt id="a94ec8268c4ae8a68420fe22d0a31ec4d">
+              Eigen::VectorXd <a href="#a94ec8268c4ae8a68420fe22d0a31ec4d" class="m-doc-self">primalEqualitySlack</a>
+            </dt>
+            <dd>Equality slack variables.</dd>
+            <dt id="a0ea5eacd27af3d5869ca9fc028e3ec2c">
+              <a href="structScsEigen_1_1Solution.html#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc">Status</a> <a href="#a0ea5eacd27af3d5869ca9fc028e3ec2c" class="m-doc-self">status</a>
+            </dt>
+            <dd>Status of the <a href="structScsEigen_1_1Solution.html" class="m-doc">Solution</a>..</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Enum documentation</h2>
+          <section class="m-doc-details" id="ad26870adda3b9792e35ec2dae9b37e32"><div>
+            <h3>
+              enum class ScsEigen::<wbr />Solution::<wbr /><a href="#ad26870adda3b9792e35ec2dae9b37e32" class="m-doc-self">Status</a>
+            </h3>
+            <p>Status of scs solver.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>You can find further information <a href="https://github.com/cvxgrp/scs/blob/07ca69c296312c260027c755f545f05bf45156eb/include/glbopts.h#L18-L28">here</a>.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>scs-eigen docs. Licensed under the <a href="https://github.com/GiulioRomualdi/scs-eigen/blob/main/LICENSE">MIT License</a>. <br />Generated by <a href="https://doxygen.org/">Doxygen</a> 1.9.1 and <a href="https://mcss.mosra.cz/">m.css</a>. Contact the team via <a href="https://github.com/GiulioRomualdi/scs-eigen">GitHub</a>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
